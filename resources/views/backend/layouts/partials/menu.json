@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Tổng quan",
+        "icon": "fas fa-chart-line",
+        "route": "admin.dashboard",
+        "id": "dashboard"
+    },
+    {
+        "title": "Cấu hình",
+        "icon": "fas fa-box-open",
+        "id": "cauhinh",
+        "children": [
+            {
+                "title": "Danh sách bài viết",
+                "url": "admin.posts.index"
+            },
+            {
+                "title": "Danh sách chức năng",
+                "url": "admin.functions.index"
+            }, {
+                "title": "Cấu hình chung",
+                "url": "admin.banners.index"
+            }
+
+
+        ],
+        "inRoutes": [
+            "admin.posts.index", "admin.functions.index", "admin.banners.index"
+        ]
+    }
+
+]

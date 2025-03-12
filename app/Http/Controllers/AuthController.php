@@ -1,0 +1,152 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\User;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
+use App\Http\Requests\Auth\LoginUserRequest;
+use App\Http\Requests\RegisterRequest;
+use App\Models\Province;
+use Illuminate\Support\Facades\Http;
+
+class AuthController extends Controller
+{
+
+    public function login()
+    {
+        return view('backend.auth.login');
+    }
+
+    public function authenticate(Request $request)
+    {
+
+        $credentials = $request->only(['email', 'password']);
+
+        $remember = $request->boolean('remember');
+
+        if (auth()->guard('admin')->attempt($credentials, $remember)) {
+
+
+            $account = auth()->guard('admin')->user();
+
+
+            if ($account->role_id != 1) {
+                sessionFlash('error', 'Tài khoản không có quyền truy cập!');
+
+                auth()->guard('admin')->logout();
+                return back();
+            }
+
+            sessionFlash('success', 'Đăng nhập thành công.');
+            return redirect()->route('admin.dashboard');
+        } else {
+            sessionFlash('error', 'Tài khoản hoặc mật khẩu không chính xác!');
+            return back()->withInput();
+        }
+    }
+
+    public function logout()
+    {
+        auth()->logout();
+
+        request()->session()->invalidate();
+        request()->session()->regenerateToken();
+        sessionFlash('success', 'Đăng xuất thành công.');
+        return redirect()->route('admin.login');
+    }
+
+
+    public function loginUser()
+    {
+        return view('frontend.auth.login');
+    }
+
+    public function registerUser()
+    {
+        $city = Province::get();
+        return view('frontend.auth.register', compact('city'));
+    }
+
+    public function registerUserSubmit(RegisterRequest $request){
+
+        // dd($request->toArray());
+        $apiUrl = 'http://127.0.0.1:9000/api/user/create';
+        $apiUrl1 = 'http://127.0.0.1:9000/api/service/create';
+
+        // Định nghĩa dữ liệu cần gửi
+        $data = [
+            'name' => $request->fullname,
+            'email' => $request->email,
+            'username' => $request->username,
+            'phone' => $request->phone,
+            'province' => $request->province,
+            'password' => bcrypt($request->password),
+            'status' => 'active',
+        ];
+
+        //  dd($data);
+
+
+        // Gửi yêu cầu POST với dữ liệu và token
+        $response = Http::withHeaders([
+            'Authorization' => 'Bearer UV7bWFOdTGverQhB2IDY1pRJWeGBbGY8fPglNDMNA5Jz6kvVwpzgHu3X4Y01',
+        ])->post($apiUrl, $data);
+
+        $result = $response->json();
+        if($result['success'] = true){
+            $data['role_id'] = 2;
+            User::create($data);
+            $data['domain'] = null;
+            $data['active_at'] = Carbon::now()->timestamp;
+            $data['number'] = 6;
+            $data['is_hotel_account'] = 1;
+
+            $response1 = Http::withHeaders([
+                'Authorization' => 'Bearer UV7bWFOdTGverQhB2IDY1pRJWeGBbGY8fPglNDMNA5Jz6kvVwpzgHu3X4Y01',
+            ])->post($apiUrl1, $data);
+            // dd($response1->json());
+
+            sessionFlash('success', 'Đăng ký thành công!');
+            // return redirect()->away('http://127.0.0.1:9000/');
+            return redirect()->back();
+        }else{
+            sessionFlash('error', 'Đăng ký không thành công!');
+            return back()->withInput();
+        }
+
+    }
+
+
+    public function authenticateUser(Request $request)
+    {
+
+        $credentials = $request->only(['email', 'password']);
+
+        $remember = $request->boolean('remember');
+
+        if (auth()->attempt($credentials, $remember)) {
+
+
+            $account = auth()->user();
+
+
+            if ($account->role_id != 2) {
+                sessionFlash('error', 'Tài khoản không có quyền truy cập!');
+
+                auth()->logout();
+                return back();
+            }
+
+            sessionFlash('success', 'Đăng nhập thành công.');
+            return redirect()->route('home');
+        } else {
+            sessionFlash('error', 'Tài khoản hoặc mật khẩu không chính xác!');
+            return back()->withInput();
+        }
+    }
+
+}
