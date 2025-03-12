@@ -74,8 +74,8 @@ class AuthController extends Controller
     public function registerUserSubmit(RegisterRequest $request){
 
         // dd($request->toArray());
-        $apiUrl = env('API_URL') . '/user/create'.'/user/create';
-        $apiUrl1 = env('API_URL') . '/user/create'.'/service/create';
+        $apiUrl = env('API_URL') .'/user/create';
+        $apiUrl1 = env('API_URL') .'/service/create';
 
         // Định nghĩa dữ liệu cần gửi
         $data = [
