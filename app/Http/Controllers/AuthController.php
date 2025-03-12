@@ -93,7 +93,7 @@ class AuthController extends Controller
 
         // Gửi yêu cầu POST với dữ liệu và token
         $response = Http::withHeaders([
-            'Authorization' => 'Bearer UV7bWFOdTGverQhB2IDY1pRJWeGBbGY8fPglNDMNA5Jz6kvVwpzgHu3X4Y01',
+            'Authorization' => 'Bearer ' . env('API_TOKEN'),
         ])->post($apiUrl, $data);
 
         $result = $response->json();
@@ -106,7 +106,7 @@ class AuthController extends Controller
             $data['is_hotel_account'] = 1;
 
             $response1 = Http::withHeaders([
-                'Authorization' => 'Bearer UV7bWFOdTGverQhB2IDY1pRJWeGBbGY8fPglNDMNA5Jz6kvVwpzgHu3X4Y01',
+                'Authorization' =>'Bearer ' . env('API_TOKEN'),
             ])->post($apiUrl1, $data);
             // dd($response1->json());
 
