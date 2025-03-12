@@ -27,7 +27,7 @@
                                 <div class="registerandlogin">
                                     <ul class="w-100">
                                         <li class="nav-item header-register"><button
-                                                class="btn btn-outline-primary btn-sm"><a href="{{ route('login') }}">Đăng nhập</a></button>
+                                                class="btn btn-outline-primary btn-sm"><a href="http://123.31.31.39:6060/admin">Đăng nhập</a></button>
                                         </li>
                                         <li class="nav-item header-login login"><button
                                                 class="btn btn-primary btn-sm"><a href="{{ route('register') }}">Đăng ký</a></button></li>

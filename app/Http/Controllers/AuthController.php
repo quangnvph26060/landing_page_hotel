@@ -111,7 +111,7 @@ class AuthController extends Controller
             Http::post($apiUrl2, $data);
 
             sessionFlash('success', 'Đăng ký thành công!');
-            return redirect()->back();
+            return redirect()->route('home');
         }else{
             sessionFlash('error', 'Đăng ký không thành công!');
             return back()->withInput();
