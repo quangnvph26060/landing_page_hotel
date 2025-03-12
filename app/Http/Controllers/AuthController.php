@@ -76,7 +76,7 @@ class AuthController extends Controller
         // dd($request->toArray());
         $apiUrl = env('API_URL') .'/user/create';
         $apiUrl1 = env('API_URL') .'/service/create';
-
+        $apiUrl2 = env('API_URL1') .'/user/store';
         // Định nghĩa dữ liệu cần gửi
         $data = [
             'name' => $request->fullname,
@@ -97,18 +97,18 @@ class AuthController extends Controller
         ])->post($apiUrl, $data);
 
         $result = $response->json();
-        if($result['success'] = true){
+        if($result['success'] == true){
             $data['role_id'] = 2;
             User::create($data);
             $data['domain'] = null;
-            $data['active_at'] = Carbon::now()->timestamp;
+            $data['active_at'] = Carbon::now()->format('Y-m-d H:i:s');
             $data['number'] = 6;
             $data['is_hotel_account'] = 1;
 
             $response1 = Http::withHeaders([
                 'Authorization' =>'Bearer ' . env('API_TOKEN'),
             ])->post($apiUrl1, $data);
-            // dd($response1->json());
+            Http::post($apiUrl2, $data);
 
             sessionFlash('success', 'Đăng ký thành công!');
             return redirect()->back();
