@@ -74,8 +74,8 @@ class AuthController extends Controller
     public function registerUserSubmit(RegisterRequest $request){
 
         // dd($request->toArray());
-        $apiUrl = 'http://127.0.0.1:9000/api/user/create';
-        $apiUrl1 = 'http://127.0.0.1:9000/api/service/create';
+        $apiUrl = env('API_URL') . '/user/create'.'/user/create';
+        $apiUrl1 = env('API_URL') . '/user/create'.'/service/create';
 
         // Định nghĩa dữ liệu cần gửi
         $data = [
@@ -111,7 +111,6 @@ class AuthController extends Controller
             // dd($response1->json());
 
             sessionFlash('success', 'Đăng ký thành công!');
-            // return redirect()->away('http://127.0.0.1:9000/');
             return redirect()->back();
         }else{
             sessionFlash('error', 'Đăng ký không thành công!');
