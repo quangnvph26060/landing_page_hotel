@@ -29,7 +29,7 @@
     <script src="{{ asset('backend/assets/js/connectDataTable.js') }}"></script>
     <script>
         $(document).ready(function() {
-            const api = "{{ route('admin.posts.index') }}"
+            const api = "https://fasthotel.vn/admin/post"
             dataTables(api, columns, 'Post')
         })
     </script>

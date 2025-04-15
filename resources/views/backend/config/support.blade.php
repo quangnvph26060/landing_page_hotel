@@ -117,7 +117,7 @@
 
     <script>
         $(document).ready(function() {
-            const api = "{{ route('admin.technologies.index') }}"
+            const api = "http://fasthotel.vn/admin/technologies"
             dataTables(api, columns, 'Technology');
 
             $('#save').click(function(event) {

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\WelcomeMail;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -12,6 +13,7 @@ use App\Http\Requests\Auth\LoginUserRequest;
 use App\Http\Requests\RegisterRequest;
 use App\Models\Province;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Mail;
 
 class AuthController extends Controller
 {
@@ -99,17 +101,21 @@ class AuthController extends Controller
         $result = $response->json();
         if($result['success'] == true){
             $data['role_id'] = 2;
-            User::create($data);
+            // User::create($data);
             $data['domain'] = null;
             $data['active_at'] = Carbon::now()->format('Y-m-d H:i:s');
-            $data['number'] = 6;
+            $data['number'] = 1;
             $data['is_hotel_account'] = 1;
 
             $response1 = Http::withHeaders([
                 'Authorization' =>'Bearer ' . env('API_TOKEN'),
             ])->post($apiUrl1, $data);
-            Http::post($apiUrl2, $data);
 
+
+            $response2 = Http::post($apiUrl2, $data);
+            if($response2['success'] == true){{
+                Mail::to($request->email)->queue(new WelcomeMail($data));
+             }}
             sessionFlash('success', 'Đăng ký thành công!');
             return redirect()->route('home');
         }else{
