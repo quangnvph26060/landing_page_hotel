@@ -27,9 +27,12 @@
     <script src="{{ asset('backend/assets/js/plugin/datatables/datatables.min.js') }}"></script>
     <script src="{{ asset('backend/assets/js/columns/post.js') }}"></script>
     <script src="{{ asset('backend/assets/js/connectDataTable.js') }}"></script>
+
+
     <script>
         $(document).ready(function() {
-            const api = "https://fasthotel.vn/admin/posts"
+            const api = "https://fasthotel.vn/admin/posts";
+
             dataTables(api, columns, 'Post')
         })
     </script>
