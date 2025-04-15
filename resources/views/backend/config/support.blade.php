@@ -117,7 +117,7 @@
 
     <script>
         $(document).ready(function() {
-            const api = "http://fasthotel.vn/admin/technologies"
+            const api = "https://fasthotel.vn/admin/technologies"
             dataTables(api, columns, 'Technology');
 
             $('#save').click(function(event) {
