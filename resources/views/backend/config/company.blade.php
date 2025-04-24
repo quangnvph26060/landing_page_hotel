@@ -19,6 +19,9 @@
         <li class="nav-item" role="presentation">
             <a class="nav-link active fw-bold" id="seo-tab" href="#">Thông tin công ty</a>
         </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link fw-bold" id="seo-tab" href="{{ route('admin.seo.index') }}">Seo</a>
+        </li>
     </ul>
 
 
@@ -106,9 +109,19 @@
                                             </div>
                                         </div>
                                     </div>
-
-
-
+                                    <div class="col-lg-12">
+                                        <div class="mb-2">
+                                            <label for="banner_login" class="form-label">Banner đăng ký <span
+                                                    class="text-danger"></span></label>
+                                            <img class="img-fluid img-thumbnail w-100" id="show_banner_login"
+                                                style="cursor: pointer; height: 300px !important;"
+                                                src="{{ showImage($config->banner_login ?? '') }}" alt=""
+                                                onclick="document.getElementById('banner_login').click();">
+                                            <input type="file" name="banner_login" id="banner_login"
+                                                class="form-control d-none" accept="image/*"
+                                                onchange="previewImage(event, 'show_banner_login')">
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="d-flex justify-content-center">

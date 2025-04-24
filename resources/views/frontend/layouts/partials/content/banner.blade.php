@@ -2,8 +2,7 @@
     style="background: url(&#39;{{ showImage($banner->image ?? '') }}&#39;) rgba(6, 26, 55, 0.2); background-size: cover; background-repeat: no-repeat;">
     <div class="page-banner-wrap">
         <div class="solution-heading">
-            <h1 class="heading-desktop">Phần mềm quản lý</h1>
-            <h1 class="heading-desktop">Khách sạn &amp; Nhà nghỉ</h1>
+            <h1 class="heading-desktop" style="width: 800px;">{{ $banner->title }}</h1>
             <h1 class="heading-mobile">{{ $banner->title }}</h1>
         </div>
         <div class="banner-below-left d-flex justify-content-center"><button

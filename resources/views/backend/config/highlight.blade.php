@@ -19,6 +19,10 @@
         <li class="nav-item" role="presentation">
             <a class="nav-link fw-bold" id="seo-tab" href="{{ route('admin.configs.index') }}">Thông tin công ty</a>
         </li>
+
+        <li class="nav-item" role="presentation">
+            <a class="nav-link fw-bold" id="seo-tab" href="{{ route('admin.seo.index') }}">Seo</a>
+        </li>
     </ul>
 
 

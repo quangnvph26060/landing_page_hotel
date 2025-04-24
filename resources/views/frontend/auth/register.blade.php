@@ -4,26 +4,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>KiotViet - Phần mềm quản lý bán hàng Phổ Biến Nhất</title>
-    <meta name="facebook-domain-verification" content="596ckow31ceg2kaownqwu554p8p7qo">
+    <title>{{ $config_all ? $config_all->company : 'Quản lý khách sạn' }} </title>
+    {{-- <meta name="facebook-domain-verification" content="596ckow31ceg2kaownqwu554p8p7qo">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@KiotViet">
     <meta name="twitter:title" content="KiotViet">
-    <meta name="twitter:description" content="Cùng bạn làm giàu">
+    <meta name="twitter:description" content="Cùng bạn làm giàu"> --}}
 
     <meta name="robots" content="max-image-preview:large">
-    <meta name="keywords" content="phan mem quan ly ban hang, kiotviet, phan mem kiotviet">
+    {{-- <meta name="keywords" content="phan mem quan ly ban hang, kiotviet, phan mem kiotviet"> --}}
     <meta property="og:type" content="website">
     <meta property="format-detection" content="telephone=no">
-    <meta property="og:image:alt" content="KiotViet - Phần mềm quản lý bán hàng Phổ Biến Nhất">
-    <meta property="og:site_name" content="KiotViet">
+    <meta property="og:image:alt" content="{{ $config_all ? $config_all->company : 'Quản lý khách sạn' }}">
+    <meta property="og:site_name" content="{{ $config_all ? $config_all->company : 'Quản lý khách sạn' }}">
     <meta property="og:image:width" content="740">
     <meta property="og:image:height" content="300">
     <meta property="fb:admins" content="n4mkut3">
     <meta property="fb:app_id" content="1138268722850522">
-
-    <meta property="fb:pag" es content="361150274018793">
-    <meta name="p:domain_verify" content="565cb621d9b2f74cd9a7917e31386206">
+    <link rel="icon" type="image/png" href="{{ asset('storage/'.$config_all->icon) }}">
+    {{-- <meta property="fb:pag" es content="361150274018793">
+    <meta name="p:domain_verify" content="565cb621d9b2f74cd9a7917e31386206"> --}}
     <link rel="stylesheet" href="{{ asset('backend/auth/css/register.css') }}">
 
 </head>
@@ -39,14 +39,14 @@
                     <div class="new-register w-100">
                         <div class="new-register-step-2 d-flex w-100">
                             <div class="new-register-left"
-                                style="background-image: url(&quot;https://cdn-kvweb.kiotviet.vn/kiotviet-website/wp-content/uploads/2023/10/31095247/background-register1-1.jpg&quot;);">
+                                style="background-image: url(&quot;{{ 'storage/'.$config_all->banner_login }}&quot;);">
                                 <div class="new-register-content">
-                                    <div class="new-register-content-title">
-                                        <p>Quản lý dễ dàng</p>
-                                        <p>Bán hàng đơn giản</p>
+                                    <div class="new-register-content-title " style="display: contents">
+                                        <p  style="width: 60%;">{{ $config_all ? $config_all->company : 'Quản lý khách sạn' }}</p>
+                                        {{-- <p>Bán hàng đơn giản</p> --}}
                                     </div>
                                     <div class="register-telephone text-center"><span class="telephone-wrap">Hỗ trợ đăng
-                                            ký 1800 6162</span></div>
+                                            ký {{ $config_all->carePhone }}</span></div>
                                 </div>
                             </div>
                             <div class="new-register-right position-relative">
@@ -189,14 +189,14 @@
     }
 
     .register-form input {
-        padding: 20px 15px !important;
+        padding: 25px 15px !important;
     }
 
     .register-form select {
-        padding: 10px 12px !important;
+        padding: 18px 12px !important;
         border: 1px solid #ced4da;
         color: #495057;
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     .form-group.text-center {

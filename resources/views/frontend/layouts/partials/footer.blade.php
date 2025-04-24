@@ -25,7 +25,7 @@
                             <span class="email-support">{{ $config->email }}</span></a></li>
                 </ul>
             </div>
-            <div data-id="1" class="col-lg-3 col-sm-6 footer-list company">
+            {{-- <div data-id="1" class="col-lg-3 col-sm-6 footer-list company">
                 <h4 class="footer-title">Doanh nghiệp</h4>
                 <div id="header-widget-area" class="chw-widget-area widget-area" role="complementary">
                     <div class="chw-widget">
@@ -51,8 +51,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div data-id="2" class="col-lg-3 col-sm-6 footer-list support">
+            </div> --}}
+            {{-- <div data-id="2" class="col-lg-3 col-sm-6 footer-list support">
                 <h4 class="footer-title">Hỗ trợ</h4>
                 <div id="header-widget-area" class="chw-widget-area widget-area" role="complementary">
                     <div class="chw-widget">
@@ -82,7 +82,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
 
     </div>
@@ -94,7 +94,7 @@
                             title="DMCA.com Protection Status" class="dmca"><img
                                 src="https://cdn-kvweb.kiotviet.vn/kiotviet-website/wp-content/uploads/2023/10/31070200/DMCA.jpg"
                                 alt="DMCA" loading="lazy"></a>{{ $config->footer }}</p>
-                <ul class="social">
+                {{-- <ul class="social">
                     <li>
                         <a rel="nofollow" title="Facebook" href="https://facebook.com/PhanmembanhangKiotViet" target="_blank">
                             <b class="fa-brands fa-facebook"></b>
@@ -113,7 +113,7 @@
                         </a>
                     </li>
 
-                </ul>
+                </ul> --}}
             </div>
         </div>
     </div>

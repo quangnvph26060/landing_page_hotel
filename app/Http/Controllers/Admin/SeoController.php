@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Config;
 use Illuminate\Http\Request;
 
-class ConfigController extends Controller
+class SeoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class ConfigController extends Controller
     {
         //
         $config = Config::first() ?? [];
-        return view('backend.config.company', compact('config'));
+        return view('backend.config.seo', compact('config'));
     }
 
     /**
@@ -32,26 +32,11 @@ class ConfigController extends Controller
     public function store(Request $request)
     {
         // dd($request->all());
-        $data = [];
+       
 
-        if ($request->hasFile('logo')) {
-            $data['logo'] = saveImages($request, 'logo', 'config');
-        }
-        if ($request->hasFile('icon')) {
-            $data['icon'] = saveImages($request, 'icon', 'config');
-        }
-
-        if ($request->hasFile('banner_login')) {
-            $data['banner_login'] = saveImages($request, 'banner_login', 'config');
-        }
-
-        $data['company']    = $request->company;
-        $data['email']      = $request->email;
-        $data['hotline']    = $request->hotline;
-        $data['address']    = $request->address;
-        $data['salesPhone'] = $request->salesPhone;
-        $data['carePhone']  = $request->carePhone;
-        $data['footer']     = $request->footer;
+        $data['title_seo']    = $request->title_seo;
+        $data['keyword_seo']      = $request->keyword_seo;
+        $data['description_seo']    = $request->description_seo;
 
         $config = Config::first();
 

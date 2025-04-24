@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Config;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -20,5 +22,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
+        $config_all = Config::first();
+        View::share('config_all', $config_all);
     }
 }

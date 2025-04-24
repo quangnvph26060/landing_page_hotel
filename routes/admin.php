@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FunctionsController;
 use App\Http\Controllers\Admin\HighlightController;
 use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\Admin\TechnologyController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
@@ -43,6 +44,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('technologies', TechnologyController::class);
         Route::resource('banners', BannerController::class);
 
+        Route::resource('seo', SeoController::class);
 
         Route::post('/delete-items', [BulkActionController::class, 'deleteItems'])->name('delete.items');
 

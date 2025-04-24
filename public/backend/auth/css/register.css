@@ -2657,7 +2657,7 @@ pre code {
     border-radius: .25rem;
     color: #495057;
     display: block;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 400;
     height: calc(1.5em + .75rem + 2px);
     line-height: 1.5;
@@ -27849,7 +27849,7 @@ input#retailer_code:disabled {
 
 @media only screen and (min-width:1600px) {
     .new-register-right .new-register-form {
-        max-width: 650px
+        max-width: 850px
     }
 }
 
