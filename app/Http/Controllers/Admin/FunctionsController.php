@@ -6,6 +6,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 
 use App\Models\Functions;
+use App\Models\TitleFunction;
 use App\Services\BaseQuery;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -23,6 +24,7 @@ class FunctionsController extends Controller
     }
     public function index()
     {
+        $titleFunction = TitleFunction::first();
         if (request()->ajax()) {
             $columns = ['id', 'title', 'image', 'description'];
 
@@ -40,7 +42,7 @@ class FunctionsController extends Controller
             }, ['title', 'description']);
         }
 
-        return view('backend.function.index'); // Đã sửa lỗi thiếu dấu ;
+        return view('backend.function.index', compact('titleFunction')); // Đã sửa lỗi thiếu dấu ;
     }
 
 

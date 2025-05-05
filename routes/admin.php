@@ -10,6 +10,8 @@ use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\Admin\TechnologyController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\TitleFunctionController;
+use App\Models\TitleFunction;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,6 +49,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('seo', SeoController::class);
 
         Route::post('/delete-items', [BulkActionController::class, 'deleteItems'])->name('delete.items');
+        Route::post('/title-function', [TitleFunctionController::class, 'update'])->name('update.title');
 
     });
 });

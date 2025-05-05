@@ -1,15 +1,45 @@
 @extends('backend.layouts.master')
 
 @section('content')
-    @include('backend.layouts.partials.breadcrumb', ['page' => 'Quản lý bài viết'])
+    @include('backend.layouts.partials.breadcrumb', ['page' => 'Quản lý chức năng'])
 
     <div class="row">
         <!-- Form Thêm/Sửa Bài Viết -->
         <div class="col-lg-4">
             <div class="card">
-                <div class="card-header">
-                    <h5 class="card-title">Thêm/Sửa Bài Viết</h5>
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">Thêm/Sửa Bài Viết</h5>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#postModal">
+                        Tiêu đề
+                    </button>
+
+                    <div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <form class="modal-content" method="post" action="{{ route('admin.update.title') }}">
+                                @csrf
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="postModalLabel">Tiêu đề</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="mb-3">
+                                        <label for="postTitle" class="form-label">Tiêu đề</label>
+                                        <input type="text" class="form-control" id="postTitle" name="title" value="{{ $titleFunction->title ?? '' }}">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="postContent" class="form-label">Nội dung</label>
+                                        <textarea class="form-control" id="postContent" name="content" rows="4">{{ $titleFunction->content ?? '' }}</textarea>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-success">Lưu</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="card-body">
                     <form id="postForm" enctype="multipart/form-data" action="{{ route('admin.functions.store') }}">
 
@@ -64,6 +94,8 @@
             </div>
         </div>
     </div>
+
+
 @endsection
 
 @push('scripts')

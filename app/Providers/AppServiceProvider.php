@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Config;
+use App\Models\TitleFunction;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -23,6 +24,8 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         $config_all = Config::first();
+        $titleFunction = TitleFunction::first();
         View::share('config_all', $config_all);
+        View::share('titleFunction', $titleFunction);
     }
 }
