@@ -5,9 +5,10 @@
             <h1 class="heading-desktop" style="width: 800px;">{{ $banner->title }}</h1>
             <h1 class="heading-mobile">{{ $banner->title }}</h1>
         </div>
-        <div class="banner-below-left d-flex justify-content-center"><button
+        <div class="banner-below-left d-flex justify-content-center">
+            <a href="{{ route('register') }}"
                 class="btn btn-primary register box-popup-register" id="show_signup"> Dùng thử miễn phí
-            </button>
+            </a>
             <!---->
         </div>
     </div>

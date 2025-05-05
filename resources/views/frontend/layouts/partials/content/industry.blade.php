@@ -54,8 +54,8 @@
                 </div> --}}
 
             </div>
-            <div class="box-footer"><button class="btn btn-primary box-popup-register"> Dùng thử miễn
-                    phí </button></div>
+            <div class="box-footer"><a href="{{ route('register') }}" class="btn btn-primary box-popup-register"> Dùng thử miễn
+                    phí </a></div>
         </div>
     </div>
 </div>

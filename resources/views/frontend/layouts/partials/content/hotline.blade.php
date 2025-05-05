@@ -1,8 +1,8 @@
 <div class="hotline-box">
     <div class="container">
         <div class="hotline-top">
-            <h3 class="hotline-title"> Hãy để chúng tôi đồng hành kinh doanh cùng bạn </h3><button
-                class="btn btn-primary box-popup-register"> Dùng thử miễn phí </button>
+            <h3 class="hotline-title"> Hãy để chúng tôi đồng hành kinh doanh cùng bạn </h3><a href="{{ route('register') }}"
+                class="btn btn-primary box-popup-register"> Dùng thử miễn phí </a>
         </div>
         <div class="row hotline-list">
 

@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     @include('frontend.layouts.partials.meta')
     <script type="module" src="" crossorigin></script>
     <title>{{ $config_all ? $config_all->company : 'Quản lý khách sạn' }} </title>
 
     <link rel="preload" as="fetch" fetchpriority="low" crossorigin="anonymous" href="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="icon" type="image/png" href="{{ asset('storage/'.$config_all->icon) }}">
+    <link rel="icon" type="image/png" href="{{ asset('storage/' . $config_all->icon) }}">
     @include('frontend.layouts.partials.style')
 </head>
 
