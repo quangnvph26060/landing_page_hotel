@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class WelcomeMail extends Mailable
+class WelcomeMail extends Mailable  implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
@@ -23,7 +23,7 @@ class WelcomeMail extends Mailable
     public function build()
     {
         return $this->subject('Chào mừng bạn đến với hệ thống!')
-                    ->view('emails.welcome')
+                    ->view('email.welcome')
                     ->with(['data' => $this->data]);
     }
 }

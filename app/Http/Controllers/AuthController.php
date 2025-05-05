@@ -90,10 +90,7 @@ class AuthController extends Controller
             'status' => 'active',
         ];
 
-        //  dd($data);
 
-
-        // Gửi yêu cầu POST với dữ liệu và token
         $response = Http::withHeaders([
             'Authorization' => 'Bearer ' . env('API_TOKEN'),
         ])->post($apiUrl, $data);
@@ -113,9 +110,9 @@ class AuthController extends Controller
 
 
             $response2 = Http::post($apiUrl2, $data);
-            if($response2['success'] == true){{
+            // if($response2['success'] == true){{
                 Mail::to($request->email)->queue(new WelcomeMail($data));
-             }}
+            //  }}
             sessionFlash('success', 'Đăng ký thành công!');
             return redirect()->route('home');
         }else{
