@@ -18,6 +18,80 @@
             font-family: 'HandelGothicArabic', sans-serif !important;
         }
 
+        p {
+            font-family: 'Rajdhani', sans-serif !important;
+        }
+
+        #banner_main {
+            height: 530px;
+        }
+
+        #banner_main {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .background-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: brightness(0.6);
+            z-index: 0;
+        }
+
+        .page-banner-wrap {
+            position: relative;
+            z-index: 1;
+            /* nội dung nằm trên ảnh */
+        }
+
+
+
+        @media (min-width: 1921px) {
+
+            #banner_main {
+                height: 770px;
+            }
+        }
+
+        .nav-link {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+            /* tạo khoảng cho đường gạch */
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            /* bắt đầu từ 0 */
+            height: 2px;
+            background-color: #007bff;
+            /* màu đường gạch chân */
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+            /* chạy sang hết chiều ngang */
+        }
+
+        .nav-link-active {
+            color: #007bff !important;
+        }
+
+        .nav-link.nav-link-active::after {
+            width: 100%;
+        }
     </style>
 
 
