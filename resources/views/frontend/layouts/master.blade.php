@@ -103,7 +103,7 @@
 
     @include('frontend.layouts.partials.meta')
     <script type="module" src="" crossorigin></script>
-    <title>{{ $config_all ? $config_all->company : 'Quản lý khách sạn' }} </title>
+    <title>{{ $config_all ? $config_all->title_seo : 'Quản lý khách sạn' }} </title>
 
     <link rel="preload" as="fetch" fetchpriority="low" crossorigin="anonymous" href="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
