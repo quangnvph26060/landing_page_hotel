@@ -88,12 +88,15 @@
             /* chạy sang hết chiều ngang */
         }
 
-        .nav-link-active {
+        /* .nav-link-active {
             color: #ff0100 !important;
-        }
+        } */
 
         .nav-link.nav-link-active::after {
             width: 100%;
+        }
+        .box-popup-register:hover{
+            background: none;
         }
     </style>
 
@@ -121,7 +124,7 @@
 
                 @include('frontend.layouts.partials.content.cardBox')
 
-                @include('frontend.layouts.partials.content.industry')
+                {{-- @include('frontend.layouts.partials.content.industry') --}}
 
                 @include('frontend.layouts.partials.content.customer')
 
