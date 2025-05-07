@@ -10,7 +10,7 @@
 } */
 
 p {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Rajdhani', sans-serif !important;
 }
 
 #banner_main {
