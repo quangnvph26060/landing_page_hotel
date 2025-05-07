@@ -10,7 +10,7 @@
             <div data-id="3" class="col-xl-3 col-md-6">
                 <div class="hotline-item">
                     <h4 class="hotline-name">
-                        <span class="hotline-icon color-primary"><i class="{{ $item->icon }}"></i>
+                        <span class="hotline-icon color-primary"><i style="display: flex; align-items: center;" class="{{ $item->icon }}"></i>
                         </span>
                         </span>{{ $item->title }}</span>
                     </h4>

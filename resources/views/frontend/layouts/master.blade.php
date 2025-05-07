@@ -75,9 +75,12 @@
             width: 0%;
             /* bắt đầu từ 0 */
             height: 2px;
-            background-color: #007bff;
+            background-color: #ff0100;
             /* màu đường gạch chân */
             transition: width 0.3s ease;
+        }
+        .nav-link:hover{
+            color: #ff0100 !important;
         }
 
         .nav-link:hover::after {
@@ -86,7 +89,7 @@
         }
 
         .nav-link-active {
-            color: #007bff !important;
+            color: #ff0100 !important;
         }
 
         .nav-link.nav-link-active::after {
@@ -124,7 +127,7 @@
 
                 @include('frontend.layouts.partials.content.hotline')
 
-                <span title="Lên đầu trang" class="go_top cursor-pointer">
+                <span title="Lên đầu trang" class="go_top cursor-pointer" style="background-color: #ff0100 !important">
                     <i class="fa-solid fa-up-long"></i>
                 </span>
                 <!---->

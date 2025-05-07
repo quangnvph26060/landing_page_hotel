@@ -39,11 +39,11 @@
                             <li>
                                 <div class="registerandlogin">
                                     <ul class="w-100">
-                                        <li class="nav-item header-register"><a class="btn btn-outline-primary btn-sm"
+                                        <li class="nav-item header-register"><a class="btn btn-sm" style="color: #000 !important; border: 1px solid #000"
                                                 href="http://123.31.31.39:6060/admin">Đăng nhập</a>
                                         </li>
                                         <li class="nav-item header-login login"><a href="{{ route('register') }}"
-                                                class="btn btn-primary btn-sm">Đăng ký</a></li>
+                                                class="btn  btn-sm" style="background-color: #ff0100 !important ; color: #ffff">Đăng ký</a></li>
                                     </ul>
                                 </div>
                             </li>

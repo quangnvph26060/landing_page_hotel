@@ -12,7 +12,7 @@
             </div>
             <div  class="col-lg-3 col-sm-6 footer-list wrap-support" style="text-align: end">
                 <div class="div-support tvbh">
-                    <h4 class="footer-title">Tư vấn bán hàng</h4>
+                    <h4 class="footer-title" style="color: #ffff">Tư vấn bán hàng</h4>
                     <h4 class="hotline-number mb-1"><a href="tel:{{ $config->salesPhone }}">{{ $config->salesPhone }}</a></h4>
                 </div>
 
@@ -23,7 +23,7 @@
             <div  class="col-lg-3 col-sm-6 footer-list wrap-support" style="text-align: end">
 
                 <div class="div-support cskh">
-                    <h4 class="footer-title">Chăm sóc khách hàng</h4>
+                    <h4 class="footer-title" style="color: #ffff">Chăm sóc khách hàng</h4>
                     <h4 class="hotline-number"><a href="tel:{{ $config->carePhone }}">{{ $config->carePhone }}</a></h4>
                 </div>
 

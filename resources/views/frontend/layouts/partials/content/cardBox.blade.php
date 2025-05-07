@@ -7,8 +7,8 @@
                     class="svg-inline--fa fa-arrow-trend-up quantity-icon" aria-hidden="true" focusable="false"
                     data-prefix="far" data-icon="arrow-trend-up" role="img" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 576 512">
-                    
-                </svg><span class="industry-txt mb-0">{{ $titleFunction->content ?? '' }}</span></div>
+
+                </svg><span class="industry-txt mb-0" style="color: #ff0100">{{ $titleFunction->content ?? '' }}</span></div>
         </div>
         <div class="row card-box-items">
             @forelse ($function as $index => $item)

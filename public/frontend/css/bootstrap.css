@@ -14266,8 +14266,8 @@ h6 {
 
 .hotline-box .btn {
     background-clip: padding-box;
-    background-color: #0070f4;
-    border-color: #0070f4 !important;
+    background-color: #ff0100;
+    border-color: #ff0100 !important;
     border: unset;
     border-radius: 99px;
     color: #fff;
@@ -14468,7 +14468,7 @@ h6 {
     background-attachment: fixed;
     background-size: cover;
     color: #fff;
-    padding-top: 40px;
+    padding-top: 25px;
     text-align: left
 }
 
@@ -19692,8 +19692,8 @@ der .btn-primary:not(:disabled):focus {
 
 .box-popup-register {
     background-clip: padding-box;
-    background-color: #0070f4;
-    border-color: #0070f4 !important;
+    background-color: #ff0100;
+    border-color: #ff0100 !important;
     border: unset;
     border-radius: 99px;
     color: #fff;
