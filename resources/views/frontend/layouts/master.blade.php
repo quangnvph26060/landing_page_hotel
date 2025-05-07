@@ -23,7 +23,7 @@
         }
 
         #banner_main {
-            height: 530px;
+            height: 550px;
         }
 
         #banner_main {
@@ -52,10 +52,10 @@
 
 
 
-        @media (min-width: 1921px) {
+        @media (min-width: 1721px) {
 
             #banner_main {
-                height: 770px;
+                height: 800px;
             }
         }
 
