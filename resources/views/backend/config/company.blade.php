@@ -81,12 +81,12 @@
                                     </div>
 
                                     <div class="col-md-4 row">
-                                        <div class="form-group mb-2 col-lg-12">
-                                            <div class="mb-2">
+                                        <div class="form-group  col-lg-12">
+                                            <div class="">
                                                 <label for="image" class="form-label">Logo <span
                                                         class="text-danger">*</span></label>
                                                 <img class="img-fluid img-thumbnail w-100" id="show_logo"
-                                                    style="cursor: pointer; height: 300px !important;"
+                                                    style="cursor: pointer;"
                                                     src="{{ showImage($config->logo ?? '') }}" alt=""
                                                     onclick="document.getElementById('logo').click();">
                                                 <input type="file" name="logo" id="logo"
@@ -95,12 +95,12 @@
                                             </div>
                                         </div>
 
-                                        <div class="form-group mb-2 col-lg-12">
-                                            <div class="mb-2">
+                                        <div class="form-grou col-lg-12">
+                                            <div class="">
                                                 <label for="icon" class="form-label">Icon <span
                                                         class="text-danger">*</span></label>
                                                 <img class="img-fluid img-thumbnail w-100" id="show_icon"
-                                                    style="cursor: pointer; height: 300px !important;"
+                                                    style="cursor: pointer;;"
                                                     src="{{ showImage($config->icon ?? '') }}" alt=""
                                                     onclick="document.getElementById('icon').click();">
                                                 <input type="file" name="icon" id="icon"
@@ -114,7 +114,7 @@
                                             <label for="banner_login" class="form-label">Banner đăng ký <span
                                                     class="text-danger"></span></label>
                                             <img class="img-fluid img-thumbnail w-100" id="show_banner_login"
-                                                style="cursor: pointer; height: 300px !important;"
+                                                style="cursor: pointer;"
                                                 src="{{ showImage($config->banner_login ?? '') }}" alt=""
                                                 onclick="document.getElementById('banner_login').click();">
                                             <input type="file" name="banner_login" id="banner_login"

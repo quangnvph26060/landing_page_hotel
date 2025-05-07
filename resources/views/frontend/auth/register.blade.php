@@ -50,7 +50,7 @@
                                 </div>
                             </div>
                             <div class="new-register-right position-relative">
-                                <div class="new-register-top"><a class="cursor-pointer"> Tạo tài khoản dùng thử miễn phí
+                                <div class="new-register-top" style="margin-top: 75px"><a class="cursor-pointer"> Tạo tài khoản dùng thử miễn phí
                                     </a></div>
                                 <form method="post" class="register-form new-register-form" novalidate
                                     action="{{ route('submit.register') }}">

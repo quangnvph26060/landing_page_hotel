@@ -147,7 +147,7 @@ if (!function_exists('saveImages')) {
                 }
 
                 // Tạo tên file WebP
-                $filename = time() . uniqid() . '.webp';
+                $filename = time() . uniqid() . '.png';
                 $path = $directory . '/' . $filename;
 
                 // Chuyển ảnh sang WebP (Chú ý: `toWebp()` trong bản 3.9)

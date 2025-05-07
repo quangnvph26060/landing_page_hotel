@@ -1,15 +1,16 @@
 <footer class="footer shadow-bg get-section" id="sectionContact" style="background: url('{{ asset('frontend/image/background-footer.jpg') }}') no-repeat top;">
 
     <div class="container">
-        <div class="wrap-head-footer">
-            <div  class="col-lg-3 col-md-12 footer-list info">
+        <div class="wrap-head-footer row">
+            <div  class="col-lg-6 col-md-12 footer-list info">
 
                 <p class="p p-company mb-3">{{ $config->company }}</p>
-                <p class="p p-hotline">Hotline: {{ $config->hotline }}</p>
-                <a title="email" href="#"  rel="nofollow">Email:
-                <span class="email-support">{{ $config->email }}</span></a>
+                <p class="p p-address">Trụ sở chính: {{ $config->address }}</p>
+                <p class="p p-email">Email: {{ $config->email }}</p>
+                {{-- <p class="p p-hotline">Hotline: {{ $config->hotline }}</p> --}}
+
             </div>
-            <div  class="col-lg-3 col-md-12 footer-list wrap-support" style="text-align: end">
+            <div  class="col-lg-3 col-sm-6 footer-list wrap-support" style="text-align: end">
                 <div class="div-support tvbh">
                     <h4 class="footer-title">Tư vấn bán hàng</h4>
                     <h4 class="hotline-number mb-1"><a href="tel:{{ $config->salesPhone }}">{{ $config->salesPhone }}</a></h4>
@@ -19,10 +20,7 @@
                     <li ></li>
                 </ul>
             </div>
-            <div  class="col-lg-3 col-md-12 footer-list company">
-                <p class="p p-address">Trụ sở chính: {{ $config->address }}</p>
-            </div>
-            <div  class="col-lg-3 col-md-12 footer-list wrap-support" style="text-align: end">
+            <div  class="col-lg-3 col-sm-6 footer-list wrap-support" style="text-align: end">
 
                 <div class="div-support cskh">
                     <h4 class="footer-title">Chăm sóc khách hàng</h4>
