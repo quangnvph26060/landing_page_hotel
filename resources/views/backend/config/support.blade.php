@@ -33,7 +33,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="text-center">
-                            <h5 class="card-title">Thêm/Sửa Bài Viết</h5>
+                            <h5 class="card-title">Thêm/Sửa </h5>
                         </div>
 
                         <form id="postForm" enctype="multipart/form-data" action="{{ route('admin.technologies.store') }}">

@@ -50,7 +50,7 @@
                                 </div>
                             </div>
                             <div class="new-register-right position-relative">
-                                <div class="new-register-top" style="margin-top: 75px"><a class="cursor-pointer"> Tạo tài khoản dùng thử miễn phí
+                                <div class="new-register-top" style="margin-top: 40px"><a class="cursor-pointer"> Tạo tài khoản dùng thử miễn phí
                                     </a></div>
                                 <form method="post" class="register-form new-register-form" novalidate
                                     action="{{ route('submit.register') }}">
@@ -119,6 +119,23 @@
                                         @enderror
                                     </div>
 
+                                    {{-- <div class="form-group w-100">
+
+                                        <select name="contact" id="contact" class="form-select w-100">
+                                            <option selected value="">Được giới thiệu từ đâu</option>
+                                            @forelse ($contacts as $item)
+                                                <option value="{{ $item->id }}"
+                                                    {{ old('contact') == $item->id ? 'selected' : '' }}>
+                                                    {{ $item->name }}</option>
+                                            @empty
+                                            @endforelse
+                                            <option value="new">Lựa chọn khác</option>
+                                        </select>
+                                        @error('contact')
+                                            <span class="error-message text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div> --}}
+
                                     {!! NoCaptcha::renderJs() !!}
                                     {!! NoCaptcha::display() !!}
                                     @error('g-recaptcha-response')
@@ -129,9 +146,6 @@
                                         <button class="btn btn-primary" type="submit">Tiếp tục</button>
                                     </div>
                                 </form>
-
-
-
                             </div>
                             <!---->
                             <div class="bg-overflow"></div>

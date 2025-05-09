@@ -18,10 +18,46 @@ class HomeController extends Controller
 
         $banner = Banner::first();
         $function = Functions::get();
+        $post = Post::where('type', 'customer')->get();
+        $highlight = Highlight::first();
+        $technologie = Technology::get();
+        $config = Config::first();
+        return view('frontend.home.index', compact('banner', 'function', 'post', 'highlight', 'technologie', 'config'));
+    }
+
+    public function service(){
+
+        $banner = Banner::first();
+        $function = Functions::get();
         $post = Post::get();
         $highlight = Highlight::first();
         $technologie = Technology::get();
         $config = Config::first();
-        return view('frontend.layouts.master', compact('banner', 'function', 'post', 'highlight', 'technologie', 'config'));
+        return view('frontend.service.index', compact('banner', 'function', 'post', 'highlight', 'technologie', 'config'));
+    }
+
+    public function post(){
+
+        $banner = Banner::first();
+        $function = Functions::get();
+        $post = Post::orderBy('created_at', 'desc')->get();
+        $postnews = Post::orderBy('created_at', 'desc')->limit(5)->get();
+        $highlight = Highlight::first();
+        $technologie = Technology::get();
+        $config = Config::first();
+        return view('frontend.post.index', compact('banner', 'function', 'post', 'highlight', 'technologie', 'config', 'postnews'));
+    }
+
+    public function postDetail($slug){
+
+        $banner = Banner::first();
+        $post = Post::where('slug', $slug)->first();
+        if(!$post){
+            return redirect()->route('post');
+        }
+        $postnews = Post::orderBy('created_at', 'desc')->limit(5)->get();
+
+        $config = Config::first();
+        return view('frontend.post.detail', compact('banner',  'post', 'config', 'postnews'));
     }
 }

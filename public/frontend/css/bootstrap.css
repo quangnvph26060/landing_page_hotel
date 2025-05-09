@@ -31096,7 +31096,7 @@ span.span-copy svg {
 
 @media (max-width:767px) {
     .form-register-mb .header-register {
-        background-image: url(https://cdn-kvweb-website.kiotviet.vn/images/illustration.png);
+        /* background-image: url(https://cdn-kvweb-website.kiotviet.vn/images/illustration.png); */
         float: left;
         height: 220px;
         text-align: center;

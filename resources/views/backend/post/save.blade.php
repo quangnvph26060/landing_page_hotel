@@ -114,6 +114,19 @@
                     </div>
                 </div>
 
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Loại bài viết</h5>
+                    </div>
+
+                    <div class="card-body">
+                        <select name="status" id="status" class="form-select">
+                            <option value="post" @selected(($post->type ?? 'post') == 'post')>Tin tức</option>
+                            <option value="customer" @selected(($post->type ?? '') =='customer')>Khách hàng</option>
+                        </select>
+                    </div>
+                </div>
+
 
                 <div class="card">
                     <div class="card-header">

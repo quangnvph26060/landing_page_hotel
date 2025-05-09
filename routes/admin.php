@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\BulkActionController;
 use App\Http\Controllers\Admin\ConfigController;
+use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FunctionsController;
 use App\Http\Controllers\Admin\HighlightController;
@@ -47,6 +48,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('banners', BannerController::class);
 
         Route::resource('seo', SeoController::class);
+        Route::resource('contacts', ContactController::class);
 
         Route::post('/delete-items', [BulkActionController::class, 'deleteItems'])->name('delete.items');
         Route::post('/title-function', [TitleFunctionController::class, 'update'])->name('update.title');

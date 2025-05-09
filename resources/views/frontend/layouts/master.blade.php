@@ -79,7 +79,8 @@
             /* màu đường gạch chân */
             transition: width 0.3s ease;
         }
-        .nav-link:hover{
+
+        .nav-link:hover {
             color: #ff0100 !important;
         }
 
@@ -95,7 +96,8 @@
         .nav-link.nav-link-active::after {
             width: 100%;
         }
-        .box-popup-register:hover{
+
+        .box-popup-register:hover {
             background: none;
         }
     </style>
@@ -120,17 +122,21 @@
             <div id="page-solution">
                 @include('frontend.layouts.partials.content.banner')
 
-                <div class="bg-overflow"></div>
+                @yield('content')
 
-                @include('frontend.layouts.partials.content.cardBox')
+                {{-- <div class="bg-overflow"></div> --}}
+
+                {{-- @include('frontend.layouts.partials.content.cardBox') --}}
 
                 {{-- @include('frontend.layouts.partials.content.industry') --}}
 
+{{--
                 @include('frontend.layouts.partials.content.customer')
 
-                @include('frontend.layouts.partials.content.hotline')
+                @include('frontend.layouts.partials.content.hotline') --}}
 
-                <span title="Lên đầu trang" class="go_top cursor-pointer" style="background-color: #ff0100 !important">
+                <span title="Lên đầu trang" class="go_top cursor-pointer"
+                    style="background-color: #ff0100 !important">
                     <i class="fa-solid fa-up-long"></i>
                 </span>
                 <!---->

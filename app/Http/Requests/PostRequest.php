@@ -29,6 +29,7 @@ class PostRequest extends FormRequest
             'description_seo'       => 'nullable|max:150',
             'keywords_seo'          => 'nullable',
             'status'                => 'required|in:1,2',
+            'type'                  => 'required',
         ];
     }
 
@@ -49,6 +50,7 @@ class PostRequest extends FormRequest
             'description_seo'  => 'Mô tả SEO',
             'keywords_seo'     => 'Từ khóa SEO',
             'status'           => 'Trạng thái',
+            'type'             => 'Loại bài viết',
         ];
     }
 }

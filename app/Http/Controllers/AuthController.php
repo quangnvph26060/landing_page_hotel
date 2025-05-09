@@ -11,6 +11,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\Auth\LoginUserRequest;
 use App\Http\Requests\RegisterRequest;
+use App\Models\Contact;
 use App\Models\Province;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
@@ -70,7 +71,8 @@ class AuthController extends Controller
     public function registerUser()
     {
         $city = Province::get();
-        return view('frontend.auth.register', compact('city'));
+        $contacts = Contact::get();
+        return view('frontend.auth.register', compact('city', 'contacts'));
     }
 
     public function registerUserSubmit(RegisterRequest $request){
