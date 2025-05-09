@@ -1,4 +1,4 @@
-<footer class="footer shadow-bg get-section" id="sectionContact" style="background: url('{{ asset('frontend/image/background-footer.jpg') }}') no-repeat top;">
+<footer class="footer shadow-bg get-section" id="sectionContact" style="background: url('{{ showImage($banner->image_footer) }}') no-repeat top;">
 
     <div class="container">
         <div class="wrap-head-footer row">

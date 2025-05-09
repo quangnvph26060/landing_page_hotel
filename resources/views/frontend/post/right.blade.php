@@ -1,17 +1,5 @@
 <div class="news-col-right">
-    <div class="box-two blog-facebook">
-        <div class="fb-like-box" data-href="https://www.facebook.com/PhanmembanhangKiotViet" data-width="341px"
-            data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true">
-        </div>
-    </div>
 
-    {{-- <div class="box-two box-add">
-        <a href="https://www.kiotviet.vn/qua-tang-cuc-hoi-hung-khoi-kinh-doanh-cung-chu-shop-kiotviet/" target="_blank"
-            rel="nofollow noopener noreferrer">
-            <img src="https://cdn-kvweb.kiotviet.vn/kiotviet-website/wp-content/uploads/2025/03/21093250/Ban-hang-thanh-thoi-1200x628-1.png"
-                alt="">
-        </a>
-    </div> --}}
     <div class="box-one blog-right mt-4">
         <h6 class="title-news-sub"><i class="far fa-newspaper"></i><span>Bài viết liên quan</span>
         </h6>

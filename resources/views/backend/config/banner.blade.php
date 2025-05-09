@@ -57,6 +57,19 @@
                                         </div>
                                     </div>
 
+                                    <div class="form-group mb-3 col-lg-12">
+                                        <div class="mb-3">
+                                            <label for="image_footer" class="form-label">Banner Footer<span
+                                                    class="text-danger">*</span></label>
+                                            <img class="img-fluid img-thumbnail w-100" id="show_image_footer"
+                                                style="cursor: pointer; height: 400px !important;"
+                                                src="{{ showImage($banner->image_footer ?? '') }}" alt=""
+                                                onclick="document.getElementById('image_footer').click();">
+                                            <input type="file" name="image_footer" id="image_footer" class="form-control d-none"
+                                                accept="image/*" onchange="previewImage(event, 'show_image_footer')">
+                                        </div>
+                                    </div>
+
                                 </div>
                                 <div class="d-flex justify-content-center">
                                     <button type="submit" class="btn btn-primary">Lưu</button>

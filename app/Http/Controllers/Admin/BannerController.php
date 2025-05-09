@@ -39,6 +39,10 @@ class BannerController extends Controller
             $data['image'] = saveImages($request, 'image', 'banner');
         }
 
+        if ($request->hasFile('image_footer')) {
+            $data['image_footer'] = saveImages($request, 'image_footer', 'banner');
+        }
+
         $data['title'] = $request->title;
 
         $banner = Banner::first();
