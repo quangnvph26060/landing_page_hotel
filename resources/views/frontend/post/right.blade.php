@@ -12,7 +12,7 @@
                 alt="">
         </a>
     </div> --}}
-    <div class="box-one blog-right">
+    <div class="box-one blog-right mt-4">
         <h6 class="title-news-sub"><i class="far fa-newspaper"></i><span>Bài viết liên quan</span>
         </h6>
         <ul class="blog-choose">
