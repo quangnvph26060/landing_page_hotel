@@ -14,11 +14,11 @@
             font-style: normal;
         }
 
-        *:not(i, p, a) {
+        *:not(i, p, a, li) {
             font-family: 'HandelGothicArabic', sans-serif !important;
         }
 
-        p {
+        p:not(.price-packagename), li {
             font-family: 'Rajdhani', sans-serif !important;
         }
 
@@ -98,7 +98,7 @@
         }
 
         .box-popup-register:hover {
-            background: none;
+            background-color: #ff0100 !important;
         }
     </style>
 

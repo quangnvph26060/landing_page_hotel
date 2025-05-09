@@ -10754,7 +10754,7 @@ html button,
 html input,
 html select,
 html textarea {
-    caret-color: #0070f4;
+    caret-color: #ff0100;
     font-family: inherit;
     font-size: inherit
 }
@@ -11803,11 +11803,11 @@ h6 {
 }
 
 .text-primary {
-    color: #0070f4 !important
+    color: #ff0100 !important
 }
 
 .bg-primary {
-    background-color: #0070f4
+    background-color: #ff0100
 }
 
 .text-secondary {
@@ -11984,7 +11984,7 @@ h6 {
 }
 
 .color-blue {
-    color: #0070f4 !important
+    color: #ff0100 !important
 }
 
 .color-gray {
@@ -12044,7 +12044,7 @@ h6 {
 }
 
 .color-primary {
-    color: #0070f4 !important
+    color: #ff0100 !important
 }
 
 .color-secondary,
@@ -12073,7 +12073,7 @@ h6 {
 }
 
 .color-hyper:hover {
-    color: #0070f4
+    color: #ff0100
 }
 
 .color-white {
@@ -12264,8 +12264,8 @@ h6 {
 }
 
 .header .btn-primary {
-    background-color: #0070f4;
-    border-color: #0070f4;
+    background-color: #ff0100;
+    border-color: #ff0100;
     color: #000
 }
 
@@ -12275,8 +12275,8 @@ h6 {
 }
 
 .header .btn-outline-primary:hover:not(:disabled) {
-    background: #0070f424 !important;
-    color: #0070f4 !important
+    background: #ff010024 !important;
+    color: #ff0100 !important
 }
 
 .header .btn-group-sm>.btn,
@@ -12616,7 +12616,7 @@ h6 {
 .header a:not(.btn):hover h4,
 .header span:hover,
 .header span:hover h4 {
-    color: #0070f4
+    color: #ff0100
 }
 
 @media only screen and (max-width:1023px) {
@@ -13206,7 +13206,7 @@ h6 {
 
 .navbar-header-content .dropdown-menu.product-menu-list .product-menu-link .product-active i {
     color: #005ac3 !important;
-    color: #0070f4
+    color: #ff0100
 }
 
 @media only screen and (min-width:1200px) {
@@ -13313,7 +13313,7 @@ h6 {
         background: #e6f1fe;
         border-radius: 99px;
         box-shadow: none;
-        color: #0070f4
+        color: #ff0100
     }
 }
 
@@ -13321,7 +13321,7 @@ h6 {
     background: #cce2fd;
     border-radius: 99px;
     box-shadow: none;
-    color: #0070f4
+    color: #ff0100
 }
 
 .navbar-header-content .dropdown-menu:not(.industry-form) a.dropdown-menu-active,
@@ -13332,7 +13332,7 @@ h6 {
 .navbar-header-content .dropdown-menu:not(.industry-form) a.dropdown-menu-active,
 .navbar-header-content .dropdown-menu:not(.industry-form) a:active {
     background: transparent;
-    color: #0070f4;
+    color: #ff0100;
     font-weight: 600
 }
 
@@ -13384,7 +13384,7 @@ h6 {
 }
 
 .navbar-header-content .dropdown-menu .industry-item .industry-content:hover {
-    background: #0070f424
+    background: #ff010024
 }
 
 @media only screen and (max-width:1199px) {
@@ -13395,7 +13395,7 @@ h6 {
 }
 
 .navbar-header-content .dropdown-menu .industry-item .industry-content>[class*=fa] {
-    background: #0070f424;
+    background: #ff010024;
     border-radius: 999px;
     display: inline-block;
     flex: 0 0 3.6rem;
@@ -13436,7 +13436,7 @@ h6 {
 
 @media only screen and (min-width:1200px) {
     .navbar-header-content .dropdown-menu .tab:hover {
-        background: #0070f424
+        background: #ff010024
     }
 }
 
@@ -13802,7 +13802,7 @@ h6 {
 }
 
 .nav-link-box.show2 a {
-    color: #0070f4 !important
+    color: #ff0100 !important
 }
 
 .introduces-list {
@@ -13869,7 +13869,7 @@ h6 {
 }
 
 .industry-content>[class*=fa] {
-    background: linear-gradient(0deg, #ffffffdb, #ffffffdb), #0070f4;
+    background: linear-gradient(0deg, #ffffffdb, #ffffffdb), #ff0100;
     border-radius: 5rem;
     display: inline-block;
     font-size: 3rem;
@@ -13908,7 +13908,7 @@ h6 {
 }
 
 /* .nav-link-active {
-    color: #0070f4 !important
+    color: #ff0100 !important
 }
 
 @media screen and (min-width:768px) {
@@ -14876,7 +14876,7 @@ h6 {
 }
 
 #loader {
-    background-color: #0070f4;
+    background-color: #ff0100;
     display: block;
     height: 78px;
     margin: auto;
@@ -14942,7 +14942,7 @@ h6 {
 .go_top {
     align-items: center;
     background-clip: padding-box;
-    background-color: #0070f4;
+    background-color: #ff0100;
     border-radius: 100%;
     bottom: 150px;
     color: #fff;
@@ -15808,7 +15808,7 @@ h6 {
     .page-sach-van-phong-pham .industry-list .solution-list-wrap>div:nth-child(13) a,
     .page-spa-salon-massage-nails .industry-list .solution-list-wrap>div:nth-child(6) a,
     .page-vat-lieu-xay-dung .industry-list .solution-list-wrap>div:nth-child(9) a {
-        background: #0070f424
+        background: #ff010024
     }
 
     .page-bar-cafe-nha-hang .industry-list .solution-list-wrap>div:nth-child(2) a h4,
@@ -15826,7 +15826,7 @@ h6 {
     .page-sach-van-phong-pham .industry-list .solution-list-wrap>div:nth-child(13) a h4,
     .page-spa-salon-massage-nails .industry-list .solution-list-wrap>div:nth-child(6) a h4,
     .page-vat-lieu-xay-dung .industry-list .solution-list-wrap>div:nth-child(9) a h4 {
-        color: #0070f4
+        color: #ff0100
     }
 
     .page-blog .blog-form>li:first-child a,
@@ -15836,8 +15836,8 @@ h6 {
     .tag-kinh-nghiem-kinh-doanh .blog-form>li:nth-child(2) a,
     .tag-meo-hay .blog-form>li:nth-child(4) a,
     .tag-tin-tuc-ve-ki-ot-viet .blog-form>li:nth-child(6) a {
-        background: #0070f424;
-        color: #0070f4
+        background: #ff010024;
+        color: #ff0100
     }
 }
 
@@ -15874,7 +15874,7 @@ h6 {
 }
 
 der .btn-primary {
-    background-color: #0070f4;
+    background-color: #ff0100;
     color: #fff
 }
 
@@ -15981,8 +15981,8 @@ der .btn-primary:not(:disabled):focus {
 
 .btn-outline-primary {
     background-color: transparent;
-    border-color: #0070f4 !important;
-    color: #0070f4 !important
+    border-color: #ff0100 !important;
+    color: #ff0100 !important
 }
 
 @media only screen and (min-width:1200px) {
@@ -15991,9 +15991,9 @@ der .btn-primary:not(:disabled):focus {
     .btn-outline-primary:not(.disabled):hover,
     .btn-outline-primary:not(:disabled).hover,
     .btn-outline-primary:not(:disabled):hover {
-        background-color: #0070f433 !important;
+        background-color: #ff010033 !important;
         box-shadow: none !important;
-        color: #0070f4 !important;
+        color: #ff0100 !important;
         outline: none !important
     }
 }
@@ -16006,9 +16006,9 @@ der .btn-primary:not(:disabled):focus {
 .btn-outline-primary:not(:disabled).focus,
 .btn-outline-primary:not(:disabled):active,
 .btn-outline-primary:not(:disabled):focus {
-    background-color: #0070f433 !important;
+    background-color: #ff010033 !important;
     box-shadow: none !important;
-    color: #0070f4 !important;
+    color: #ff0100 !important;
     outline: none !important
 }
 
@@ -16245,7 +16245,7 @@ der .btn-primary:not(:disabled):focus {
 .btn-industry-viewmore {
     align-items: center;
     border-top: 1px solid #e8eaed;
-    color: #0070f4;
+    color: #ff0100;
     display: flex;
     font-size: 14px;
     font-weight: 600;
@@ -16257,7 +16257,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .register {
-    background-color: #0070f4;
+    background-color: #ff0100;
     border: none;
     border-radius: 99px;
     box-shadow: 0 8px 16px #00000014;
@@ -16658,7 +16658,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .select2-container--default .select2-search--dropdown .select2-search__field {
-    border: 1px solid #0070f4
+    border: 1px solid #ff0100
 }
 
 .select2-container--default .select2-search--inline .select2-search__field {
@@ -16717,7 +16717,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .select2-container--default .select2-results__option--selected {
-    background-color: #0070f4;
+    background-color: #ff0100;
     color: #fff
 }
 
@@ -17319,7 +17319,7 @@ der .btn-primary:not(:disabled):focus {
 
 @media only screen and (min-width:1200px) {
     .banner-home .banner-logo-item a:hover {
-        box-shadow: 0 8px 24px #0070f433
+        box-shadow: 0 8px 24px #ff010033
     }
 
     .banner-home .banner-logo-item a:hover .img-logo img {
@@ -17704,7 +17704,7 @@ der .btn-primary:not(:disabled):focus {
 
 @media only screen and (min-width:1200px) {
     .video-banner-box .modalyoutube-close:hover {
-        color: #0070f4
+        color: #ff0100
     }
 }
 
@@ -18449,7 +18449,7 @@ der .btn-primary:not(:disabled):focus {
 @media only screen and (min-width:1200px) {
     .industry-all-major:hover {
         background-color: #f2f8fe;
-        color: #0070f4;
+        color: #ff0100;
         cursor: pointer
     }
 
@@ -18463,12 +18463,12 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .industry-all-major.industry-active {
-    color: #0070f4;
+    color: #ff0100;
     cursor: pointer
 }
 
 .industry-all-major.industry-active svg {
-    color: #0070f4
+    color: #ff0100
 }
 
 .industry-all .icon-wrapper {
@@ -18882,7 +18882,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .solution-item ul li svg {
-    color: #0070f4;
+    color: #ff0100;
     font-size: 20px;
     margin-right: 12px;
     padding: 0 2px
@@ -19097,7 +19097,7 @@ der .btn-primary:not(:disabled):focus {
 
 @media only screen and (min-width:1200px) {
     .customer-box .customer-item:hover .customer-title a {
-        color: #0070f4
+        color: #ff0100
     }
 }
 
@@ -19597,7 +19597,7 @@ der .btn-primary:not(:disabled):focus {
     }
 
     .link-item:hover h4 {
-        color: #0070f4 !important
+        color: #ff0100 !important
     }
 }
 
@@ -19654,7 +19654,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .link-item.scan-barcode p {
-    color: #0070f4;
+    color: #ff0100;
     font-size: 14px;
     font-weight: 600;
     line-height: 20px
@@ -19667,7 +19667,7 @@ der .btn-primary:not(:disabled):focus {
 
 @media only screen and (min-width:1200px) {
     .btn-popup-app:hover {
-        color: #0070f4
+        color: #ff0100
     }
 }
 
@@ -19812,7 +19812,7 @@ der .btn-primary:not(:disabled):focus {
     }
 
     .news-item:not(.news-item_1):not(.news-item_2):hover .news-title a {
-        color: #0070f4
+        color: #ff0100
     }
 }
 
@@ -19937,7 +19937,7 @@ der .btn-primary:not(:disabled):focus {
 
     .news-item_1:hover .news-title a,
     .news-item_2:hover .news-title a {
-        color: #0070f4
+        color: #ff0100
     }
 }
 
@@ -20608,7 +20608,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .banner-phi-dich-vu .text-banner h1 em {
-    border: solid #0070f4;
+    border: solid #ff0100;
     border-width: 0 0 6px;
     font-style: normal
 }
@@ -20844,7 +20844,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .price-service-item .sub-title {
-    background: #0070f4;
+    background: #ff0100;
     border-radius: 99px;
     color: #fff;
     font-size: 14px;
@@ -20995,11 +20995,11 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .price-service-item.profession .wrap-price i {
-    color: #0070f4
+    color: #ff0100
 }
 
 .price-service-item.profession .price-value em {
-    border-color: #0070f4
+    border-color: #ff0100
 }
 
 @media only screen and (max-width:1199px) {
@@ -21702,7 +21702,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .box-product-price .product-category .category-title .text:before {
-    background-color: #0070f4;
+    background-color: #ff0100;
     border-radius: 3px;
     bottom: 0;
     content: "";
@@ -21735,7 +21735,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .box-product-price .kv-btn-price.kv-btn-price-now {
-    background-color: #0070f4;
+    background-color: #ff0100;
     color: #fff
 }
 
@@ -21756,7 +21756,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .box-product-price .border-primary {
-    border: 1px solid #0070f4;
+    border: 1px solid #ff0100;
     padding: 23px 11px 11px !important
 }
 
@@ -21921,7 +21921,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .box-product-price .product-price .info-product-price p.code {
-    color: #0070f4;
+    color: #ff0100;
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
@@ -22182,7 +22182,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .box-product-price .intro-product .col-xs-9 p {
-    color: #0070f4;
+    color: #ff0100;
     font-size: 1.6rem;
     font-weight: 600;
     line-height: 24px;
@@ -22197,7 +22197,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .box-product-price .intro-product .col-xs-9 p.contact {
-    color: #0070f4;
+    color: #ff0100;
     display: block;
     font-size: 14px;
     line-height: 20px;
@@ -22542,7 +22542,7 @@ der .btn-primary:not(:disabled):focus {
 
 .frame-extended-solution .button-detail {
     align-items: center;
-    color: #0070f4;
+    color: #ff0100;
     display: flex;
     font-size: 14px;
     font-weight: 600;
@@ -22726,7 +22726,7 @@ der .btn-primary:not(:disabled):focus {
 
 .price-service-item.profession {
     border-radius: 20px;
-    outline: 2px solid #0070f4;
+    outline: 2px solid #ff0100;
     padding-top: 22px
 }
 
@@ -23001,7 +23001,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .frame-extended-solution .button-register {
-    background: #0070f4;
+    background: #ff0100;
     border: none;
     border-radius: 99px;
     color: #fff;
@@ -23191,7 +23191,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .popup-register-purchase .popup-wrap .popup-content-main .textarea-control:focus {
-    border-color: #0070f4
+    border-color: #ff0100
 }
 
 .popup-register-purchase .popup-wrap .form-contact {
@@ -23315,7 +23315,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .popup-login-main .close-modal-harware {
-    background-color: #0070f4;
+    background-color: #ff0100;
     border: 0;
     border-radius: 99px;
     color: #fff;
@@ -23427,7 +23427,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .intro-product-contact .kv-btn-price-now {
-    background: #0070f4;
+    background: #ff0100;
     border-radius: 99px;
     color: #fff;
     cursor: pointer;
@@ -23441,7 +23441,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .intro-product-contact .contactTxt {
-    color: #0070f4;
+    color: #ff0100;
     display: block;
     font-size: 14px;
     font-weight: 600;
@@ -23487,7 +23487,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .product-detail-price .price-new {
-    color: #0070f4;
+    color: #ff0100;
     font-size: 18px;
     font-weight: 600;
     line-height: 26px
@@ -24204,7 +24204,7 @@ der .btn-primary:not(:disabled):focus {
 
 .introcustomer-rules-icon.fa-money-bill {
     background-color: #f2f8fe;
-    color: #0070f4
+    color: #ff0100
 }
 
 .introcustomer-rules-icon.fa-mobile-screen-button {
@@ -24563,7 +24563,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .customerIntro-navbar a:hover {
-    color: #0070f4 !important
+    color: #ff0100 !important
 }
 
 @media only screen and (max-width:1199px) {
@@ -24578,15 +24578,15 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .customerIntro-navbar a.active {
-    color: #0070f4;
+    color: #ff0100;
     position: relative
 }
 
 .customerIntro-navbar a.active:after {
-    border-bottom: 3px solid #0070f4;
+    border-bottom: 3px solid #ff0100;
     border-radius: 4px 4px 0 0;
     bottom: 0;
-    color: #0070f4;
+    color: #ff0100;
     content: "";
     display: block;
     left: 0;
@@ -24596,7 +24596,7 @@ der .btn-primary:not(:disabled):focus {
 
 @media only screen and (max-width:1199px) {
     .customerIntro-navbar a.active:after {
-        background: #0070f4;
+        background: #ff0100;
         border-bottom: unset;
         top: 0;
         width: 2px
@@ -24794,7 +24794,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 #customer .quantity-user {
-    color: #0070f4;
+    color: #ff0100;
     font-size: 2.4rem;
     font-weight: 700;
     line-height: 36px;
@@ -24825,7 +24825,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 #customer .quantity-icon {
-    color: #0070f4;
+    color: #ff0100;
     display: flex;
     flex-direction: column;
     font-size: 24px;
@@ -24868,7 +24868,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 #customer .customer-list .customer-item:hover .customer-title a {
-    color: #0070f4
+    color: #ff0100
 }
 
 #customer .customer-list .customer-item-img {
@@ -25066,7 +25066,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 #kv-pagination .page-items .page-item.active {
-    background: #0070f4;
+    background: #ff0100;
     color: #fff;
     padding: 8px 12px
 }
@@ -25118,7 +25118,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .home-back-button {
-    color: #0070f4;
+    color: #ff0100;
     font-size: 12px;
     font-weight: 500;
     line-height: 14.52px;
@@ -25161,8 +25161,8 @@ der .btn-primary:not(:disabled):focus {
 .register-wrapper .btn:focus,
 .register-wrapper .btn:hover,
 .register-wrapper .btn:visited {
-    background-color: #0070f4;
-    border-color: #0070f4;
+    background-color: #ff0100;
+    border-color: #ff0100;
     color: #fff
 }
 
@@ -25399,7 +25399,7 @@ der .btn-primary:not(:disabled):focus {
     }
 
     .register-left .register-top {
-        color: #0070f4;
+        color: #ff0100;
         font-size: 18px;
         margin-bottom: 0;
         padding-bottom: 0
@@ -25651,14 +25651,14 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .register-top-back {
-    color: #0070f4;
+    color: #ff0100;
     font-size: 16px;
     margin-right: 10px
 }
 
 .register-top-back:focus,
 .register-top-back:hover {
-    color: #0070f4
+    color: #ff0100
 }
 
 @media only screen and (min-width:992px) {
@@ -25861,7 +25861,7 @@ der .btn-primary:not(:disabled):focus {
 .form-check-label .form-control:focus,
 .form-check-label .select2-choice:focus {
     background-color: #fff;
-    border-color: #0070f4
+    border-color: #ff0100
 }
 
 .form-check-label .form-control:not(.textarea-control) {
@@ -25888,7 +25888,7 @@ der .btn-primary:not(:disabled):focus {
 
 .form-check-label .note {
     background-clip: padding-box;
-    background-color: #0070f41a;
+    background-color: #ff01001a;
     border-radius: 25px;
     color: #262a2e !important;
     font-size: 15px !important;
@@ -25948,9 +25948,9 @@ der .btn-primary:not(:disabled):focus {
 
 .btn-get-otp {
     background-clip: padding-box;
-    border: 1px solid #0070f4;
+    border: 1px solid #ff0100;
     border-radius: 99px;
-    color: #0070f4 !important;
+    color: #ff0100 !important;
     display: flex;
     font-size: 16px;
     font-weight: 600;
@@ -26016,7 +26016,7 @@ der .btn-primary:not(:disabled):focus {
 }
 
 .register-success-head h4 {
-    color: #0070f4;
+    color: #ff0100;
     color: #002146;
     font-size: 2.2rem;
     font-size: 1.5rem;
@@ -26305,7 +26305,7 @@ der .btn-primary:not(:disabled):focus {
 
 .captchar-box a svg {
     align-items: center;
-    color: #0070f4;
+    color: #ff0100;
     display: flex;
     font-size: 20px;
     height: 20px;
@@ -26402,8 +26402,8 @@ body:not(.page-template-registerWebapp) .front-register-error:not(:empty) svg {
 }
 
 .register-bottom .btn {
-    background-color: #0070f4;
-    border-color: #0070f4;
+    background-color: #ff0100;
+    border-color: #ff0100;
     border-radius: 99px;
     color: #fff;
     display: inline-block;
@@ -26444,9 +26444,9 @@ body:not(.page-template-registerWebapp) .front-register-error:not(:empty) svg {
 }
 
 .register-bottom .btn-arrow-left:hover {
-    background-color: #0070f433;
-    border-color: #0070f4;
-    color: #0070f4
+    background-color: #ff010033;
+    border-color: #ff0100;
+    color: #ff0100
 }
 
 .register-bottom .btn-arrow-right {
@@ -26467,7 +26467,7 @@ body:not(.page-template-registerWebapp) .front-register-error:not(:empty) svg {
 
 .register-bottom .btn-outline-primary {
     background-color: transparent;
-    color: #0070f4
+    color: #ff0100
 }
 
 .register-bottom .btn-outline-primary i {
@@ -26611,7 +26611,7 @@ body:not(.page-template-registerWebapp) .front-register-error:not(:empty) svg {
 
 .page-template-register.popup-register.register-pmain .new-website .btn-get-otp {
     background-color: transparent;
-    border: 1px solid #0070f4;
+    border: 1px solid #ff0100;
     color: #3e464f;
     font-size: 16px;
     font-weight: 400;
@@ -27089,7 +27089,7 @@ input#retailer_code:disabled {
 }
 
 .new-register-step-2 .register-final .register-bottom .back-home-page {
-    color: #0070f4;
+    color: #ff0100;
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
@@ -27636,7 +27636,7 @@ input#retailer_code:disabled {
 }
 
 .select2-container--default .select2-selection--single:hover {
-    border-radius: 1px solid #0070f4
+    border-radius: 1px solid #ff0100
 }
 
 .select2-container--default .select2-selection--single:focus-visible {
@@ -27697,7 +27697,7 @@ input#retailer_code:disabled {
 }
 
 .select2-dropdown .select2-search--dropdown .select2-search__field {
-    border: 1px solid #0070f4;
+    border: 1px solid #ff0100;
     border-radius: 8px;
     font-size: 14px;
     line-height: 20px;
@@ -28013,7 +28013,7 @@ textarea:hover {
 .filled .select,
 .filled:focus,
 .filled:focus-within {
-    border-color: #0070f4
+    border-color: #ff0100
 }
 
 .filled .select .fa-circle-exclamation,
@@ -28235,7 +28235,7 @@ textarea:hover {
 .valid .select2-init-data>.label-input:after,
 .valid>input>.label-input:after,
 .valid>textarea>.label-input:after {
-    background-color: #0070f4;
+    background-color: #ff0100;
     bottom: 0;
     content: "";
     height: 1px;
@@ -28793,7 +28793,7 @@ textarea:hover {
     }
 
     .terms-policies a {
-        color: #0070f4
+        color: #ff0100
     }
 
     .iti__flag.iti__vn {
@@ -28975,7 +28975,7 @@ textarea:hover {
     }
 
     .filled.error-border:focus-within {
-        border-color: #0070f4
+        border-color: #ff0100
     }
 
     .valid .phone-international:after {
@@ -29304,7 +29304,7 @@ textarea:hover {
     }
 
     .resend-otp a.send-otp {
-        color: #0070f4;
+        color: #ff0100;
         font-size: 14px;
         font-weight: 600;
         line-height: 20px
@@ -29377,7 +29377,7 @@ textarea:hover {
 
     .register-mobile .register-mobile-otp_step2 .form-check-label input.phone.focus {
         background-color: #fff;
-        border-color: #0070f4
+        border-color: #ff0100
     }
 
     .iti .iti__country-list {
@@ -30364,7 +30364,7 @@ textarea:hover {
 }
 
 #page-solution .quantity-icon {
-    color: #0070f4;
+    color: #ff0100;
     display: flex;
     flex-direction: column;
     font-size: 24px;
@@ -30385,7 +30385,7 @@ textarea:hover {
 }
 
 #page-solution .quantity-user {
-    color: #0070f4;
+    color: #ff0100;
     font-size: 24px;
     font-weight: 700;
     line-height: 36px;
@@ -30728,7 +30728,7 @@ textarea:hover {
 
 @media only screen and (min-width:1200px) {
     .ladingpage-breadcrumb span a:hover {
-        color: #0070f4
+        color: #ff0100
     }
 }
 
@@ -30754,7 +30754,7 @@ textarea:hover {
     }
 
     .ladingpage-item:hover .ladingpage-item-title {
-        color: #0070f4
+        color: #ff0100
     }
 }
 
@@ -30811,7 +30811,7 @@ textarea:hover {
 }
 
 .new-register .wrap-input.validated .filled:focus-within {
-    border: 1px solid #0070f4
+    border: 1px solid #ff0100
 }
 
 .new-register .wrap-input.input-address .svg-inline--fa.error {
@@ -30857,7 +30857,7 @@ input#phone::placeholder {
 }
 
 .register-chooseindustry .wrap-input.validated .filled:focus-within {
-    border: 1px solid #0070f4
+    border: 1px solid #ff0100
 }
 
 .register-chooseindustry .wrap-input .label-chooseindustry .svg-inline--fa.error,
@@ -31054,7 +31054,7 @@ span.span-copy svg {
     }
 
     .register-industry.form-otp .wrap-input.validated .m-filled:focus-within {
-        border: 1px solid #0070f4
+        border: 1px solid #ff0100
     }
 
     .register-industry.form-otp .input-address .svg-inline--fa.error {
@@ -31062,7 +31062,7 @@ span.span-copy svg {
     }
 
     .register-industry.form-otp .m-filled:focus-within {
-        border: 1px solid #0070f4
+        border: 1px solid #ff0100
     }
 
     .iti--allow-dropdown input,
@@ -31149,7 +31149,7 @@ span.span-copy svg {
     }
 
     .form-step-four .wrap-input.validated .m-filled:focus-within {
-        border: 1px solid #0070f4
+        border: 1px solid #ff0100
     }
 
     .form-step-four .wrap-input.validated .m-filled .error {
@@ -31180,7 +31180,7 @@ span.span-copy svg {
     }
 
     .register-mobile-final-info-block .code {
-        color: #0070f4
+        color: #ff0100
     }
 
     .register-mobile .register-mobile-otp_step3 .sub-title {

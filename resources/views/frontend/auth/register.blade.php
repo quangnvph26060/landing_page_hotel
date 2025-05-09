@@ -143,7 +143,7 @@
                                         @enderror
 
                                     <div class="form-group text-center w-100">
-                                        <button class="btn btn-primary" type="submit">Tiếp tục</button>
+                                        <button class="btn" style="background-color: #ff0100" type="submit">Tiếp tục</button>
                                     </div>
                                 </form>
                             </div>
