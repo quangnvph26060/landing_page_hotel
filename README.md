@@ -64,3 +64,39 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+mysql
+
+
+-- Bảng SupportCategories để phân loại các vấn đề hỗ trợ
+CREATE TABLE SupportCategories (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    parent_id INT,
+    slug VARCHAR(255) NOT NULL,
+    FOREIGN KEY (parent_id) REFERENCES SupportCategories(id) ON DELETE CASCADE,
+    UNIQUE (slug)
+);
+
+-- Bảng SupportPosts để lưu các bài viết hỗ trợ
+CREATE TABLE SupportPosts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    content TEXT,
+    slug VARCHAR(255) NOT NULL,
+    category_id INT,
+    author_id INT,
+    status ENUM('draft', 'published', 'archived') DEFAULT 'draft',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    parent_post_id INT,
+    FOREIGN KEY (category_id) REFERENCES SupportCategories(id) ON DELETE CASCADE,
+    FOREIGN KEY (parent_post_id) REFERENCES SupportPosts(id) ON DELETE CASCADE,
+    UNIQUE (slug)
+);
+
+-- Tạo chỉ mục để tối ưu hóa tìm kiếm thể loại con
+CREATE INDEX idx_parent_id ON SupportCategories(parent_id);
+CREATE INDEX idx_category_id ON SupportPosts(category_id);
+

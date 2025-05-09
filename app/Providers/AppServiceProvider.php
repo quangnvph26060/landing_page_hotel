@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Banner;
 use App\Models\Config;
 use App\Models\TitleFunction;
 use Illuminate\Support\Facades\View;
@@ -25,6 +26,9 @@ class AppServiceProvider extends ServiceProvider
         //
         $config_all = Config::first();
         $titleFunction = TitleFunction::first();
+          $config = Config::first();$banner = Banner::first();
+            View::share('config', $config);
+              View::share('banner', $banner);
         View::share('config_all', $config_all);
         View::share('titleFunction', $titleFunction);
     }

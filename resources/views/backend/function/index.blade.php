@@ -105,7 +105,8 @@
     <script src="{{ asset('backend/assets/js/connectDataTable.js') }}"></script>
     <script>
         $(document).ready(function() {
-            const api = "https://fasthotel.vn/admin/functions"
+             const APP_URL = "{{ config(key: 'app.url') }}";
+            const api = APP_URL + "/admin/functions";
             dataTables(api, columns, 'Functions')
 
             $('#save').click(function(event) {
