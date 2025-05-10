@@ -17,12 +17,17 @@
             {
                 "title": "Danh sách chức năng",
                 "url": "admin.functions.index"
-            }, {
+            },
+             {
                 "title": "Cấu hình chung",
                 "url": "admin.banners.index"
             }, {
-                "title": "Cấu gía",
+                "title": "Cấu hình gía",
                 "url": "admin.prices.index"
+            },
+              {
+                "title": "Hỗ trợ",
+                "url": "admin.banners.index"
             }
 
         ],

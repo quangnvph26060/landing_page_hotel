@@ -120,7 +120,8 @@
 
     <script>
         $(document).ready(function() {
-            const api = "https://fasthotel.vn/admin/technologies"
+             const APP_URL = "{{ config('app.url') }}";
+            const api = APP_URL + "/admin/technologies";
             dataTables(api, columns, 'Technology');
 
             $('#save').click(function(event) {

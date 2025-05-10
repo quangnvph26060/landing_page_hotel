@@ -29,7 +29,9 @@
     <script src="{{ asset('backend/assets/js/connectDataTable.js') }}"></script>
     <script>
         $(document).ready(function() {
-            const api = "https://fasthotel.vn/admin/posts"
+            const APP_URL = "{{ config('app.url') }}";
+            const api = APP_URL + "/admin/posts";
+           
             dataTables(api, columns, 'Post')
         })
     </script>

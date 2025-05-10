@@ -22,22 +22,24 @@
                     <div class="offcanvas-body pt-0">
                         <ul class="navbar-header-content navbar-nav">
                             <li class="nav-item nav-item-product">
-                                <a class="nav-link">Sản phẩm</a>
+                                <a class="nav-link">Tính năng</a>
                             </li>
-                            <li class="nav-item nav-item-industry">
-                               <a class="nav-link ">Giải pháp</a><!---->
-                            </li>
+                           
                             <li class="nav-item nav-item-customer">
                               <a class="nav-link">Khách hàng</a>
                             </li>
+                           
                             <li class="nav-item">
-                                <a href="{{ route('service') }}" class="nav-link {{ Request::is('service') ? 'nav-link-active' : '' }}"> Phí dịch vụ</a>
+                                <a href="{{ route('service') }}" class="nav-link {{ Request::is('service') ? 'nav-link-active' : '' }}"> Bảng giá</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link"> Hỗ trợ </a>
+                                <a class="nav-link"  href="{{ route('suport') }}" class="nav-link {{ Request::is('suport') ? 'nav-link-active' : '' }}"> Hỗ trợ </a>
                             </li>
                             <li class="nav-item nav-item-blog">
                                 <a href="{{ route('post') }}" class="nav-link {{ Request::is('post') ? 'nav-link-active' : '' }}"> Tin tức</a>
+                            </li>
+                             <li class="nav-item nav-item-blog">
+                                <a  class="nav-link ">Về Fasthost</a>
                             </li>
                             <li>
                                 <div class="registerandlogin">

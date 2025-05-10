@@ -56,7 +56,7 @@
 @push('styles')
     <link rel="stylesheet" href="{{ asset('backend/assets/css/dataTables.min.css') }}">
     <style>
-        th{
+        th {
             text-align: start;
         }
     </style>
@@ -71,7 +71,9 @@
 
     <script>
         $(document).ready(function() {
-            const api = "https://fasthotel.vn/admin/contacts"
+
+            const APP_URL = "{{ config('app.url') }}";
+            const api = APP_URL + "/admin/contacts";
             dataTables(api, columns, 'Contact');
 
             $('#save').click(function(event) {
