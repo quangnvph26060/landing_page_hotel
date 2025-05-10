@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FunctionsController;
 use App\Http\Controllers\Admin\HighlightController;
 use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\Admin\PriceController;
 use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\Admin\TechnologyController;
 use App\Http\Controllers\AuthController;
@@ -49,6 +50,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
         Route::resource('seo', SeoController::class);
         Route::resource('contacts', ContactController::class);
+        Route::resource('prices', PriceController::class);
 
         Route::post('/delete-items', [BulkActionController::class, 'deleteItems'])->name('delete.items');
         Route::post('/title-function', [TitleFunctionController::class, 'update'])->name('update.title');

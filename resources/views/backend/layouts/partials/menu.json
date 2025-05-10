@@ -20,12 +20,14 @@
             }, {
                 "title": "Cấu hình chung",
                 "url": "admin.banners.index"
+            }, {
+                "title": "Cấu gía",
+                "url": "admin.prices.index"
             }
-
 
         ],
         "inRoutes": [
-            "admin.posts.index", "admin.functions.index", "admin.banners.index"
+            "admin.posts.index", "admin.functions.index", "admin.banners.index", "admin.prices.index"
         ]
     }
 
