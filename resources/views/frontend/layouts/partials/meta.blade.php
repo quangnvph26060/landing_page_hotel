@@ -16,7 +16,5 @@
 <link rel="icon" type="image/x-icon" href="{{ asset('storage/' . $config_all->icon) }}" sizes="64x64" fetchpriority="high">
 
 <meta property="og:image" content="{{ asset('storage/' . $config_all->logo) }}">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 <meta property="og:image:type" content="image/png">
 
