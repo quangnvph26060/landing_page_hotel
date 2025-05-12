@@ -29680,21 +29680,18 @@ textarea:hover {
 }
 
 .fa-user {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/user-regular.svg); */
     filter: invert(22%) sepia(28%) saturate(7159%) hue-rotate(203deg) brightness(96%) contrast(101%);
     height: 26px;
     width: 26px
 }
 
 .fa-user-plus {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/user-plus-regular.svg); */
     filter: invert(19%) sepia(100%) saturate(3406%) hue-rotate(146deg) brightness(102%) contrast(106%);
     height: 30px;
     width: 30px
 }
 
 .fa-circle-check {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/circle-check-regular.svg); */
     filter: invert(33%) sepia(30%) saturate(4837%) hue-rotate(199deg) brightness(92%) contrast(110%);
     height: 20px;
     width: 20px
@@ -29708,7 +29705,6 @@ textarea:hover {
 }
 
 .fa-arrow-right {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/arrow-right-regular.svg); */
     filter: invert(33%) sepia(30%) saturate(4837%) hue-rotate(199deg) brightness(92%) contrast(110%);
     height: 12px;
     margin-bottom: -1px;
@@ -29716,21 +29712,18 @@ textarea:hover {
 }
 
 .fa-arrow-up-long {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/arrow-up-long.svg); */
     filter: invert(100%) sepia(7%) saturate(455%) hue-rotate(164deg) brightness(112%) contrast(100%);
     height: 24px;
     width: 18px
 }
 
 .fa-xmark {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/xmark-solid.svg); */
     filter: invert(46%) sepia(9%) saturate(719%) hue-rotate(173deg) brightness(94%) contrast(90%);
     height: 24px;
     width: 20px
 }
 
 .fa-play {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/play-solid.svg); */
     filter: invert(33%) sepia(30%) saturate(4837%) hue-rotate(199deg) brightness(92%) contrast(110%);
     height: 20px;
     width: 15px
@@ -29743,9 +29736,7 @@ textarea:hover {
     }
 }
 
-.fa-phone-rotary {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/phone-rotary-solid.svg) */
-}
+
 
 .fa-message-dots,
 .fa-phone-rotary {
@@ -29754,20 +29745,12 @@ textarea:hover {
     width: 20px
 }
 
-.fa-message-dots {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/message-dots-solid.svg) */
-}
-
 .fa-bars {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/bars-regular.svg); */
     filter: invert(46%) sepia(9%) saturate(719%) hue-rotate(173deg) brightness(94%) contrast(90%);
     height: 21px;
     width: 21px
 }
 
-.fa-angle-up {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/angle-up-regular.svg) */
-}
 
 .fa-angle-down,
 .fa-angle-up {
@@ -29776,13 +29759,6 @@ textarea:hover {
     width: 16px
 }
 
-.fa-angle-down {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/angle-down-regular.svg) */
-}
-
-.fa-angles-up {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/angles-up-regular.svg) */
-}
 
 .fa-angles-down,
 .fa-angles-up {
@@ -29791,19 +29767,16 @@ textarea:hover {
     width: 16px
 }
 
-.fa-angles-down {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/angles-down-regular.svg) */
-}
 
 .fa-youtube {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/youtube-solid.svg); */
+
     filter: invert(33%) sepia(30%) saturate(4837%) hue-rotate(199deg) brightness(92%) contrast(110%);
     height: 24px;
     width: 24px
 }
 
 .fa-facebook {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/facebook-solid.svg); */
+
     width: 12px
 }
 
@@ -29813,21 +29786,14 @@ textarea:hover {
     height: 21px
 }
 
-.fa-twitter {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/twitter-solid.svg); */
-    width: 18px
-}
 
 .fa-comments {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/comment-solid.svg); */
+
     filter: invert(33%) sepia(30%) saturate(4837%) hue-rotate(199deg) brightness(92%) contrast(110%);
     height: 24px;
     width: 24px
 }
 
-.fa-cart-shopping {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/cart-shopping-regular.svg) */
-}
 
 .fa-cart-shopping,
 .fa-fork-knife {
@@ -29836,13 +29802,7 @@ textarea:hover {
     width: 20px
 }
 
-.fa-fork-knife {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/fork-knife-regular.svg) */
-}
 
-.fa-spa {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/spa-regular.svg) */
-}
 
 .fa-bed,
 .fa-spa {
@@ -29851,13 +29811,6 @@ textarea:hover {
     width: 20px
 }
 
-.fa-bed {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/bed-regular.svg) */
-}
-
-.fa-users-rectangle {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/user-rectangle-regular.svg) */
-}
 
 .fa-qrcode,
 .fa-users-rectangle {
@@ -29866,13 +29819,6 @@ textarea:hover {
     width: 20px
 }
 
-.fa-qrcode {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/qrcode-regular.svg) */
-}
-
-.fa-circle-dollar {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/circle-dollar-regular.svg) */
-}
 
 .fa-circle-dollar,
 .fa-shirt {
@@ -29881,13 +29827,7 @@ textarea:hover {
     width: 20px
 }
 
-.fa-shirt {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/shirt-regular.svg) */
-}
 
-.fa-washing-machine {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/washing-machine.svg) */
-}
 
 .fa-baby-carriage,
 .fa-washing-machine {
@@ -29896,13 +29836,7 @@ textarea:hover {
     width: 20px
 }
 
-.fa-baby-carriage {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/baby-carriage-regular.svg) */
-}
 
-.fa-house-medical {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/house-medical-regular.svg) */
-}
 
 .fa-house-medical,
 .fa-wand-magic-sparkles {
@@ -29911,13 +29845,6 @@ textarea:hover {
     width: 20px
 }
 
-.fa-wand-magic-sparkles {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/wand-magic-sparkles-regular.svg) */
-}
-
-.fa-screwdriver-wrench {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/screwdriver-wrench-regular.svg) */
-}
 
 .fa-motorcycle,
 .fa-screwdriver-wrench {
@@ -29926,13 +29853,6 @@ textarea:hover {
     width: 20px
 }
 
-.fa-motorcycle {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/motorcycle-regular.svg) */
-}
-
-.fa-couch {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/couch-regular.svg) */
-}
 
 .fa-corn,
 .fa-couch {
@@ -29941,13 +29861,6 @@ textarea:hover {
     width: 20px
 }
 
-.fa-corn {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/corn-regular.svg) */
-}
-
-.fa-book {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/book-regular.svg) */
-}
 
 .fa-book,
 .fa-gift {
@@ -29956,13 +29869,6 @@ textarea:hover {
     width: 20px
 }
 
-.fa-gift {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/gift-regular.svg) */
-}
-
-.fa-shovel {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/shovel-regular.svg) */
-}
 
 .fa-grid-2,
 .fa-shovel {
@@ -29971,13 +29877,7 @@ textarea:hover {
     width: 20px
 }
 
-.fa-grid-2 {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/grid-2-regular.svg) */
-}
 
-.fa-bell-concierge {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/bell-concierge-regular.svg) */
-}
 
 .fa-bell-concierge,
 .fa-utensils {
@@ -29986,13 +29886,7 @@ textarea:hover {
     width: 20px
 }
 
-.fa-utensils {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/utensils-regular.svg) */
-}
 
-.fa-cup-togo {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/cup-togo-regular.svg) */
-}
 
 .fa-cup-togo,
 .fa-microphone-stand {
@@ -30001,13 +29895,7 @@ textarea:hover {
     width: 20px
 }
 
-.fa-microphone-stand {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/microphone-stand-regular.svg) */
-}
 
-.fa-martini-glass {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/martini-glass-regular.svg) */
-}
 
 .fa-burger-soda,
 .fa-martini-glass {
@@ -30016,28 +29904,7 @@ textarea:hover {
     width: 20px
 }
 
-.fa-burger-soda {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/burger-soda-regular.svg) */
-}
 
-.fa-sparkles {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/sparkles-regular.svg) */
-}
-
-.fa-hotel,
-.fa-sparkles {
-    filter: invert(46%) sepia(9%) saturate(719%) hue-rotate(173deg) brightness(94%) contrast(90%);
-    height: 20px;
-    width: 20px
-}
-
-.fa-hotel {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/hotel-regular.svg) */
-}
-
-.fa-mug-saucer {
-    /* background-image: url(https://cdn-kvweb.1-website/wp-content/uploads/images/mug-saucer-regular.svg) */
-}
 
 .fa-dumbbell,
 .fa-mug-saucer {
@@ -30426,7 +30293,7 @@ textarea:hover {
 }
 
 #page-solution .card-box {
-    padding-bottom: 5rem;
+    /* padding-bottom: 5rem; */
     padding-top: 8rem
 }
 

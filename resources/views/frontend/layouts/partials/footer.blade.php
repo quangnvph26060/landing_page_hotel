@@ -1,30 +1,112 @@
-<footer class="footer shadow-bg get-section" id="sectionContact" style="background: url('{{ showImage($banner->image_footer) }}') no-repeat top;">
+<style>
+ .social-icons {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-icons li a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icons li a[title="Facebook"] {
+  background-color: #3b5998;
+}
+
+.social-icons li a[title="YouTube"] {
+  background-color: #ff0000;
+}
+
+.social-icons li a:hover {
+  transform: scale(1.1);
+}
+/* .social-icons i{
+    font-size: 20px;
+} */
+
+
+</style>
+<footer class="footer shadow-bg get-section" id="sectionContact"
+    style="background: url('{{ showImage($banner->image_footer) }}') no-repeat top;">
 
     <div class="container">
         <div class="wrap-head-footer row">
-            <div  class="col-lg-6 col-md-12 footer-list info">
+            <div class="col-lg-6 col-md-12 footer-list info">
 
-                <p class="p p-company mb-3">{{ $config->company }}</p>
-                <p class="p p-address">Trụ sở chính: {{ $config->address }}</p>
-                <p class="p p-email">Email: {{ $config->email }}</p>
-                {{-- <p class="p p-hotline">Hotline: {{ $config->hotline }}</p> --}}
+                <h4 class="footer-title" style="color: #ffff">{{ $config->company }}</h4>
+                <p class="p p-hotline">Trụ sở chính: {{ $config->address }}</p>
+                <p class="p p-hotline">Hotline: {{ $config->hotline }}</p>
+                <p class="p p-hotline">Email: {{ $config->email }}</p>
+                <p class="p p-hotline">MST: 0108806638 cấp ngày 05/07/2019</p>
+                <p class="p p-hotline">STK: 4567789999 - VPbank</p>
 
             </div>
-            <div  class="col-lg-3 col-sm-6 footer-list wrap-support" style="text-align: end">
-                <div class="div-support tvbh">
-                    <h4 class="footer-title" style="color: #ffff">Tư vấn bán hàng</h4>
-                    <h4 class="hotline-number mb-1"><a href="tel:{{ $config->salesPhone }}">{{ $config->salesPhone }}</a></h4>
+            <div class="col-lg-3 col-sm-6 footer-list info">
+                {{-- <div class="div-support tvbh"> --}}
+                <h4 class="footer-title" style="color: #ffff">Về chúng tôi</h4>
+                <div id="header-widget-area" class="chw-widget-area widget-area" role="complementary">
+                    <div class="chw-widget">
+                        <div class="textwidget">
+                            <div>
+                                <ul>
+                                    <li><a title="Về KiotViet"
+                                            href="https://about.kiotviet.vn/ve-chung-toi/?_gl=1*9r11pp*_gcl_au*NDk3MDM2ODc1LjE3NDA5Njg4NzY.*_ga*MTEwNjI0MzgyOS4xNzIxMTIxNjg3*_ga_6HE3N545ZW*czE3NDcwMzU5MDAkbzQyJGcwJHQxNzQ3MDM1OTAwJGo2MCRsMCRoMA.."
+                                            target="_blank" rel="nofollow noopener">Giới thiệu</a></li>
+                                    <li><a title="Khách hàng" href="https://www.kiotviet.vn/khach-hang/"
+                                            rel="nofollow">Hồ sơ năng lực</a></li>
+                                    <li><a title="Điều khoản sử dụng" href="https://www.kiotviet.vn/dieu-khoan-su-dung/"
+                                            target="_blank" rel="nofollow noopener">CHính sách</a></li>
+                                    <li><a title="Liên hệ" href="https://kiotviet.vn/lien-he" rel="nofollow">
+                                            Tuyển dụng</a></li>
+                                    <li><a title="Tuyển dụng KiotViet" href="https://about.kiotviet.vn/tuyen-dung/"
+                                            target="_blank" rel="nofollow noopener">Hướng dẫn thanh toán</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                {{-- </div> --}}
 
                 <ul>
-                    <li ></li>
+                    <li></li>
                 </ul>
             </div>
-            <div  class="col-lg-3 col-sm-6 footer-list wrap-support" style="text-align: end">
+            <div class="col-lg-3 col-sm-6 footer-list info">
+                {{-- <div class="div-support tvbh"> --}}
+                <h4 class="footer-title" style="color: #ffff">Theo dõi chúng tôi</h4>
+                <div id="header-widget-area" class="chw-widget-area widget-area" role="complementary">
+                    <div class="chw-widget">
+                        <div class="textwidget">
+                            <div>
+                                <ul class="social-icons">
+                                    <li>
+                                        <a href="https://facebook.com" title="Facebook">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://youtube.com" title="YouTube">
+                                            <i class="fab fa-youtube-square"></i>
+                                        </a>
+                                    </li>
+                                </ul>
 
-                <div class="div-support cskh">
-                    <h4 class="footer-title" style="color: #ffff">Chăm sóc khách hàng</h4>
-                    <h4 class="hotline-number"><a href="tel:{{ $config->carePhone }}">{{ $config->carePhone }}</a></h4>
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>

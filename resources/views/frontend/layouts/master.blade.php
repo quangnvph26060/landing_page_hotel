@@ -22,83 +22,8 @@
             font-family: 'Rajdhani', sans-serif !important;
         }
 
-        #banner_main {
-            height: 550px;
-        }
-
-        #banner_main {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .background-layer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            filter: brightness(0.6);
-            z-index: 0;
-        }
-
-        .page-banner-wrap {
-            position: relative;
-            z-index: 1;
-            /* nội dung nằm trên ảnh */
-        }
-
-
-
-        @media (min-width: 1721px) {
-
-            #banner_main {
-                height: 800px;
-            }
-        }
-
-        .nav-link {
-            position: relative;
-            display: inline-block;
-            padding-bottom: 5px;
-            /* tạo khoảng cho đường gạch */
-            transition: color 0.3s ease;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0%;
-            /* bắt đầu từ 0 */
-            height: 2px;
-            background-color: #ff0100;
-            /* màu đường gạch chân */
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: #ff0100 !important;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-            /* chạy sang hết chiều ngang */
-        }
-
-        /* .nav-link-active {
-            color: #ff0100 !important;
-        } */
-
-        .nav-link.nav-link-active::after {
-            width: 100%;
-        }
-
-        .box-popup-register:hover {
-            background-color: #ff0100 !important;
+        input::placeholder {
+            font-family: 'Rajdhani', sans-serif !important;
         }
     </style>
 
@@ -124,21 +49,21 @@
 
                 @yield('content')
 
-                {{-- <div class="bg-overflow"></div> --}}
 
-                {{-- @include('frontend.layouts.partials.content.cardBox') --}}
-
-                {{-- @include('frontend.layouts.partials.content.industry') --}}
-
-{{--
-                @include('frontend.layouts.partials.content.customer')
-
-                @include('frontend.layouts.partials.content.hotline') --}}
-
-                <span title="Lên đầu trang" class="go_top cursor-pointer"
-                    style="background-color: #ff0100 !important">
+                <span title="Lên đầu trang" class="go_top cursor-pointer" style="background-color: #ff0100 !important">
                     <i class="fa-solid fa-up-long"></i>
                 </span>
+
+                <div class="zalo-wrapper">
+                    <!-- Sóng -->
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+
+                    <!-- Nút Zalo -->
+                    <div class="zalo-button">
+                        {{-- <img src="https://aicrm.vn/zalo.png" alt="Zalo"> --}}
+                    </div>
+                </div>
                 <!---->
             </div>
             @include('frontend.layouts.partials.footer')
@@ -148,6 +73,7 @@
         <!--]-->
     </div>
     <div id="teleports"></div>
+
 
     @include('frontend.layouts.partials.script')
 </body>

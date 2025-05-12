@@ -1,15 +1,18 @@
 <div class="card-box">
     <div class="container">
-        <div class="box-title text-center">
+        <div class="box-title text-center mb-5">
 
             <h3 class="card-heading mb-0">{{ $titleFunction->title ?? '' }}</h3>
-            <div class="quantity-register d-flex justified-content-center align-items-center"><svg
+            <div class="quantity-register d-flex justified-content-center align-items-center mb-3"><svg
                     class="svg-inline--fa fa-arrow-trend-up quantity-icon" aria-hidden="true" focusable="false"
                     data-prefix="far" data-icon="arrow-trend-up" role="img" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 576 512">
 
                 </svg><span class="industry-txt mb-0" style="color: #ff0100">{{ $titleFunction->content ?? '' }}</span></div>
         </div>
+
+        @include('frontend.layouts.partials.content.subsystem')
+
         <div class="row card-box-items">
             @forelse ($function as $index => $item)
                 <div data-id="{{ $index }}" class="col-12 col-md-6 col-xl-10">

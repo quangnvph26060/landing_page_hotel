@@ -29,7 +29,8 @@
     <script src="{{ asset('backend/assets/js/connectDataTable.js') }}"></script>
     <script>
         $(document).ready(function() {
-            const api = "http://127.0.0.1:8000/admin/prices"
+            const APP_URL = "{{ config('app.url') }}";
+            const api = APP_URL + "/admin/prices";
             dataTables(api, columns, 'Price')
         })
     </script>

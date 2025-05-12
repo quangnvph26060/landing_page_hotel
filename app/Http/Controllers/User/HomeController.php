@@ -30,13 +30,13 @@ class HomeController extends Controller
     public function service()
     {
 
-
+        $prices = Price::get();
         $function = Functions::get();
         $post = Post::get();
         $highlight = Highlight::first();
         $technologie = Technology::get();
 
-        return view('frontend.service.index', compact( 'function', 'post', 'highlight', 'technologie'));
+        return view('frontend.service.index', compact( 'function', 'post', 'highlight', 'technologie', 'prices'));
     }
 
     public function post()
