@@ -71,6 +71,17 @@
     .right-info h5 {
         font-size: 29.5px
     }
+
+    @media (max-width: 768px) {
+        .form-container {
+            flex-direction: column;
+        }
+
+        .left-form,
+        .right-info {
+            width: 100%;
+        }
+    }
 </style>
 
 <div style="margin-bottom: 50px">

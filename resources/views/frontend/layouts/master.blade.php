@@ -25,6 +25,7 @@
         input::placeholder {
             font-family: 'Rajdhani', sans-serif !important;
         }
+        
     </style>
 
 

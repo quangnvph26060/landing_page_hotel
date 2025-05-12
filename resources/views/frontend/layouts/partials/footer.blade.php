@@ -60,17 +60,11 @@
                         <div class="textwidget">
                             <div>
                                 <ul>
-                                    <li><a title="Về KiotViet"
-                                            href="https://about.kiotviet.vn/ve-chung-toi/?_gl=1*9r11pp*_gcl_au*NDk3MDM2ODc1LjE3NDA5Njg4NzY.*_ga*MTEwNjI0MzgyOS4xNzIxMTIxNjg3*_ga_6HE3N545ZW*czE3NDcwMzU5MDAkbzQyJGcwJHQxNzQ3MDM1OTAwJGo2MCRsMCRoMA.."
-                                            target="_blank" rel="nofollow noopener">Giới thiệu</a></li>
-                                    <li><a title="Khách hàng" href="https://www.kiotviet.vn/khach-hang/"
-                                            rel="nofollow">Hồ sơ năng lực</a></li>
-                                    <li><a title="Điều khoản sử dụng" href="https://www.kiotviet.vn/dieu-khoan-su-dung/"
-                                            target="_blank" rel="nofollow noopener">CHính sách</a></li>
-                                    <li><a title="Liên hệ" href="https://kiotviet.vn/lien-he" rel="nofollow">
-                                            Tuyển dụng</a></li>
-                                    <li><a title="Tuyển dụng KiotViet" href="https://about.kiotviet.vn/tuyen-dung/"
-                                            target="_blank" rel="nofollow noopener">Hướng dẫn thanh toán</a></li>
+                                    <li><a title="Về KiotViet" href="" target="_blank" rel="nofollow noopener">Giới thiệu</a></li>
+                                    <li><a title="Khách hàng" href="" arget="_blank" rel="nofollow">Hồ sơ năng lực</a></li>
+                                    <li><a title="Điều khoản sử dụng" href=""target="_blank" rel="nofollow noopener">Chính sách</a></li>
+                                    <li><a title="Liên hệ" href="" arget="_blank" rel="nofollow">Tuyển dụng</a></li>
+                                    <li><a title="Tuyển dụng KiotViet" href=""target="_blank" rel="nofollow noopener">Hướng dẫn thanh toán</a></li>
                                 </ul>
                             </div>
                         </div>

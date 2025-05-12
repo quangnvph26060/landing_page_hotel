@@ -15,7 +15,7 @@
 
         <div class="row card-box-items">
             @forelse ($function as $index => $item)
-                <div data-id="{{ $index }}" class="col-12 col-md-6 col-xl-10">
+                <div data-id="{{ $index }}" class="col-12 col-md-6 col-xl-10 function">
                     <div class="card-item" style="visibility: visible; background-color: #f2f8fe;">
                         <div class="{{ $index % 2 != 0 ? 'flex-row-reverse' : '' }}  row m-0">
                             <div class="card-img col-md-4 ">

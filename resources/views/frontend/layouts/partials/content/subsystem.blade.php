@@ -18,17 +18,34 @@
         font-size: 3rem;
         margin-bottom: 10px;
     }
-    #subsystem h5{
+
+    #subsystem {
+        margin-bottom: 30px;
+    }
+
+    #subsystem h5 {
         font-size: 18px;
         margin-top: 0;
         margin-bottom: 10px
     }
+
+    @media (max-width: 768px) {
+        #subsystem>div>div {
+            margin-bottom: 40px;
+        }
+        .function{
+            margin-bottom: 40px;
+        }
+        .customer-box{
+            padding-bottom: 0px !important;
+        }
+    }
 </style>
 
-<div class="pb-5" id="subsystem">
+<div id="subsystem">
     <div class="row g-4">
         <!-- Card 1 -->
-        <div class="col-md-4">
+        <div class="col-md-4 ">
             <div class="custom-card h-100">
                 <div class="icon text-center"><i class="fas fa-hotel fa-3x text-dark"></i></div>
                 <h5 class="text-center">Quản lý vận hành khách sạn</h5>
@@ -38,7 +55,7 @@
         </div>
 
         <!-- Card 2 -->
-        <div class="col-md-4">
+        <div class="col-md-4 ">
             <div class="custom-card h-100">
                 <div class="icon text-center"> <i class="fas fa-cogs fa-3x text-dark"></i></div>
                 <h5 class="text-center">Cấu hình linh hoạt</h5>
@@ -51,7 +68,7 @@
         <!-- Card 3 -->
         <div class="col-md-4">
             <div class="custom-card h-100">
-                <div class="icon text-center">  <i class="fas fa-headset fa-3x text-dark"></i></div>
+                <div class="icon text-center"> <i class="fas fa-headset fa-3x text-dark"></i></div>
                 <h5 class="text-center">Hỗ trợ vận hành & báo cáo</h5>
                 <p>Thống kê, quản lý nhân sự chặt chẽ kèm theo báo cáo thông minh và dễ tra soát tình trạng khách sạn
                     24/7.</p>

@@ -24,11 +24,11 @@
                             <li class="nav-item nav-item-product">
                                 <a class="nav-link">Tính năng</a>
                             </li>
-                           
+
                             <li class="nav-item nav-item-customer">
                               <a class="nav-link">Khách hàng</a>
                             </li>
-                           
+
                             <li class="nav-item">
                                 <a href="{{ route('service') }}" class="nav-link {{ Request::is('service') ? 'nav-link-active' : '' }}"> Bảng giá</a>
                             </li>
@@ -45,7 +45,7 @@
                                 <div class="registerandlogin">
                                     <ul class="w-100">
                                         <li class="nav-item header-register"><a class="btn btn-sm" style="color: #000 !important; border: 1px solid #000"
-                                                href="http://123.31.31.39:6060/admin">Đăng nhập</a>
+                                                href="https://app.fasthotel.vn">Đăng nhập</a>
                                         </li>
                                         <li class="nav-item header-login login"><a href="{{ route('register') }}"
                                                 class="btn  btn-sm" style="background-color: #ff0100 !important ; color: #ffff">Đăng ký</a></li>
