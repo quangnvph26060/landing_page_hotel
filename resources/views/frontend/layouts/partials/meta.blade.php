@@ -15,6 +15,6 @@
 
 <link rel="icon" type="image/x-icon" href="{{ asset('storage/' . $config_all->icon) }}" sizes="64x64" fetchpriority="high">
 
-<meta property="og:image" content="{{ asset('storage/' . $config_all->logo) }}">
+<meta property="og:image" content="https://fasthotel.vn/storage/config/1746606871681b1b1740ac1.png">
 <meta property="og:image:type" content="image/png">
 
