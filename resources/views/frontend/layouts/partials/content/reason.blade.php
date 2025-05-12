@@ -118,7 +118,7 @@
                 <iframe
                     width="100%"
                     height="200"
-                    src="https://www.youtube.com/embed/IuhbRCmaMVE"
+                    src="https://youtu.be/Xl6iVWhYo4s?si=t9N8ru6Y8oU8mKoH"
                     frameborder="0"
                     allowfullscreen>
                 </iframe>
@@ -129,7 +129,7 @@
                 <iframe
                     width="100%"
                     height="200"
-                    src="https://www.youtube.com/embed/IuhbRCmaMVE"
+                    src="https://youtu.be/Xl6iVWhYo4s?si=t9N8ru6Y8oU8mKoH"
                     frameborder="0"
                     allowfullscreen>
                 </iframe>

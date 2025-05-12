@@ -93,7 +93,7 @@
             <input type="email" class="form-control form-control-lg" placeholder="Nhập Email">
             <input type="tel" class="form-control form-control-lg" placeholder="Nhập số điện thoại">
             <input type="text" class="form-control form-control-lg" placeholder="Nhập địa chỉ">
-            <button class="btn btn-light w-100 mt-2 fw-bold">Đăng ký tư vấn</button>
+            <button class="btn btn-light w-100 mt-2 fw-bold form-control-lg">Đăng ký tư vấn</button>
         </div>
 
         <!-- Right Information -->

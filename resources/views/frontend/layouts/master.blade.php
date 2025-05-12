@@ -25,7 +25,7 @@
         input::placeholder {
             font-family: 'Rajdhani', sans-serif !important;
         }
-        
+
     </style>
 
 
@@ -61,9 +61,8 @@
                     <div class="pulse-ring"></div>
 
                     <!-- Nút Zalo -->
-                    <div class="zalo-button">
-                        {{-- <img src="https://aicrm.vn/zalo.png" alt="Zalo"> --}}
-                    </div>
+                    <a href="https://zalo.me/{{ preg_replace('/\D/', '', $config->hotline )}}" target="_blank" class="zalo-button">
+                    </a>
                 </div>
                 <!---->
             </div>
