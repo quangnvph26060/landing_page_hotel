@@ -16,7 +16,7 @@
 <link rel="icon" type="image/x-icon" href="{{ asset('storage/' . $config_all->icon) }}" sizes="64x64" fetchpriority="high">
 
 <meta property="og:image" content="{{ asset('storage/' . $config_all->logo) }}?t={{ filemtime(public_path('storage/' . $config_all->logo)) }}">
-<meta property="og:image:width" content="280">
-<meta property="og:image:height" content="88">
+<meta property="og:image:width" content="380">
+<meta property="og:image:height" content="119">
 <meta property="og:image:type" content="image/png">
 
