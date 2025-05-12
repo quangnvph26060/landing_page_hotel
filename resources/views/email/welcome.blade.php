@@ -60,9 +60,11 @@
             <p>Xin chào <span class="highlight">{{ $data['name'] }}</span>,</p>
             <p>Cảm ơn bạn đã đăng ký tài khoản với chúng tôi. Dưới đây là thông tin tài khoản của bạn:</p>
             <ul>
-                <li><strong>Họ Tên:</strong> {{ $data['name'] }}</li>
-                <li><strong>Email:</strong> {{ $data['email'] }}</li>
-                <li><strong>Số Điện Thoại:</strong> {{ $data['phone'] }}</li>
+                <li><strong>Họ Tên : </strong> {{ $data['name'] }}</li>
+                <li><strong>Email : </strong> {{ $data['email'] }}</li>
+                <li><strong>Số Điện Thoại : </strong> {{ $data['phone'] }}</li>
+                <li><strong>Tài khoản : </strong> {{ $data['username'] }}</li>
+                <li><strong>Mật khẩu : </strong> {{ $data['username'] }}</li>
             </ul>
             <p>Chúng tôi rất mong được phục vụ bạn tốt hơn và hy vọng trải nghiệm của bạn  thật tuyệt vời!</p>
         </div>

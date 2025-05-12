@@ -78,10 +78,11 @@ class AuthController extends Controller
     public function registerUserSubmit(RegisterRequest $request){
 
         // dd($request->toArray());
-        $apiUrl = env('API_URL') .'/user/create';
-        $apiUrl1 = env('API_URL') .'/service/create';
-        $apiUrl2 = env('API_URL1') .'/user/store';
+        $apiUrl  = config('app.api_url') .'/user/create';
+        $apiUrl1 = config('app.api_url') .'/service/create';
+        $apiUrl2 = config('app.api_url1') .'/user/store';
         // Định nghĩa dữ liệu cần gửi
+        dd($apiUrl);
         $data = [
             'name' => $request->fullname,
             'email' => $request->email,
@@ -91,7 +92,6 @@ class AuthController extends Controller
             'password' => bcrypt($request->password),
             'status' => 'active',
         ];
-
 
         $response = Http::withHeaders([
             'Authorization' => 'Bearer ' . env('API_TOKEN'),
