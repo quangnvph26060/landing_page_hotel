@@ -42,7 +42,7 @@
                                 style="background-image: url(&quot;{{ 'storage/'.$config_all->banner_login }}&quot;);">
                                 <div class="new-register-content">
                                     <div class="new-register-content-title " style="display: contents">
-                                        <p  style="width: 60%;">{{ $config_all ? $config_all->company : 'Quản lý khách sạn' }}</p>
+                                        <p  style="width: 80%;">{{ $config_all ? $config_all->company : 'Quản lý khách sạn' }}</p>
                                         {{-- <p>Bán hàng đơn giản</p> --}}
                                     </div>
                                     <div class="register-telephone text-center"><span class="telephone-wrap">Hỗ trợ đăng
@@ -143,7 +143,7 @@
                                         @enderror
 
                                     <div class="form-group text-center w-100">
-                                        <button class="btn" style="background-color: #ff0100" type="submit">Tiếp tục</button>
+                                        <button class="btn btn-primary register box-popup-register px-5" style="background-color: #ff0100; font-size: 15px" type="submit">Tiếp tục</button>
                                     </div>
                                 </form>
                             </div>

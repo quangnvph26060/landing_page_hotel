@@ -21,18 +21,23 @@
              {
                 "title": "Cấu hình chung",
                 "url": "admin.banners.index"
-            }, {
+            },
+            {
                 "title": "Cấu hình gía",
                 "url": "admin.prices.index"
             },
-              {
+            {
                 "title": "Hỗ trợ",
                 "url": "admin.banners.index"
+            },
+            {
+                "title": "Đăng ký tư vấn",
+                "url": "admin.advisory.index"
             }
 
         ],
         "inRoutes": [
-            "admin.posts.index", "admin.functions.index", "admin.banners.index", "admin.prices.index"
+            "admin.posts.index", "admin.functions.index", "admin.banners.index", "admin.prices.index", "admin.advisory.index"
         ]
     }
 

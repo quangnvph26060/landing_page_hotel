@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\PriceController;
 use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\Admin\TechnologyController;
 use App\Http\Controllers\Admin\WhyChooseUsController;
+use App\Http\Controllers\AdvisoriesController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TitleFunctionController;
 use App\Models\TitleFunction;
@@ -53,6 +54,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('contacts', ContactController::class);
         Route::resource('prices', PriceController::class);
         Route::resource('reason', WhyChooseUsController::class);
+
+        Route::get('advisory', [AdvisoriesController::class, 'index'])->name('advisory.index');
 
         Route::post('/delete-items', [BulkActionController::class, 'deleteItems'])->name('delete.items');
         Route::post('/title-function', [TitleFunctionController::class, 'update'])->name('update.title');

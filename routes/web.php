@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdvisoriesController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\User\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -29,4 +30,5 @@ Route::get('dang-nhap', [AuthController::class, 'loginUser'])->name('login');
 Route::post('dang-nhap', [AuthController::class, 'authenticateUser'])->name('submit.login');
 Route::get('dang-ky-tai-khoan', [AuthController::class, 'registerUser'])->name('register');
 Route::post('dang-ky-tai-khoan', [AuthController::class, 'registerUserSubmit'])->name('submit.register');
+Route::post('tu-van', [AdvisoriesController::class, 'registerAdvisories'])->name('register.advisories');
 

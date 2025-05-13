@@ -82,21 +82,32 @@
             width: 100%;
         }
     }
+
+    .custom-toast {
+        margin-top: 80px !important;
+        /* chỉnh khoảng cách top tại đây */
+    }
 </style>
 
 <div style="margin-bottom: 50px">
     <div class="form-container">
         <!-- Left Form -->
         <div class="left-form">
+
             <h5 class="text-center fw-bold mb-4">ĐĂNG KÝ TƯ VẤN NGAY<br>ĐỂ NHẬN ƯU ĐÃI!</h5>
-            <form action="" method="post">
+            <form id="consultForm" action="{{ route('register.advisories') }}" method="post">
                 @csrf
-                <input type="text" class="form-control form-control-lg" placeholder="Họ và tên">
-                <input type="email" class="form-control form-control-lg" placeholder="Nhập Email">
-                <input type="tel" class="form-control form-control-lg" placeholder="Nhập số điện thoại">
-                <input type="text" class="form-control form-control-lg" placeholder="Nhập địa chỉ">
+                <input type="text" id="name" name="name" class="form-control form-control-lg"
+                    placeholder="Họ và tên">
+                <input type="email" id="email" name="email" class="form-control form-control-lg"
+                    placeholder="Nhập Email">
+                <input type="text" id="number_phone" name="phone" class="form-control form-control-lg"
+                    placeholder="Nhập số điện thoại">
+                <input type="text" id="address" name="address" class="form-control form-control-lg"
+                    placeholder="Nhập địa chỉ">
                 <button type="submit" class="btn-light w-100 mt-2 fw-bold form-control-lg">Đăng ký tư vấn</button>
             </form>
+
         </div>
 
         <!-- Right Information -->
@@ -117,3 +128,51 @@
         </div>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    function showAlert(message) {
+        Swal.fire({
+            toast: true,
+            position: 'top',
+            icon: 'error',
+            title: message,
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            customClass: {
+                popup: 'custom-toast'
+            }
+        });
+    }
+</script>
+
+<script>
+    $('#consultForm').on('submit', function(e) {
+        const name = $('#name').val().trim();
+        const email = $('#email').val().trim();
+        const phone = $('#number_phone').val().trim();
+        const address = $('#address').val().trim();
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const phoneRegex = /^(0[0-9]{9})$/;
+
+        if (!name || !email || !phone || !address) {
+            showAlert("Vui lòng điền đầy đủ thông tin.");
+            e.preventDefault();
+            return;
+        }
+
+        if (!emailRegex.test(email)) {
+            showAlert("Email không đúng định dạng.");
+            e.preventDefault();
+            return;
+        }
+
+        if (!phoneRegex.test(phone)) {
+            showAlert("Số điện thoại không đúng định dạng.");
+            e.preventDefault();
+            return;
+        }
+    });
+</script>
