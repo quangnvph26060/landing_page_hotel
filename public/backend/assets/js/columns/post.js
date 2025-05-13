@@ -21,6 +21,11 @@ const columns = [
         searchable: false,
     },
     {
+        data: "types",
+        name: "type",
+        title: "Loại bài viết",
+    },
+    {
         data: "statuss",
         name: "status",
         title: "Trạng thái",

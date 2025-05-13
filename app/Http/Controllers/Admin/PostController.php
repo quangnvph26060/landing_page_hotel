@@ -26,7 +26,7 @@ class PostController extends Controller
     {
         //
         if (request()->ajax()) {
-            $columns    = ['id', 'title', 'slug', 'image', 'address', 'status'];
+            $columns    = ['id', 'title', 'slug', 'image', 'address', 'status', 'type'];
 
             $query      = $this->queryBuilder->buildQuery(
                 $columns,
@@ -42,8 +42,12 @@ class PostController extends Controller
                 </a>")
                     ->editColumn('statuss', fn($row) => $row->status == 1
                         ? '<span class="badge bg-success">Xuất bản</span>'
-                        : '<span class="badge bg-warning">Chưa xuất bản</span>');
-            }, ['title', 'statuss']);
+                        : '<span class="badge bg-warning">Chưa xuất bản</span>')
+                        ->editColumn('types', fn($row) => $row->type == 'customer'
+                        ? '<span class="badge bg-primary">Khách hàng</span>'
+                        : '<span class="badge bg-info text-dark">Tin tức</span>');
+
+            }, ['title', 'statuss', 'types']);
         }
         return view('backend.post.index');
     }
