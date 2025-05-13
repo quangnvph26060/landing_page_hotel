@@ -53,6 +53,8 @@ class WhyChooseUsController extends Controller
         }
 
         $why->save();
+        sessionFlash('success', 'Cập nhật thành công.');
+        return redirect()->back();
 
     }
 
