@@ -22,7 +22,7 @@ class HomeController extends Controller
         $banner = Banner::first();
         $function = Functions::get();
         $post = Post::where('type', 'customer')->orderBy('created_at', 'desc')->limit(6)->get();
-        $post_highlight = Post::where('type', 'customer')->orderBy('created_at', 'desc')->limit(5)->get();
+        $post_highlight = Post::where('type', 'post')->orderBy('created_at', 'desc')->limit(5)->get();
         $highlight = Highlight::first();
         $technologie = Technology::get();
         $config = Config::first();
@@ -46,8 +46,8 @@ class HomeController extends Controller
     {
 
         $function = Functions::get();
-        $post = Post::orderBy('created_at', 'desc')->get();
-        $postnews = Post::orderBy('created_at', 'desc')->limit(5)->get();
+        $post = Post::where('type', 'post')->orderBy('created_at', 'desc')->get();
+        $postnews = Post::where('type', 'post')->orderBy('created_at', 'desc')->limit(5)->get();
         $highlight = Highlight::first();
         $technologie = Technology::get();
 
@@ -60,7 +60,7 @@ class HomeController extends Controller
         if (!$post) {
             return redirect()->route('post');
         }
-        $postnews = Post::orderBy('created_at', 'desc')->limit(5)->get();
+        $postnews = Post::where('type', 'post')->orderBy('created_at', 'desc')->limit(5)->get();
 
         return view('frontend.post.detail', compact(  'post', 'postnews'));
     }

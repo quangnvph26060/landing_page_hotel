@@ -36,7 +36,7 @@
                                 <a href="{{ route('suport') }}" class="nav-link {{ Request::is('suport') ? 'nav-link-active' : '' }}"> Hỗ trợ </a>
                             </li>
                             <li class="nav-item nav-item-blog">
-                                <a href="{{ route('post') }}" class="nav-link {{ Request::is('post') ? 'nav-link-active' : '' }}"> Tin tức</a>
+                                <a href="{{ route('post') }}" class="nav-link {{ Request::is('tin-tuc*') ? 'nav-link-active' : '' }}"> Tin tức</a>
                             </li>
                              <li class="nav-item nav-item-blog">
                                 <a  class="nav-link ">Về Fasthotel</a>

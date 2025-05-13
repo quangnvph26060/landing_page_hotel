@@ -100,7 +100,7 @@
             <div class="feature-box">
                 <ul class="list-unstyled feature-list">
                 @php
-                    $reasons = json_decode($reason->reason, true) ?? [];
+                    $reasons = json_decode($reason->reason ?? [], true) ?? [];
                     //  dd($reasons);
                 @endphp
 
