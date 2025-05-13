@@ -64,7 +64,7 @@
                 <li><strong>Email : </strong> {{ $data['email'] }}</li>
                 <li><strong>Số Điện Thoại : </strong> {{ $data['phone'] }}</li>
                 <li><strong>Tài khoản : </strong> {{ $data['username'] }}</li>
-                <li><strong>Mật khẩu : </strong> {{ $data['username'] }}</li>
+                <li><strong>Mật khẩu : </strong> {{ $data['password'] }}</li>
             </ul>
             <p>Chúng tôi rất mong được phục vụ bạn tốt hơn và hy vọng trải nghiệm của bạn thật tuyệt vời!</p>
         </div>

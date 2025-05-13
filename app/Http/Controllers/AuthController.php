@@ -82,7 +82,7 @@ class AuthController extends Controller
         $apiUrl1 = config('app.api_url') .'/service/create';
         $apiUrl2 = config('app.api_url1') .'/user/store';
         // Định nghĩa dữ liệu cần gửi
-        dd($apiUrl);
+        // dd($apiUrl);
         $data = [
             'name' => $request->fullname,
             'email' => $request->email,
@@ -113,6 +113,7 @@ class AuthController extends Controller
 
             $response2 = Http::post($apiUrl2, $data);
             // if($response2['success'] == true){{
+                $data['password'] = $request->password;
                 Mail::to($request->email)->queue(new WelcomeMail($data));
             //  }}
             sessionFlash('success', 'Đăng ký thành công!');

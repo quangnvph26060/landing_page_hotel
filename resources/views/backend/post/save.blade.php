@@ -109,7 +109,7 @@
                     <div class="card-body">
                         <select name="status" id="status" class="form-select">
                             <option value="1" @selected(($post->status ?? 1) == 1)>Xuất bản</option>
-                            <option value="2" @selected(($post->status ?? '') == 2)>Chưa xuất bản</option>
+                            <option value="2" @selected(($post->status ?? 2) == 2)>Chưa xuất bản</option>
                         </select>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                     </div>
 
                     <div class="card-body">
-                        <select name="status" id="status" class="form-select">
+                        <select name="type" id="type" class="form-select">
                             <option value="post" @selected(($post->type ?? 'post') == 'post')>Tin tức</option>
                             <option value="customer" @selected(($post->type ?? '') =='customer')>Khách hàng</option>
                         </select>
