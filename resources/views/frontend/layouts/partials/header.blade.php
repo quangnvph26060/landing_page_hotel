@@ -30,7 +30,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="{{ route('service') }}" class="nav-link {{ Request::is('service') ? 'nav-link-active' : '' }}"> Bảng giá</a>
+                                <a href="{{ route('service') }}" class="nav-link {{ Request::is('dich-vu') ? 'nav-link-active' : '' }}"> Bảng giá</a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('suport') }}" class="nav-link {{ Request::is('suport') ? 'nav-link-active' : '' }}"> Hỗ trợ </a>
