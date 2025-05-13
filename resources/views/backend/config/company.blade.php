@@ -22,6 +22,9 @@
         <li class="nav-item" role="presentation">
             <a class="nav-link fw-bold" id="seo-tab" href="{{ route('admin.seo.index') }}">Seo</a>
         </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link fw-bold" id="seo-tab" href="{{ route('admin.reason.index') }}">Lý do lựa chọn</a>
+        </li>
     </ul>
 
 
@@ -49,8 +52,13 @@
                                         </div>
 
                                         <div class="form-group mb-2 col-lg-12">
-                                            <label for="address" class="form-label">Trụ sợ chính </label>
-                                            <textarea name="address" class="form-control " rows="3" placeholder="Trụ sở chính">{{ $config->address }}</textarea>
+                                            <label for="address" class="form-label">Địa chỉ</label>
+                                            <textarea name="address" class="form-control " rows="3" placeholder="Địa chỉ">{{ $config->address }}</textarea>
+                                        </div>
+
+                                        <div class="form-group mb-2 col-lg-12">
+                                            <label for="headoffice" class="form-label">Trụ sở chính</label>
+                                            <textarea name="headoffice" class="form-control " rows="3" placeholder="Trụ sở chính">{{ $config->headoffice }}</textarea>
                                         </div>
 
                                         <div class="form-group mb-2 col-lg-12">
@@ -59,19 +67,43 @@
                                                 name="hotline"class="form-control" type="text" placeholder="Hotline">
                                         </div>
 
-                                        <div class="form-group mb-2 col-lg-12">
-                                            <label for="salesPhone" class="form-label">Tư vấn bán hàng </label>
-                                            <input value="{{ $config->salesPhone ?? '' }}" id="salesPhone"
-                                                name="salesPhone"class="form-control" type="text"
-                                                placeholder="Tư vấn bán hàng">
+                                        <div class="form-group mb-2 col-lg-6">
+                                            <label for="mst" class="form-label">MST</label>
+                                            <input value="{{ $config->mst ?? '' }}" id="mst"
+                                                name="mst"class="form-control" type="text" placeholder="MST">
+                                        </div>
+
+                                        <div class="form-group mb-2 col-lg-6">
+                                            <label for="stk" class="form-label">STK</label>
+                                            <input value="{{ $config->stk ?? '' }}" id="stk"
+                                                name="stk"class="form-control" type="text" placeholder="STK">
+                                        </div>
+
+                                        <div class="form-group mb-2 col-lg-6">
+                                            <label for="facebook_link" class="form-label">Link FaceBook</label>
+                                            <input value="{{ $config->facebook_link ?? '' }}" id="facebook_link"
+                                                name="facebook_link"class="form-control" type="text" placeholder="Link FaceBook ">
+                                        </div>
+
+                                        <div class="form-group mb-2 col-lg-6">
+                                            <label for="youtube_link" class="form-label"> Link Youtobe </label>
+                                            <input value="{{ $config->youtube_link ?? '' }}" id="youtube_link"
+                                                name="youtube_link"class="form-control" type="text" placeholder=" Link Youtobe">
                                         </div>
 
                                         <div class="form-group mb-2 col-lg-12">
-                                            <label for="carePhone" class="form-label">Chăm sóc khách hành </label>
+                                            <label for="salesPhone" class="form-label">Điện thoại</label>
+                                            <input value="{{ $config->salesPhone ?? '' }}" id="salesPhone"
+                                                name="salesPhone"class="form-control" type="text"
+                                                placeholder="Điện thoại">
+                                        </div>
+
+                                        {{-- <div class="form-group mb-2 col-lg-12">
+                                            <label for="carePhone" class="form-label">Hotline </label>
                                             <input value="{{ $config->carePhone ?? '' }}" id="carePhone"
                                                 name="carePhone"class="form-control" type="text"
-                                                placeholder="Chăm sóc khách hành">
-                                        </div>
+                                                placeholder="Hotline">
+                                        </div> --}}
 
                                         <div class="form-group mb-2 col-lg-12">
                                             <label for="footer" class="form-label">Footer</label>
@@ -114,7 +146,7 @@
                                             <label for="banner_login" class="form-label">Banner đăng ký <span
                                                     class="text-danger"></span></label>
                                             <img class="img-fluid img-thumbnail w-100" id="show_banner_login"
-                                                style="cursor: pointer;"
+                                                style="cursor: pointer; height: 400px"
                                                 src="{{ showImage($config->banner_login ?? '') }}" alt=""
                                                 onclick="document.getElementById('banner_login').click();">
                                             <input type="file" name="banner_login" id="banner_login"

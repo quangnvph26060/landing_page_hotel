@@ -45,11 +45,12 @@
             <div class="col-lg-6 col-md-12 footer-list info">
 
                 <h4 class="footer-title" style="color: #ffff">{{ $config->company }}</h4>
-                <p class="p p-hotline">Trụ sở chính: {{ $config->address }}</p>
-                <p class="p p-hotline">Hotline: {{ $config->hotline }}</p>
+                <p class="p p-hotline">Địa chỉ: {{ $config->address }}</p>
+                <p class="p p-hotline">Trụ sở chính: {{ $config->headoffice }}</p>
+                <p class="p p-hotline">Điện thoại: {{ $config->salesPhone }} / Hotline: {{ $config->hotline }}</p>
                 <p class="p p-hotline">Email: {{ $config->email }}</p>
-                <p class="p p-hotline">MST: 0108806638 cấp ngày 05/07/2019</p>
-                <p class="p p-hotline">STK: 4567789999 - VPbank</p>
+                <p class="p p-hotline">MST: {{ $config->mst }}</p>
+                <p class="p p-hotline">STK: {{ $config->stk }}</p>
 
             </div>
             <div class="col-lg-3 col-sm-6 footer-list info">
@@ -85,12 +86,12 @@
                             <div>
                                 <ul class="social-icons">
                                     <li>
-                                        <a href="https://facebook.com" title="Facebook">
+                                        <a href="{{ $config->facebook_link }}" target="_black" title="Facebook">
                                             <i class="fab fa-facebook-f"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://youtube.com" title="YouTube">
+                                        <a href="{{ $config->youtube_link }}" target="_black" title="YouTube">
                                             <i class="fab fa-youtube-square"></i>
                                         </a>
                                     </li>

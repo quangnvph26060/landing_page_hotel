@@ -89,11 +89,14 @@
         <!-- Left Form -->
         <div class="left-form">
             <h5 class="text-center fw-bold mb-4">ĐĂNG KÝ TƯ VẤN NGAY<br>ĐỂ NHẬN ƯU ĐÃI!</h5>
-            <input type="text" class="form-control form-control-lg" placeholder="Họ và tên">
-            <input type="email" class="form-control form-control-lg" placeholder="Nhập Email">
-            <input type="tel" class="form-control form-control-lg" placeholder="Nhập số điện thoại">
-            <input type="text" class="form-control form-control-lg" placeholder="Nhập địa chỉ">
-            <button class="btn btn-light w-100 mt-2 fw-bold form-control-lg">Đăng ký tư vấn</button>
+            <form action="" method="post">
+                @csrf
+                <input type="text" class="form-control form-control-lg" placeholder="Họ và tên">
+                <input type="email" class="form-control form-control-lg" placeholder="Nhập Email">
+                <input type="tel" class="form-control form-control-lg" placeholder="Nhập số điện thoại">
+                <input type="text" class="form-control form-control-lg" placeholder="Nhập địa chỉ">
+                <button type="submit" class="btn-light w-100 mt-2 fw-bold form-control-lg">Đăng ký tư vấn</button>
+            </form>
         </div>
 
         <!-- Right Information -->

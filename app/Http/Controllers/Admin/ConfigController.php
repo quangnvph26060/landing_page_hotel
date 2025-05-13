@@ -49,7 +49,12 @@ class ConfigController extends Controller
         $data['email']      = $request->email;
         $data['hotline']    = $request->hotline;
         $data['address']    = $request->address;
+        $data['headoffice'] = $request->headoffice;
         $data['salesPhone'] = $request->salesPhone;
+        $data['mst']        = $request->mst;
+        $data['stk']        = $request->stk;
+        $data['facebook_link']        = $request->facebook_link;
+        $data['youtube_link']         = $request->youtube_link;
         $data['carePhone']  = $request->carePhone;
         $data['footer']     = $request->footer;
 

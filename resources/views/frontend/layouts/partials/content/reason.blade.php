@@ -99,15 +99,19 @@
             </div>
             <div class="feature-box">
                 <ul class="list-unstyled feature-list">
-                    <li><i class="fa-solid fa-check-circle"></i>Thanh toán đa dạng, không tiền mặt</li>
-                    <li><i class="fa-solid fa-check-circle"></i>Giao diện dễ dùng, phù hợp mọi nhân viên</li>
-                    <li><i class="fa-solid fa-check-circle"></i>Quản lý phòng trống – đầy – đặt chỗ dễ dàng</li>
-                    <li><i class="fa-solid fa-check-circle"></i>Theo dõi doanh thu mọi lúc, mọi nơi</li>
-                    <li><i class="fa-solid fa-check-circle"></i>Hỗ trợ kỹ thuật 24/7, có mặt khi cần</li>
-                    <li><i class="fa-solid fa-check-circle"></i>Theo dõi doanh thu mọi lúc, mọi nơi</li>
+                @php
+                    $reasons = json_decode($reason->reason, true) ?? [];
+                    //  dd($reasons);
+                @endphp
+
+                @forelse ($reasons as $item)
+                    <li><i class="fa-solid fa-check-circle"></i>{{ $item['value'] }}</li>
+                @empty
+                @endforelse
+
                 </ul>
                 <div class="text-center mt-3">
-                    <button class="btn-demo">Dùng thử miễn phí</button>
+                    <a href="{{ route('register') }}" class="btn-demo">Dùng thử miễn phí</a>
                 </div>
             </div>
         </div>
@@ -118,7 +122,7 @@
                 <iframe
                     width="100%"
                     height="200"
-                    src="https://youtu.be/Xl6iVWhYo4s?si=t9N8ru6Y8oU8mKoH"
+                    src="{{ asset('storage/'.$reason->video_1_url) }}"
                     frameborder="0"
                     allowfullscreen>
                 </iframe>
@@ -129,7 +133,7 @@
                 <iframe
                     width="100%"
                     height="200"
-                    src="https://youtu.be/Xl6iVWhYo4s?si=t9N8ru6Y8oU8mKoH"
+                    src="{{ asset('storage/'.$reason->video_1_url) }}"
                     frameborder="0"
                     allowfullscreen>
                 </iframe>

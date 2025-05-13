@@ -23,6 +23,9 @@
         <li class="nav-item" role="presentation">
             <a class="nav-link fw-bold" id="seo-tab" href="{{ route('admin.seo.index') }}">Seo</a>
         </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link fw-bold" id="seo-tab" href="{{ route('admin.reason.index') }}">Lý do lựa chọn</a>
+        </li>
     </ul>
 
 

@@ -10,6 +10,7 @@ use App\Models\Highlight;
 use App\Models\Post;
 use App\Models\Price;
 use App\Models\Technology;
+use App\Models\WhyChooseUs;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,7 +25,8 @@ class HomeController extends Controller
         $highlight = Highlight::first();
         $technologie = Technology::get();
         $config = Config::first();
-        return view('frontend.home.index', compact('banner', 'function', 'post', 'highlight', 'technologie', 'config'));
+        $reason = WhyChooseUs::first();
+        return view('frontend.home.index', compact('banner', 'function', 'post', 'highlight', 'technologie', 'config', 'reason'));
     }
 
     public function service()
