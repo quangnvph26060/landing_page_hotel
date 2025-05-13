@@ -33,13 +33,13 @@
                                 <a href="{{ route('service') }}" class="nav-link {{ Request::is('service') ? 'nav-link-active' : '' }}"> Bảng giá</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link"  href="{{ route('suport') }}" class="nav-link {{ Request::is('suport') ? 'nav-link-active' : '' }}"> Hỗ trợ </a>
+                                <a href="{{ route('suport') }}" class="nav-link {{ Request::is('suport') ? 'nav-link-active' : '' }}"> Hỗ trợ </a>
                             </li>
                             <li class="nav-item nav-item-blog">
                                 <a href="{{ route('post') }}" class="nav-link {{ Request::is('post') ? 'nav-link-active' : '' }}"> Tin tức</a>
                             </li>
                              <li class="nav-item nav-item-blog">
-                                <a  class="nav-link ">Về Fasthost</a>
+                                <a  class="nav-link ">Về Fasthotel</a>
                             </li>
                             <li>
                                 <div class="registerandlogin">

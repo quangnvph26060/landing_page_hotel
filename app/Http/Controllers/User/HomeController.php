@@ -21,12 +21,13 @@ class HomeController extends Controller
 
         $banner = Banner::first();
         $function = Functions::get();
-        $post = Post::where('type', 'customer')->get();
+        $post = Post::where('type', 'customer')->orderBy('created_at', 'desc')->limit(6)->get();
+        $post_highlight = Post::where('type', 'customer')->orderBy('created_at', 'desc')->limit(5)->get();
         $highlight = Highlight::first();
         $technologie = Technology::get();
         $config = Config::first();
-        $reason = WhyChooseUs::first();
-        return view('frontend.home.index', compact('banner', 'function', 'post', 'highlight', 'technologie', 'config', 'reason'));
+        $reason = WhyChooseUs::first() ?? [];
+        return view('frontend.home.index', compact('banner', 'function', 'post', 'highlight', 'technologie', 'config', 'reason', 'post_highlight'));
     }
 
     public function service()
