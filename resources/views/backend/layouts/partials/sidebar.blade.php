@@ -2,7 +2,7 @@
     <!-- Logo Header -->
     <div class="logo-header" data-background-color="white">
         <a href="index.html" class="logo">
-            <img src="{{ asset('storage/'.$config_all->logo) }}" alt="navbar brand" class="navbar-brand" style="width: 100px;
+            <img src="{{ asset('storage/'.$config_all->logo) }}" alt="navbar brand" class="navbar-brand" style="width: 80%;
             height: auto" height="20">
         </a>
         <div class="nav-toggle">

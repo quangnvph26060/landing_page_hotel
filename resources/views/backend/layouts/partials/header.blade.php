@@ -2,7 +2,7 @@
     <!-- Logo Header -->
     <div class="logo-header" data-background-color="white">
         <a href="index.html" class="logo">
-            <img src="https://aicrm.vn/sgovn.png" alt="navbar brand" class="navbar-brand" style="width: 100px;
+            <img src="https://aicrm.vn/sgovn.png" alt="navbar brand" class="navbar-brand" style="c;
             height: auto" height="20">
         </a>
         <div class="nav-toggle">
