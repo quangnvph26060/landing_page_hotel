@@ -66,7 +66,7 @@
                 <li><strong>Tài khoản : </strong> {{ $data['username'] }}</li>
                 <li><strong>Mật khẩu : </strong> {{ $data['username'] }}</li>
             </ul>
-            <p>Chúng tôi rất mong được phục vụ bạn tốt hơn và hy vọng trải nghiệm của bạn  thật tuyệt vời!</p>
+            <p>Chúng tôi rất mong được phục vụ bạn tốt hơn và hy vọng trải nghiệm của bạn thật tuyệt vời!</p>
         </div>
         <div class="footer">
             <p>&copy; 2025. Mọi quyền lợi đều được bảo vệ.</p>

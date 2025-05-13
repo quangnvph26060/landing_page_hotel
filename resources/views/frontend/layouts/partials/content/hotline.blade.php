@@ -1,4 +1,4 @@
-<div class="hotline-box pt-5">
+<div class="hotline-box pt-0">
     <div class="container">
         <div class="hotline-top">
             <h3 class="hotline-title"> Hãy để chúng tôi đồng hành kinh doanh cùng bạn </h3><a href="{{ route('register') }}"

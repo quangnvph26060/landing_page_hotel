@@ -1,18 +1,18 @@
 <div class="main-page">
     <div data-v-50fe0c44="" class="price-service">
         <div data-v-50fe0c44="" class="container">
-            <p data-v-50fe0c44="" class="price-title">Phí dịch vụ Khách sạn &amp; Homestay</p>
+            <p data-v-50fe0c44="" class="price-title mt-5">Phí dịch vụ Khách sạn &amp; Homestay</p>
             <div data-v-50fe0c44="" class="price-service-items" style="margin-bottom: 20px !important">
 
                 @forelse ($prices as $item)
                     <div data-v-50fe0c44="" data-id="{{ $item->id }}"
                         class="price-service-item {{ $item->recommended == 'true' ? 'profession' : '' }}">
                         <div data-v-50fe0c44="" class="wrap-price">
-                            <p data-v-50fe0c44="" class="price-packagename">Gói chuyên nghiệp <span data-v-50fe0c44=""
+                            <p data-v-50fe0c44="" class="price-packagename">{{ $item->name }} <span data-v-50fe0c44=""
                                     class="sub-title {{ $item->recommended == 'true' ? '' : 'd-none' }}">Nổi bật</span>
                             </p>
                             <div data-v-50fe0c44="" class="price-info"><span data-v-50fe0c44=""
-                                    class="price-value">310.000 <em data-v-50fe0c44="">đ</em></span><span
+                                    class="price-value">{{ number_format($item->price) }} <em data-v-50fe0c44="">đ</em></span><span
                                     data-v-50fe0c44="" class="price-group"><span data-v-50fe0c44="" class="price-shop">
                                         @php
                                             $branchPrices = json_decode($item->branch_price, true) ?? [];
