@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>{{ $config_all ? $config_all->company : 'Quản lý khách sạn' }} </title>
+    <title>{!! strip_tags($config_all ? $config_all->company : 'Quản lý khách sạn') !!} </title>
     {{-- <meta name="facebook-domain-verification" content="596ckow31ceg2kaownqwu554p8p7qo">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@KiotViet">
@@ -15,8 +15,8 @@
     {{-- <meta name="keywords" content="phan mem quan ly ban hang, kiotviet, phan mem kiotviet"> --}}
     <meta property="og:type" content="website">
     <meta property="format-detection" content="telephone=no">
-    <meta property="og:image:alt" content="{{ $config_all ? $config_all->company : 'Quản lý khách sạn' }}">
-    <meta property="og:site_name" content="{{ $config_all ? $config_all->company : 'Quản lý khách sạn' }}">
+    <meta property="og:image:alt" content="{!! strip_tags($config_all ? $config_all->company : 'Quản lý khách sạn') !!}">
+    <meta property="og:site_name" content="{!! strip_tags($config_all ? $config_all->company : 'Quản lý khách sạn') !!}">
     <meta property="og:image:width" content="740">
     <meta property="og:image:height" content="300">
     <meta property="fb:admins" content="n4mkut3">
@@ -42,11 +42,10 @@
                                 style="background-image: url(&quot;{{ 'storage/'.$config_all->banner_login }}&quot;);">
                                 <div class="new-register-content">
                                     <div class="new-register-content-title " style="display: contents">
-                                        <p  style="width: 80%;">{{ $config_all ? $config_all->company : 'Quản lý khách sạn' }}</p>
+                                        <p  style="width: 80%;">{!! $config_all ? $config_all->company : 'Quản lý khách sạn' !!}</p>
                                         {{-- <p>Bán hàng đơn giản</p> --}}
                                     </div>
-                                    <div class="register-telephone text-center"><span class="telephone-wrap">Hỗ trợ đăng
-                                            ký {{ $config_all->carePhone }}</span></div>
+                                    <div class="register-telephone text-center"><span class="telephone-wrap">Hỗ trợ đăng ký : {{ $config_all->hotline }}</span></div>
                                 </div>
                             </div>
                             <div class="new-register-right position-relative">
