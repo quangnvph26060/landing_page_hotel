@@ -44,7 +44,7 @@
         <div class="wrap-head-footer row">
             <div class="col-lg-6 col-md-12 footer-list info">
 
-                <h4 class="footer-title" style="color: #ffff">{{ $config->company }}</h4>
+                <h4 class="footer-title" style="color: #ffff">{!! $config->company !!}</h4>
                 <p class="p p-hotline">Địa chỉ: {{ $config->address }}</p>
                 <p class="p p-hotline">Trụ sở chính: {{ $config->headoffice }}</p>
                 <p class="p p-hotline">Điện thoại: {{ $config->salesPhone }} / Hotline: {{ $config->hotline }}</p>

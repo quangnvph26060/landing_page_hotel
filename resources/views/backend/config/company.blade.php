@@ -41,10 +41,10 @@
                                     <div class="col-md-8 row">
                                         <div class="form-group mb-2 col-lg-12">
                                             <label for="company" class="form-label">Tên công ty </label>
-                                            {{-- <input value="{{ $config->company ?? '' }}" id="company"
-                                                name="company"class="form-control" type="text" placeholder="Tên công ty"> --}}
-                                                <textarea name="company" id="description_seo" class="form-control ckeditor"
-                                                placeholder="Mô tả seo">{{ $config->company }}</textarea>
+                                            <input value="{{ $config->company ?? '' }}" id="company"
+                                                name="company"class="form-control" type="text" placeholder="Tên công ty">
+                                                {{-- <textarea name="company" id="description_seo" class="form-control ckeditor"
+                                                placeholder="Mô tả seo">{{ $config->company }}</textarea> --}}
                                         </div>
 
                                         <div class="form-group mb-2 col-lg-12">
