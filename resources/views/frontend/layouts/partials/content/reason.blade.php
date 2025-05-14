@@ -9,6 +9,7 @@
         flex-direction: column;
         align-items: center;
     }
+
     .feature-header {
         background-color: #e60000;
         color: white;
@@ -62,7 +63,8 @@
         margin-top: 5px;
         font-style: italic;
     }
-    .list-unstyled{
+
+    .list-unstyled {
         line-height: 33px;
     }
 
@@ -94,23 +96,23 @@
         <!-- Cột trái -->
         <div class="col-md-5 mb-4 d-flex flex-column">
             <div class="feature-header">
-                TẠI SAO NÊN CHỌN?<br />
-                <span>FASTHOTEL</span>
+                TẠI SAO NÊN CHỌN<br />
+                <span>FASTHOTEL ?</span>
             </div>
             <div class="feature-box">
                 <ul class="list-unstyled feature-list">
-                @php
-                    $reasons = json_decode($reason->reason ?? [], true) ?? [];
-                    //  dd($reasons);
-                @endphp
+                    @php
+                        $reasons = json_decode($reason->reason ?? [], true) ?? [];
+                        //  dd($reasons);
+                    @endphp
 
-                @forelse ($reasons as $item)
-                    <li><i class="fa-solid fa-check-circle"></i>{{ $item['value'] }}</li>
-                @empty
-                @endforelse
+                    @forelse ($reasons as $item)
+                        <li><i class="fa-solid fa-check-circle"></i>{{ ucfirst($item['value']) }}</li>
+                    @empty
+                    @endforelse
 
                 </ul>
-                <div class="text-center mt-3">
+                <div class="text-center my-5">
                     <a href="{{ route('register') }}" class="btn-demo">Dùng thử miễn phí</a>
                 </div>
             </div>
@@ -119,22 +121,14 @@
         <!-- Cột phải - Video -->
         <div class="col-md-5 d-flex flex-column">
             <div class="video-box">
-                <iframe
-                    width="100%"
-                    height="200"
-                    src="{{ asset('storage/'.$reason->video_1_url) }}"
-                    frameborder="0"
+                <iframe width="100%" height="200" src="{{ asset('storage/' . $reason->video_1_url) }}" frameborder="0"
                     allowfullscreen>
                 </iframe>
                 <div class="video-caption">Hướng dẫn sử dụng tính năng...</div>
             </div>
 
             <div class="video-box">
-                <iframe
-                    width="100%"
-                    height="200"
-                    src="{{ asset('storage/'.$reason->video_1_url) }}"
-                    frameborder="0"
+                <iframe width="100%" height="200" src="{{ asset('storage/' . $reason->video_1_url) }}" frameborder="0"
                     allowfullscreen>
                 </iframe>
                 <div class="video-caption">Hướng dẫn sử dụng tính năng...</div>

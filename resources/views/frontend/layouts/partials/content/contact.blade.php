@@ -89,7 +89,7 @@
     }
 </style>
 
-<div style="margin-bottom: 50px">
+<div style="margin-bottom: 30px">
     <div class="form-container">
         <!-- Left Form -->
         <div class="left-form">
