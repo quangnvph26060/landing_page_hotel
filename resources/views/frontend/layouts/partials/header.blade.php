@@ -33,7 +33,7 @@
                                 <a href="{{ route('service') }}" class="nav-link {{ Request::is('dich-vu') ? 'nav-link-active' : '' }}"> Bảng giá</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('suport') }}" class="nav-link {{ Request::is('suport') ? 'nav-link-active' : '' }}"> Hỗ trợ </a>
+                                <a href="{{ route('suport') }}" class="nav-link {{ Request::is('ho-tro') ? 'nav-link-active' : '' }}"> Hỗ trợ </a>
                             </li>
                             <li class="nav-item nav-item-blog">
                                 <a href="{{ route('post') }}" class="nav-link {{ Request::is('tin-tuc*') ? 'nav-link-active' : '' }}"> Tin tức</a>
