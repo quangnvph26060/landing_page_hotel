@@ -21,7 +21,7 @@
                                         @endphp
 
                                         @forelse ($branchPrices as $value)
-                                            {{ $value['value'] }}
+                                           <p>{{ $value['value'] }}</p>
                                         @empty
                                         @endforelse
                                     </span>
