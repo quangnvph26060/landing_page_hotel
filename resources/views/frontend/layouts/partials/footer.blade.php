@@ -41,7 +41,7 @@
     content: "➤";
     margin-right: 15px;
     color: white;
-    font-size: 12px;
+    font-size: 10px;
     display: inline-flex;
     align-items: center;
 }
@@ -50,7 +50,7 @@
     content: "➤";
     margin-right: 15px;
     color: white;
-    font-size: 12px;
+    font-size: 10px;
     vertical-align: middle;
     line-height: 1;
 }

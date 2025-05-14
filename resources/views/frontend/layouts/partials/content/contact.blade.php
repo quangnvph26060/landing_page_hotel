@@ -114,15 +114,15 @@
         <div class="right-info">
             <h5 class="fw-bold text-danger mb-4">ĐĂNG KÝ NGAY<br>ĐỂ HƯỞNG ƯU ĐÃI HẤP DẪN</h5>
             <div class="info-box">
-                <i class="fas fa-hotel"></i>
+                <i class="fas fa-gift"></i>
                 <span>{{ $config->company }}</span>
             </div>
             <div class="info-box">
-                <i class="fas fa-cogs"></i>
+                <i class="fas fa-gift"></i>
                 <span>{{ $config->hotline }}</span>
             </div>
             <div class="info-box">
-                <i class="fas fa-headset"></i>
+                <i class="fas fa-gift"></i>
                 <span>{{ $config->salesPhone }}</span>
             </div>
         </div>

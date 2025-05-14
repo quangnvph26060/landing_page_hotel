@@ -15,7 +15,7 @@
         color: white;
         border-radius: 10px 10px 0 0;
         text-align: center;
-        padding: 15px 10px 5px;
+        padding: 15px;
         font-weight: bold;
         font-size: 18px;
     }
@@ -89,6 +89,10 @@
         text-align: center;
         margin-top: 2px;
     }
+
+    .btn-demo:hover {
+        color: #ffffff;
+    }
 </style>
 
 <div class="container pb-5">
@@ -96,8 +100,7 @@
         <!-- Cột trái -->
         <div class="col-md-5 mb-4 d-flex flex-column">
             <div class="feature-header">
-                TẠI SAO NÊN CHỌN<br />
-                <span>FASTHOTEL ?</span>
+                TẠI SAO NÊN CHỌN FASTHOTEL ?
             </div>
             <div class="feature-box">
                 <ul class="list-unstyled feature-list">
@@ -120,19 +123,30 @@
 
         <!-- Cột phải - Video -->
         <div class="col-md-5 d-flex flex-column">
+            <?php
+            function extractYouTubeId($url)
+            {
+                $regex = '/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/';
+                preg_match($regex, $url, $match);
+                return isset($match[1]) ? $match[1] : null;
+            }
+            ?>
+
             <div class="video-box">
-                <iframe width="100%" height="200" src="{{ asset('storage/' . $reason->video_1_url) }}" frameborder="0"
-                    allowfullscreen>
+                <iframe width="100%" height="300"
+                    src="{{ $reason->video_1_url ? 'https://www.youtube.com/embed/' . extractYouTubeId($reason->video_1_url) : '' }}"
+                    frameborder="0" allowfullscreen>
                 </iframe>
                 <div class="video-caption">Hướng dẫn sử dụng tính năng...</div>
             </div>
 
-            <div class="video-box">
+
+            {{-- <div class="video-box">
                 <iframe width="100%" height="200" src="{{ asset('storage/' . $reason->video_1_url) }}" frameborder="0"
                     allowfullscreen>
                 </iframe>
                 <div class="video-caption">Hướng dẫn sử dụng tính năng...</div>
-            </div>
+            </div> --}}
 
         </div>
     </div>

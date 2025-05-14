@@ -35,22 +35,22 @@ class WhyChooseUsController extends Controller
         $why = WhyChooseUs::first() ?? new WhyChooseUs();
 
         $why->reason = $request->input('reason');
+        $why->video_1_url = $request->input('video_1_url');
+        // if ($request->hasFile('video_1_url')) {
+        //     if ($why->video_1_url && Storage::disk('public')->exists($why->video_1_url)) {
+        //         Storage::disk('public')->delete($why->video_1_url);
+        //     }
 
-        if ($request->hasFile('video_1_url')) {
-            if ($why->video_1_url && Storage::disk('public')->exists($why->video_1_url)) {
-                Storage::disk('public')->delete($why->video_1_url);
-            }
+        //     $why->video_1_url = $request->file('video_1_url')->store('why_choose_us', 'public');
+        // }
 
-            $why->video_1_url = $request->file('video_1_url')->store('why_choose_us', 'public');
-        }
+        // if ($request->hasFile('video_2_url')) {
+        //     if ($why->video_2_url && Storage::disk('public')->exists($why->video_2_url)) {
+        //         Storage::disk('public')->delete($why->video_2_url);
+        //     }
 
-        if ($request->hasFile('video_2_url')) {
-            if ($why->video_2_url && Storage::disk('public')->exists($why->video_2_url)) {
-                Storage::disk('public')->delete($why->video_2_url);
-            }
-
-            $why->video_2_url = $request->file('video_2_url')->store('why_choose_us', 'public');
-        }
+        //     $why->video_2_url = $request->file('video_2_url')->store('why_choose_us', 'public');
+        // }
 
         $why->save();
         sessionFlash('success', 'Cập nhật thành công.');
