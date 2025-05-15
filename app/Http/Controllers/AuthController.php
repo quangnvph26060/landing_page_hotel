@@ -77,12 +77,10 @@ class AuthController extends Controller
 
     public function registerUserSubmit(RegisterRequest $request){
 
-        // dd($request->toArray());
         $apiUrl  = config('app.api_url') .'/user/create';
         $apiUrl1 = config('app.api_url') .'/service/create';
         $apiUrl2 = config('app.api_url1') .'/user/store';
-        // Định nghĩa dữ liệu cần gửi
-        // dd($apiUrl);
+
         $data = [
             'name' => $request->fullname,
             'email' => $request->email,
@@ -100,7 +98,7 @@ class AuthController extends Controller
         $result = $response->json();
         if($result['success'] == true){
             $data['role_id'] = 2;
-            // User::create($data);
+
             $data['domain'] = null;
             $data['active_at'] = Carbon::now()->format('Y-m-d H:i:s');
             $data['number'] = 1;
@@ -114,10 +112,10 @@ class AuthController extends Controller
             $response2 = Http::post($apiUrl2, $data);
             // if($response2['success'] == true){{
                 $data['password'] = $request->password;
-                Mail::to($request->email)->queue(new WelcomeMail($data));
+                // Mail::to($request->email)->queue(new WelcomeMail($data));
             //  }}
-            sessionFlash('success', 'Đăng ký thành công!');
-            return redirect()->route('home');
+            // sessionFlash('success', 'Đăng ký thành công!');
+            return view('frontend.success.index', compact('data'));
         }else{
             sessionFlash('error', 'Đăng ký không thành công!');
             return back()->withInput();

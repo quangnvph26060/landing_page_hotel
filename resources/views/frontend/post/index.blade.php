@@ -14,12 +14,17 @@
             font-family: 'HandelGothicArabic', sans-serif !important;
         }
 
+
+        p:not(.price-packagename),
+        li {
+            font-family: 'Rajdhani', sans-serif !important;
+        }
+
         .breadcrumb a:not(:last-child)::after {
             content: " ›";
             margin: 0 5px;
             color: #888;
         }
-
     </style>
     <div class="sub-content news-page">
         <div class="container">
@@ -37,8 +42,7 @@
                             @forelse ($post as $item)
                                 <li class="kv-news-item">
                                     <div class="images-form">
-                                        <a class="img-content"
-                                            href="{{ route('post.detail', ['slug' => $item->slug]) }}"
+                                        <a class="img-content" href="{{ route('post.detail', ['slug' => $item->slug]) }}"
                                             title="“Yêu nước đâu phải chờ đến lễ lớn!” - Câu chuyện GenZ khởi nghiệp bằng tình yêu thương của khách hàng"
                                             style="background-image:url('{{ showImage($item->image ?? '') }}')">
                                             <img class="lazy" src="{{ showImage($item->image ?? '') }}"

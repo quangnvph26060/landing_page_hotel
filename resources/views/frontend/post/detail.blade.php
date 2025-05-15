@@ -13,6 +13,12 @@
         *:not(i, p, a) {
             font-family: 'HandelGothicArabic', sans-serif !important;
         }
+
+        p:not(.price-packagename),
+        li {
+            font-family: 'Rajdhani', sans-serif !important;
+        }
+
         .breadcrumb a:not(:last-child)::after {
             content: " ›";
             margin: 0 5px;
