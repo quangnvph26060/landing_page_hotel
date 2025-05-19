@@ -148,7 +148,7 @@
 
             const url = `https://${subdomain}.fasthotel.vn`;
 
-            window.location.href = url;
+            window.open(url, '_blank');
         });
     });
 </script>
