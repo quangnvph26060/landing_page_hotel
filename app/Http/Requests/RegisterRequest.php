@@ -18,7 +18,14 @@ class RegisterRequest extends FormRequest
     {
         return [
             'fullname'  => 'required|string|max:255',
-            'username'  => 'required|string|min:3|max:50|unique:users,username',
+            'username'  => [
+                'required',
+                'string',
+                'min:3',
+                'max:50',
+                'unique:users,username',
+                'regex:/^[a-zA-Z0-9_]+$/',
+            ],
             'phone'     => 'required|digits_between:10,11|unique:users,phone',
             'email'     => 'required|email|unique:users,email',
             'password'  => 'required|min:6',
@@ -29,21 +36,19 @@ class RegisterRequest extends FormRequest
 
     public function messages()
     {
+        return __('request.messages');
+    }
+
+    public function attributes()
+    {
         return [
-            'fullname.required'  => 'Họ và tên không được để trống.',
-            'username.required'  => 'Tên đăng nhập không được để trống.',
-            'username.unique'    => 'Tên đăng nhập đã tồn tại.',
-            'phone.required'     => 'Số điện thoại không được để trống.',
-            'phone.unique'       => 'Số điện thoại đã được sử dụng.',
-            'email.required'     => 'Email không được để trống.',
-            'email.email'        => 'Email không hợp lệ.',
-            'email.unique'       => 'Email đã tồn tại.',
-            'password.required'  => 'Mật khẩu không được để trống.',
-            'password.min'       => 'Mật khẩu phải có ít nhất 6 ký tự.',
-            'province.required'  => 'Vui lòng chọn khu vực.',
-            'province.exists'    => 'Khu vực không hợp lệ.',
-            'g-recaptcha-response.required' => 'Vui lòng xác nhận captcha.',
-            'g-recaptcha-response.captcha' => 'Captcha không hợp lệ, vui lòng thử lại.',
+            'fullname'  => 'Họ và tên',
+            'username'  => 'Tên đăng nhập',
+            'phone'     => 'Số điện thoại',
+            'email'     => 'Email',
+            'password'  => 'Mật khẩu',
+            'province'  => 'Tỉnh/thành phố',
+            'g-recaptcha-response' => 'Mã xác thực captcha',
         ];
     }
 }
