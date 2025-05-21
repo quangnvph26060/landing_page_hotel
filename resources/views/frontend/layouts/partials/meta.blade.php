@@ -17,6 +17,6 @@
 
 <meta property="og:image" content="{{ asset('storage/' . $config_all->logo) }}">
 <meta property="og:image:width" content="380">
-<meta property="og:image:height" content="119">
+<meta property="og:image:height" content="200">
 <meta property="og:image:type" content="image/png">
 
