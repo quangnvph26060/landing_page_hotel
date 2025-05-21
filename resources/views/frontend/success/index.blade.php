@@ -134,33 +134,33 @@
         <div class="info-block">
             <div class="info-left">
                 <span class="label">Tên gian hàng</span>
-                <span class="value text-primary">{{ $data['username'].'.fasthotel.vn' }}</span>
+                <span class="value text-primary" id="shop-url"></span>
             </div>
-            <i class="bi bi-clipboard" onclick="copyText({{ $data['username'].'.fasthotel.vn' }}, this)"></i>
+            <i class="bi bi-clipboard" onclick="copyText(document.getElementById('shop-url').textContent, this)"></i>
         </div>
 
         <div class="info-block login">
             <div class="info-left">
                 <span class="label">Tên đăng nhập</span>
-                <span class="value text-success">{{ $data['username'] }}</span>
+                <span class="value text-success" id="shop-username"></span>
             </div>
-            <i class="bi bi-clipboard" onclick="copyText({{ $data['username'] }} , this)"></i>
+            <i class="bi bi-clipboard"
+                onclick="copyText(document.getElementById('shop-username').textContent, this)"></i>
         </div>
 
         <div class="info-block password">
             <div class="info-left">
                 <span class="label">Mật khẩu</span>
-                <span class="value text-warning">{{ $data['password'] }}</span>
+                <span class="value text-warning" id="shop-password"></span>
             </div>
-            <i class="bi bi-clipboard" onclick="copyText({{ $data['password'] }}, this)"></i>
+            <i class="bi bi-clipboard"
+                onclick="copyText(document.getElementById('shop-password').textContent, this)"></i>
         </div>
 
-        <button class="btn btn-primary start-btn">Bắt đầu quản lý</button>
+        <button class="btn btn-primary start-btn" onclick="goToStore()">Bắt đầu quản lý</button>
 
         <div class="footer-text">Bạn muốn quản lý mọi lúc mọi nơi? Tải ứng dụng trên điện thoại</div>
         <div class="store-badges">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Available_on_the_App_Store_%28black%29_SVG.svg"
-                alt="App Store">
             <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                 alt="Google Play">
         </div>
@@ -168,6 +168,30 @@
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
     <script>
+        // Lưu thông tin từ Blade vào localStorage (chỉ cần thực hiện 1 lần)
+        const userData = {
+            username: "{{ $data['username'] }}",
+            password: "{{ $data['password'] }}",
+            shopUrl: "{{ $data['username'] }}.fasthotel.vn"
+        };
+        localStorage.setItem("shopData", JSON.stringify(userData));
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const data = JSON.parse(localStorage.getItem("shopData"));
+            if (data) {
+                document.getElementById("shop-username").textContent = data.username;
+                document.getElementById("shop-password").textContent = data.password;
+                document.getElementById("shop-url").textContent = data.shopUrl;
+            }
+
+            // Hiện wrapper mượt mà
+            document.querySelector(".wrapper").style.opacity = "0";
+            setTimeout(() => {
+                document.querySelector(".wrapper").style.opacity = "1";
+            }, 1000);
+        });
+
+        // Pháo hoa
         window.addEventListener("load", () => {
             const duration = 2 * 1200;
             const end = Date.now() + duration;
@@ -182,7 +206,6 @@
                         y: 1
                     }
                 });
-
                 confetti({
                     particleCount: 10,
                     angle: 120,
@@ -192,8 +215,6 @@
                         y: 1
                     }
                 });
-
-
                 confetti({
                     particleCount: 10,
                     spread: 160,
@@ -201,39 +222,30 @@
                         x: 0.5,
                         y: 0.3
                     }
-                })
+                });
 
-                if (Date.now() < end) {
-                    requestAnimationFrame(frame);
-                } else {
-                    document.body.classList.add("ready");
-                }
+                if (Date.now() < end) requestAnimationFrame(frame);
             })();
         });
 
-        // Hiện nội dung chính sau pháo hoa
-        document.addEventListener("DOMContentLoaded", () => {
-            document.querySelector(".wrapper").style.opacity = "0";
-            setTimeout(() => {
-                document.querySelector(".wrapper").style.opacity = "1";
-            }, 1000);
-        });
-
-
         function copyText(text, element) {
             navigator.clipboard.writeText(text).then(() => {
-
                 element.classList.remove("bi-clipboard");
                 element.classList.add("bi-check-lg");
                 element.style.color = "green";
-
-
                 setTimeout(() => {
                     element.classList.remove("bi-check-lg");
                     element.classList.add("bi-clipboard");
                     element.style.color = "#555";
                 }, 1500);
             });
+        }
+
+        function goToStore() {
+            const data = JSON.parse(localStorage.getItem("shopData"));
+            if (data && data.shopUrl) {
+                window.location.href = "https://" + data.shopUrl;
+            }
         }
     </script>
 
