@@ -159,11 +159,11 @@
 
         <button class="btn btn-primary start-btn" onclick="goToStore()">Bắt đầu quản lý</button>
 
-        <div class="footer-text">Bạn muốn quản lý mọi lúc mọi nơi? Tải ứng dụng trên điện thoại</div>
+        {{-- <div class="footer-text">Bạn muốn quản lý mọi lúc mọi nơi? Tải ứng dụng trên điện thoại</div>
         <div class="store-badges">
             <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
                 alt="Google Play">
-        </div>
+        </div> --}}
     </div>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
