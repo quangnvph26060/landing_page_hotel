@@ -117,7 +117,7 @@ class AuthController extends Controller
             // sessionFlash('success', 'Đăng ký thành công!');
             return view('frontend.success.index', compact('data'));
         }else{
-            sessionFlash('error', 'Đăng ký không thành công!');
+            sessionFlash('error', $result['message']);
             return back()->withInput();
         }
 
