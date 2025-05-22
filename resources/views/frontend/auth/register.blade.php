@@ -61,17 +61,18 @@
                                             placeholder="Họ và tên" autocomplete="one-time-code"
                                             value="{{ old('fullname') }}">
                                         @error('fullname')
-                                            <span class="error-message text-danger">{{ $message }}</span>
+                                            <span class="error-message text-danger px-2">{{ $message }}</span>
                                         @enderror
                                     </div>
 
                                     <div class="form-group w-100">
 
                                         <input id="username" name="username" type="text" class="form-control"
-                                            placeholder="Username" autocomplete="one-time-code"
+                                            placeholder="Tên đăng nhập" autocomplete="one-time-code"
                                             value="{{ old('username') }}">
+                                        <p class="text-muted px-2" style="font-size: 12px">Tên đăng nhập ví dụ : fasthotel123, fasthotel222.</p>
                                         @error('username')
-                                            <span class="error-message text-danger">{{ $message }}</span>
+                                            <span class="error-message text-danger px-2">{{ $message }}</span>
                                         @enderror
                                     </div>
 
@@ -81,7 +82,7 @@
                                             placeholder="Số điện thoại" pattern="[0-9]{10,11}" autocomplete="tel"
                                             value="{{ old('phone') }}">
                                         @error('phone')
-                                            <span class="error-message text-danger">{{ $message }}</span>
+                                            <span class="error-message text-danger px-2">{{ $message }}</span>
                                         @enderror
                                     </div>
 
@@ -89,7 +90,7 @@
                                         <input id="email" name="email" type="email" class="form-control"
                                             placeholder="Email" autocomplete="email" value="{{ old('email') }}">
                                         @error('email')
-                                            <span class="error-message text-danger">{{ $message }}</span>
+                                            <span class="error-message text-danger px-2">{{ $message }}</span>
                                         @enderror
                                     </div>
 
@@ -98,7 +99,7 @@
                                         <input id="password" name="password" type="password" class="form-control"
                                             placeholder="Mật khẩu" autocomplete="new-password">
                                         @error('password')
-                                            <span class="error-message text-danger">{{ $message }}</span>
+                                            <span class="error-message text-danger px-2">{{ $message }}</span>
                                         @enderror
                                     </div>
 
@@ -114,7 +115,7 @@
                                             @endforelse
                                         </select>
                                         @error('province')
-                                            <span class="error-message text-danger">{{ $message }}</span>
+                                            <span class="error-message text-danger px-2">{{ $message }}</span>
                                         @enderror
                                     </div>
 
@@ -138,7 +139,7 @@
                                     {!! NoCaptcha::renderJs() !!}
                                     {!! NoCaptcha::display() !!}
                                     @error('g-recaptcha-response')
-                                            <span class="error-message text-danger">{{ $message }}</span>
+                                            <span class="error-message text-danger px-2">{{ $message }}</span>
                                         @enderror
 
                                     <div class="form-group text-center w-100">
