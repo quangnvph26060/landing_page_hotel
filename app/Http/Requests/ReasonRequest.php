@@ -22,7 +22,7 @@ class ReasonRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'reason' => 'required|string|max:255',
+            'reason' => 'required|string',
             'video_1_url' => 'nullable', // tối đa 50MB
             'video_2_url' => 'nullable',
         ];

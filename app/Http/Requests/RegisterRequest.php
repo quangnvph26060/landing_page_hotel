@@ -24,7 +24,7 @@ class RegisterRequest extends FormRequest
                 'min:3',
                 'max:50',
                 'unique:users,username',
-                'regex:/^[a-zA-Z0-9_]+$/',
+                'regex:/^[a-z0-9]+$/',
             ],
             'phone'     => 'required|digits_between:10,11|unique:users,phone',
             'email'     => 'required|email|unique:users,email',
@@ -36,7 +36,9 @@ class RegisterRequest extends FormRequest
 
     public function messages()
     {
-        return __('request.messages');
+        return array_merge(__('request.messages'), [
+            'username.regex' => 'Tên đăng nhập chỉ được chứa chữ cái, số và dấu gạch dưới. Ví dụ: fasthotel1, fasthotel2',
+        ]);
     }
 
     public function attributes()

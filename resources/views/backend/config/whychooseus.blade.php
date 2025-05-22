@@ -125,7 +125,7 @@
 
             var input = document.querySelector('#reason');
             var tagify = new Tagify(input, {
-                maxTags: 10,
+                maxTags: 20,
                 placeholder: "Nhập reason...",
             });
         });
