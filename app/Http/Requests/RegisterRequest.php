@@ -37,7 +37,7 @@ class RegisterRequest extends FormRequest
     public function messages()
     {
         return array_merge(__('request.messages'), [
-            'username.regex' => 'Tên đăng nhập chỉ được chứa chữ cái, số và dấu gạch dưới. Ví dụ: fasthotel1, fasthotel2',
+            'username.regex' => 'Tên đăng nhập chỉ được chứa chữ cái, số. Ví dụ: fasthotel1, fasthotel2 .'
         ]);
     }
 
