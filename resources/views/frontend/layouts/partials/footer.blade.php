@@ -73,7 +73,7 @@
 
                 <h4 class="footer-title" style="color: #ffff">{{ $config->company }}</h4>
                 <ul class="footer-info">
-                    <li class="p p-hotline">Trụ sở chính: {{ $config->headoffice }}</li>
+                    {{-- <li class="p p-hotline">Trụ sở chính: {{ $config->headoffice }}</li> --}}
                     <li class="p p-hotline">Địa chỉ: {{ $config->address }}</li>
                     <li class="p p-hotline">Điện thoại: {{ $config->salesPhone }} / Hotline: {{ $config->hotline }}</li>
                     <li class="p p-hotline">Email: {{ $config->email }}</li>
