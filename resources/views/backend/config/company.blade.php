@@ -64,9 +64,9 @@
                                         </div>
 
                                         <div class="form-group mb-2 col-lg-12">
-                                            <label for="hotline" class="form-label">Hotline</label>
+                                            <label for="hotline" class="form-label">Di động</label>
                                             <input value="{{ $config->hotline ?? '' }}" id="hotline"
-                                                name="hotline"class="form-control" type="text" placeholder="Hotline">
+                                                name="hotline"class="form-control" type="text" placeholder="Di động">
                                         </div>
 
                                         <div class="form-group mb-2 col-lg-6">
@@ -94,10 +94,10 @@
                                         </div>
 
                                         <div class="form-group mb-2 col-lg-12">
-                                            <label for="salesPhone" class="form-label">Điện thoại</label>
+                                            <label for="salesPhone" class="form-label">Máy bàn</label>
                                             <input value="{{ $config->salesPhone ?? '' }}" id="salesPhone"
                                                 name="salesPhone"class="form-control" type="text"
-                                                placeholder="Điện thoại">
+                                                placeholder="Máy bàn">
                                         </div>
 
                                         {{-- <div class="form-group mb-2 col-lg-12">
@@ -112,6 +112,12 @@
                                             <input value="{{ $config->footer ?? '' }}" id="footer"
                                                 name="footer"class="form-control" type="text" placeholder="Footer">
                                         </div>
+
+                                        <div class="form-group mb-2 col-lg-12">
+                                            <label for="promotion" class="form-label">Ưu đã</label>
+                                            <input id="promotion" value="{{ $config->promotion }}" name="promotion">
+                                        </div>
+
                                     </div>
 
                                     <div class="col-md-4 row">
@@ -194,4 +200,15 @@
     <script src="{{ asset('backend/ckeditor/ckeditor.js') }}"></script>
     <script src="{{ asset('backend/assets/js/image-uploader.min.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            var input = document.querySelector('#promotion');
+            var tagify = new Tagify(input, {
+                maxTags: 10,
+                placeholder: "Nhập ưu đãi...",
+            });
+
+        });
+    </script>
 @endpush
