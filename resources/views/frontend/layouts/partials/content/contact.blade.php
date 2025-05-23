@@ -111,20 +111,20 @@
         </div>
 
         <!-- Right Information -->
+        {{-- @dd($config->promotion) --}}
+        @php
+            $promotions = json_decode($config->promotion, true);
+        @endphp
         <div class="right-info">
             <h5 class="fw-bold text-danger mb-4">ĐĂNG KÝ NGAY<br>ĐỂ HƯỞNG ƯU ĐÃI HẤP DẪN</h5>
-            <div class="info-box">
-                <i class="fas fa-gift"></i>
-                <span>{{ $config->company }}</span>
-            </div>
-            <div class="info-box">
-                <i class="fas fa-gift"></i>
-                <span>{{ $config->hotline }}</span>
-            </div>
-            <div class="info-box">
-                <i class="fas fa-gift"></i>
-                <span>{{ $config->salesPhone }}</span>
-            </div>
+            @if (!empty($promotions))
+                @foreach ($promotions as $item)
+                    <div class="info-box" style="align-items: baseline;">
+                        <i class="fas fa-gift"></i>
+                        <span>{{ $item['value'] }}</span>
+                    </div>
+                @endforeach
+            @endif
         </div>
     </div>
 </div>

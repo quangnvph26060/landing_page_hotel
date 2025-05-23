@@ -57,6 +57,7 @@ class ConfigController extends Controller
         $data['youtube_link']         = $request->youtube_link;
         $data['carePhone']  = $request->carePhone;
         $data['footer']     = $request->footer;
+        $data['promotion']     = $request->promotion;
 
         $config = Config::first();
 
