@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\HighlightController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\PriceController;
 use App\Http\Controllers\Admin\SeoController;
+use App\Http\Controllers\Admin\SupportController;
 use App\Http\Controllers\Admin\TechnologyController;
 use App\Http\Controllers\Admin\WhyChooseUsController;
 use App\Http\Controllers\AdvisoriesController;
@@ -54,6 +55,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('contacts', ContactController::class);
         Route::resource('prices', PriceController::class);
         Route::resource('reason', WhyChooseUsController::class);
+        Route::resource('support', SupportController::class);
 
         Route::get('advisory', [AdvisoriesController::class, 'index'])->name('advisory.index');
 

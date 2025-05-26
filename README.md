@@ -100,3 +100,22 @@ CREATE TABLE SupportPosts (
 CREATE INDEX idx_parent_id ON SupportCategories(parent_id);
 CREATE INDEX idx_category_id ON SupportPosts(category_id);
 
+
+
+CREATE TABLE supports (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    slug VARCHAR(255) NOT NULL UNIQUE,
+    image VARCHAR(255),
+    address VARCHAR(255),
+    description TEXT,
+    status TINYINT(1) DEFAULT 1,
+    title_seo VARCHAR(255),
+    type VARCHAR(100),
+    description_seo TEXT,
+    keyword_seo VARCHAR(255),
+    created_at TIMESTAMP NULL DEFAULT NULL,
+    updated_at TIMESTAMP NULL DEFAULT NULL
+);
+
+

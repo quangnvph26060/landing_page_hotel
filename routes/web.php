@@ -25,7 +25,7 @@ Route::get('/dich-vu', [HomeController::class, 'service'])->name('service');
 Route::get('/tin-tuc', [HomeController::class, 'post'])->name('post');
 Route::get('/tin-tuc/{slug?}', [HomeController::class, 'postDetail'])->name('post.detail');
 
-Route::get('/ho-tro', [HomeController::class, 'suport'])->name('suport');
+Route::get('/huong-dan-su-dung-fasthotel', [HomeController::class, 'suport'])->name('suport');
 Route::get('dang-nhap', [AuthController::class, 'loginUser'])->name('login');
 Route::post('dang-nhap', [AuthController::class, 'authenticateUser'])->name('submit.login');
 Route::get('dang-ky-tai-khoan', [AuthController::class, 'registerUser'])->name('register');

@@ -27,8 +27,8 @@
                 "url": "admin.prices.index"
             },
             {
-                "title": "Hỗ trợ",
-                "url": "admin.banners.index"
+                "title": "Hướng dẫn sử dụng",
+                "url": "admin.support.index"
             },
             {
                 "title": "Đăng ký tư vấn",
@@ -37,7 +37,7 @@
 
         ],
         "inRoutes": [
-            "admin.posts.index", "admin.functions.index", "admin.banners.index", "admin.prices.index", "admin.advisory.index"
+            "admin.posts.index", "admin.functions.index", "admin.banners.index", "admin.prices.index", "admin.advisory.index", "admin.support.index"
         ]
     }
 
