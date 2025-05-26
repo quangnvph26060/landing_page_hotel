@@ -15,9 +15,11 @@ use App\Http\Controllers\Admin\TechnologyController;
 use App\Http\Controllers\Admin\WhyChooseUsController;
 use App\Http\Controllers\AdvisoriesController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CKEditorController;
 use App\Http\Controllers\TitleFunctionController;
 use App\Models\TitleFunction;
 use Illuminate\Support\Facades\Route;
+use UniSharp\LaravelFilemanager\Lfm;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,4 +66,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
     });
 });
+Route::post('/ckeditor/upload', [CKEditorController::class, 'upload'])->name('ckeditor.upload');
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web']], function () {
+    Lfm::routes();
+});
+
 
