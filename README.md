@@ -69,53 +69,28 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 mysql
 
 
--- Bảng SupportCategories để phân loại các vấn đề hỗ trợ
-CREATE TABLE SupportCategories (
+-- Bảng danh mục hướng dẫn
+CREATE TABLE guides_categories (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
-    parent_id INT,
-    slug VARCHAR(255) NOT NULL,
-    FOREIGN KEY (parent_id) REFERENCES SupportCategories(id) ON DELETE CASCADE,
-    UNIQUE (slug)
+    slug VARCHAR(255) NOT NULL UNIQUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
--- Bảng SupportPosts để lưu các bài viết hỗ trợ
-CREATE TABLE SupportPosts (
+-- Bảng các hướng dẫn
+CREATE TABLE guides (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    category_id INT NOT NULL,
     title VARCHAR(255) NOT NULL,
-    content TEXT,
     slug VARCHAR(255) NOT NULL,
-    category_id INT,
-    author_id INT,
-    status ENUM('draft', 'published', 'archived') DEFAULT 'draft',
+    content TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    parent_post_id INT,
-    FOREIGN KEY (category_id) REFERENCES SupportCategories(id) ON DELETE CASCADE,
-    FOREIGN KEY (parent_post_id) REFERENCES SupportPosts(id) ON DELETE CASCADE,
-    UNIQUE (slug)
+    
+    FOREIGN KEY (category_id) REFERENCES guides_categories(id) ON DELETE CASCADE,
+    UNIQUE (category_id, slug)
 );
 
--- Tạo chỉ mục để tối ưu hóa tìm kiếm thể loại con
-CREATE INDEX idx_parent_id ON SupportCategories(parent_id);
-CREATE INDEX idx_category_id ON SupportPosts(category_id);
-
-
-
-CREATE TABLE supports (
-    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
-    slug VARCHAR(255) NOT NULL UNIQUE,
-    image VARCHAR(255),
-    address VARCHAR(255),
-    description TEXT,
-    status TINYINT(1) DEFAULT 1,
-    title_seo VARCHAR(255),
-    type VARCHAR(100),
-    description_seo TEXT,
-    keyword_seo VARCHAR(255),
-    created_at TIMESTAMP NULL DEFAULT NULL,
-    updated_at TIMESTAMP NULL DEFAULT NULL
-);
 
 
