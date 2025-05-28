@@ -341,10 +341,14 @@
     margin-left: 20px
 }
 
-.supportMain-content_article {
+/* .supportMain-content_article {
     width: calc(100% - 282px);
     float: right;
     border-left: 1px solid #e8eaed
+} */
+.supportMain-content_article {
+    width: 100%;
+    /* border-left: 1px solid #e8eaed */
 }
 
 .supportMain-content_article-title {

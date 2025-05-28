@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Banner;
 use App\Models\Config;
 use App\Models\Functions;
+use App\Models\GuidesCategory;
 use App\Models\Highlight;
 use App\Models\Post;
 use App\Models\Price;
@@ -39,7 +40,7 @@ class HomeController extends Controller
         $highlight = Highlight::first();
         $technologie = Technology::get();
 
-        return view('frontend.service.index', compact( 'function', 'post', 'highlight', 'technologie', 'prices'));
+        return view('frontend.service.index', compact('function', 'post', 'highlight', 'technologie', 'prices'));
     }
 
     public function post()
@@ -51,7 +52,7 @@ class HomeController extends Controller
         $highlight = Highlight::first();
         $technologie = Technology::get();
 
-        return view('frontend.post.index', compact( 'function', 'post', 'highlight', 'technologie', 'postnews'));
+        return view('frontend.post.index', compact('function', 'post', 'highlight', 'technologie', 'postnews'));
     }
 
     public function postDetail($slug)
@@ -62,11 +63,55 @@ class HomeController extends Controller
         }
         $postnews = Post::where('type', 'post')->orderBy('created_at', 'desc')->limit(5)->get();
 
-        return view('frontend.post.detail', compact(  'post', 'postnews'));
+        return view('frontend.post.detail', compact('post', 'postnews'));
     }
     // hỗ trợ
     public function suport()
     {
         return view('frontend.support.index');
+    }
+    public function suportDetail($slug)
+    {
+        // Tìm category theo slug, kèm theo các guides liên quan
+        $category = GuidesCategory::where('slug', $slug)
+            ->with(['guides' => function ($query) {
+                $query->select('id', 'title', 'content', 'category_id');
+            }])
+            ->first();
+
+        if (!$category) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Không tìm thấy danh mục'
+            ], 404);
+        }
+
+        // Chuẩn bị dữ liệu trả về
+        $data = [
+            'category' => [
+                'name' => $category->name,
+                'slug' => $category->slug,
+            ],
+            'guides' => $category->guides->map(function ($guide) {
+                return [
+                    'title' => $guide->title,
+                    'content' => $guide->content,
+                ];
+            }),
+        ];
+
+        return response()->json([
+            'success' => true,
+            'data' => $data
+        ], 200);
+    }
+
+    public function categorieSupport()
+    {
+        $categories =  GuidesCategory::select('name', 'slug')->get();
+        return response()->json([
+            'success' => true,
+            'data' => $categories,
+        ]);
     }
 }
