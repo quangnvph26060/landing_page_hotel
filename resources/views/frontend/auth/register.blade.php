@@ -21,7 +21,7 @@
     <meta property="og:image:height" content="300">
     <meta property="fb:admins" content="n4mkut3">
     <meta property="fb:app_id" content="1138268722850522">
-    <link rel="icon" type="image/png" href="{{ asset('storage/'.$config_all->icon) }}">
+    <link rel="icon" type="image/png" href="{{ asset('storage/' . $config_all->icon) }}">
     {{-- <meta property="fb:pag" es content="361150274018793">
     <meta name="p:domain_verify" content="565cb621d9b2f74cd9a7917e31386206"> --}}
     <link rel="stylesheet" href="{{ asset('backend/auth/css/register.css') }}">
@@ -39,17 +39,19 @@
                     <div class="new-register w-100">
                         <div class="new-register-step-2 d-flex w-100">
                             <div class="new-register-left"
-                                style="background-image: url(&quot;{{ 'storage/'.$config_all->banner_login }}&quot;);">
+                                style="background-image: url(&quot;{{ 'storage/' . $config_all->banner_login }}&quot;);">
                                 <div class="new-register-content">
                                     <div class="new-register-content-title " style="display: contents">
-                                        <p  style="width: 80%;">{!! $config_all ? $config_all->company : 'Quản lý khách sạn' !!}</p>
+                                        <p style="width: 80%;">{!! $config_all ? $config_all->company : 'Quản lý khách sạn' !!}</p>
                                         {{-- <p>Bán hàng đơn giản</p> --}}
                                     </div>
-                                    <div class="register-telephone text-center"><span class="telephone-wrap">Hỗ trợ đăng ký : {{ $config_all->hotline }}</span></div>
+                                    <div class="register-telephone text-center"><span class="telephone-wrap">Hỗ trợ đăng
+                                            ký : {{ $config_all->hotline }}</span></div>
                                 </div>
                             </div>
                             <div class="new-register-right position-relative">
-                                <div class="new-register-top" style="margin-top: 40px"><a class="cursor-pointer"> Tạo tài khoản dùng thử miễn phí
+                                <div class="new-register-top" style="margin-top: 40px"><a class="cursor-pointer"> Tạo
+                                        tài khoản dùng thử miễn phí
                                     </a></div>
                                 <form method="post" class="register-form new-register-form" novalidate
                                     action="{{ route('submit.register') }}">
@@ -70,7 +72,8 @@
                                         <input id="username" name="username" type="text" class="form-control"
                                             placeholder="Tên đăng nhập" autocomplete="one-time-code"
                                             value="{{ old('username') }}">
-                                        <p class="text-muted px-2" style="font-size: 12px">Tên đăng nhập ví dụ : fasthotel123, fasthotel222.</p>
+                                        <p class="text-muted px-2" style="font-size: 12px">Tên đăng nhập ví dụ :
+                                            fasthotel123, fasthotel222.</p>
                                         @error('username')
                                             <span class="error-message text-danger px-2">{{ $message }}</span>
                                         @enderror
@@ -104,13 +107,13 @@
                                     </div>
 
                                     <div class="form-group w-100">
-
                                         <select name="province" id="province" class="form-select w-100">
                                             <option selected value="">Chọn khu vực</option>
                                             @forelse ($city as $item)
                                                 <option value="{{ $item->id }}"
                                                     {{ old('province') == $item->id ? 'selected' : '' }}>
-                                                    {{ $item->name }}</option>
+                                                    {{ $item->name }}
+                                                </option>
                                             @empty
                                             @endforelse
                                         </select>
@@ -139,11 +142,13 @@
                                     {!! NoCaptcha::renderJs() !!}
                                     {!! NoCaptcha::display() !!}
                                     @error('g-recaptcha-response')
-                                            <span class="error-message text-danger px-2">{{ $message }}</span>
-                                        @enderror
+                                        <span class="error-message text-danger px-2">{{ $message }}</span>
+                                    @enderror
 
                                     <div class="form-group text-center w-100">
-                                        <button class="btn btn-primary register box-popup-register px-5" style="background-color: #ff0100; font-size: 15px" type="submit">Tiếp tục</button>
+                                        <button class="btn btn-primary register box-popup-register px-5"
+                                            style="background-color: #ff0100; font-size: 15px" type="submit">Tiếp
+                                            tục</button>
                                     </div>
                                 </form>
                             </div>
@@ -165,7 +170,15 @@
 </body>
 
 <style>
-    /* Container bọc select */
+    select.form-select {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        -webkit-appearance: none;
+        appearance: none;
+        padding: 8px;
+    }
+
     .select-container {
         display: flex;
         flex-direction: column;
@@ -224,6 +237,7 @@
         margin: 0 auto;
         padding: 7px 14px;
     }
+
     .error-message {
         font-size: 11px;
     }
