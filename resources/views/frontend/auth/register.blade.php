@@ -176,7 +176,7 @@
         max-width: 100%;
         -webkit-appearance: none;
         appearance: none;
-        padding: 8px;
+        padding: 6px;
     }
 
     .select-container {
@@ -220,7 +220,7 @@
     }
 
     .register-form select {
-        padding: 18px 12px !important;
+        padding: 14px 12px !important;
         border: 1px solid #ced4da;
         color: #495057;
         font-size: 1.3rem;
