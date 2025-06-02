@@ -50,9 +50,13 @@
                                 </div>
                             </div>
                             <div class="new-register-right position-relative">
-                                <div class="new-register-top" style="margin-top: 40px"><a class="cursor-pointer"> Tạo
-                                        tài khoản dùng thử miễn phí
-                                    </a></div>
+                                <div class="new-register-top" style="margin-top: 40px">
+                                    <a class="cursor-pointer"> Tạo
+                                        tài khoản dùng thử
+                                    </a>
+                                    <a class="cursor-pointer"> Miễn phí
+                                    </a>
+                                </div>
                                 <form method="post" class="register-form new-register-form" novalidate
                                     action="{{ route('submit.register') }}">
                                     @csrf
@@ -174,9 +178,10 @@
         box-sizing: border-box;
         width: 100%;
         max-width: 100%;
-        -webkit-appearance: none;
-        appearance: none;
-        padding: 6px;
+        /* -webkit-appearance: none; */
+        /* appearance: none; */
+        background: white;
+        padding: 7px;
     }
 
     .select-container {
@@ -184,7 +189,7 @@
         flex-direction: column;
         gap: 5px;
         width: 100%;
-        /* margin: 10px 0; */
+
         margin-bottom: 10px;
     }
 
