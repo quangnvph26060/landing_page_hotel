@@ -178,10 +178,10 @@
         box-sizing: border-box;
         width: 100%;
         max-width: 100%;
-        appearance: auto;
+        /* appearance: auto; */
         -webkit-appearance: auto;
         -moz-appearance: auto;
-        /* appearance: none; */
+        appearance: none;
         background: white;
         padding: 7px;
     }
