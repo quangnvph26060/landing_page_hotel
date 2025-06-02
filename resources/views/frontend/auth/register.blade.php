@@ -54,7 +54,7 @@
                                     <a class="cursor-pointer"> Tạo
                                         tài khoản dùng thử
                                     </a>
-                                    <a class="cursor-pointer"> Miễn phí
+                                    <a class="cursor-pointer"> miễn phí
                                     </a>
                                 </div>
                                 <form method="post" class="register-form new-register-form" novalidate
@@ -179,7 +179,7 @@
         width: 100%;
         max-width: 100%;
         /* -webkit-appearance: none; */
-        /* appearance: none; */
+        appearance: none;
         background: white;
         padding: 7px;
     }
