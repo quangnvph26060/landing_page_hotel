@@ -175,16 +175,22 @@
 
 <style>
     select.form-select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
         box-sizing: border-box;
         width: 100%;
         max-width: 100%;
-        /* appearance: auto; */
-        -webkit-appearance: auto;
-        -moz-appearance: auto;
-        appearance: none;
         background: white;
-        padding: 7px;
+        background-size: 12px;
+        padding: 7px 30px 7px 10px;
+        /* thêm padding-right để icon không đè lên text */
+        min-height: 38px;
+        /* hoặc theo Bootstrap hoặc thiết kế của bạn */
+        line-height: 1.5;
+        /* tránh chữ bị dính */
     }
+
 
     .select-container {
         display: flex;
