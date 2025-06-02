@@ -178,7 +178,9 @@
         box-sizing: border-box;
         width: 100%;
         max-width: 100%;
-        /* -webkit-appearance: none; */
+        appearance: auto;
+        -webkit-appearance: auto;
+        -moz-appearance: auto;
         appearance: none;
         background: white;
         padding: 7px;
