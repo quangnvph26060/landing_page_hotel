@@ -175,9 +175,9 @@
 
 <style>
     select.form-select {
-        appearance: auto;
-        -webkit-appearance: auto;
-        -moz-appearance: auto;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
         box-sizing: border-box;
         width: 100%;
         max-width: 100%;
