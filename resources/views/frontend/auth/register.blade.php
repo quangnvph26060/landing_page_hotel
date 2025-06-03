@@ -73,6 +73,16 @@
 
                                     <div class="form-group w-100">
 
+                                        <input id="hotel_homestay" name="hotel_homestay" type="text" class="form-control"
+                                            placeholder="Tên khách sạn / Homestay" autocomplete="one-time-code"
+                                            value="{{ old('hotel_homestay') }}">
+                                        @error('hotel_homestay')
+                                            <span class="error-message text-danger px-2">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+
+                                    <div class="form-group w-100">
+
                                         <input id="username" name="username" type="text" class="form-control"
                                             placeholder="Tên đăng nhập" autocomplete="one-time-code"
                                             value="{{ old('username') }}">

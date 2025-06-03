@@ -89,6 +89,7 @@ class AuthController extends Controller
             'province' => $request->province,
             'password' => bcrypt($request->password),
             'status' => 'active',
+            'hotel_homestay' => $request->hotel_homestay ?? ''
         ];
 
         $response = Http::withHeaders([

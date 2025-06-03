@@ -26,6 +26,7 @@ class RegisterRequest extends FormRequest
                 'unique:users,username',
                 'regex:/^[a-z0-9]+$/',
             ],
+            'hotel_homestay'  => 'required',
             'phone'     => 'required|digits_between:10,11|unique:users,phone',
             'email'     => 'required|email|unique:users,email',
             'password'  => 'required|min:6',
@@ -46,6 +47,7 @@ class RegisterRequest extends FormRequest
         return [
             'fullname'  => 'Họ và tên',
             'username'  => 'Tên đăng nhập',
+            'hotel_homestay'  => 'Tên khách sạn / Homestay',
             'phone'     => 'Số điện thoại',
             'email'     => 'Email',
             'password'  => 'Mật khẩu',

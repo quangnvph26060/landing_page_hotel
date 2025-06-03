@@ -81,7 +81,7 @@
 
             <div class="mb-3 input-group subdomain-input">
                 <input type="text" class="form-control" style="height: 40px ;"
-                    placeholder="Địa chỉ truy cập cửa hàng">
+                    placeholder="Địa chỉ truy cập khách sạn / Homestay">
                 <span class="input-group-text" style="padding: 0px 20px">fasthotel.vn</span>
             </div>
 
