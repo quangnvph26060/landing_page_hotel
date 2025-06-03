@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdvisoriesController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\User\HomeController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,3 +33,7 @@ Route::get('dang-ky-tai-khoan', [AuthController::class, 'registerUser'])->name('
 Route::post('dang-ky-tai-khoan', [AuthController::class, 'registerUserSubmit'])->name('submit.register');
 Route::post('tu-van', [AdvisoriesController::class, 'registerAdvisories'])->name('register.advisories');
 
+Route::view('upload', 'upload');
+Route::post('upload', function (Request $request) {
+    return response()->json($request->toArray());
+})->name('upload-image');
