@@ -129,11 +129,11 @@
             <i class="bi bi-check-lg"></i>
         </div>
 
-        <h5 class="mb-4 fw-bold">Cửa hàng của bạn đã sẵn sàng</h5>
+        <h5 class="mb-4 fw-bold">Khách sạn của bạn đã sẵn sàng</h5>
 
         <div class="info-block">
             <div class="info-left">
-                <span class="label">Tên gian hàng</span>
+                <span class="label">Tên hhách sạn </span>
                 <span class="value text-primary" id="shop-url"></span>
             </div>
             <i class="bi bi-clipboard" onclick="copyText(document.getElementById('shop-url').textContent, this)"></i>

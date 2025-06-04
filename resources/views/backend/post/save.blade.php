@@ -54,7 +54,7 @@
 
                                     <div class="form-group mb-3 col-lg-12">
                                         <label for="name" class="form-label">Địa chỉ<span
-                                                class="text-danger">*</span></label>
+                                                class="text-danger"></span></label>
                                         <input value="{{ $post->address ?? '' }}"
                                             id="address" name="address" class="form-control" type="text"
                                             placeholder="Địa chỉ">

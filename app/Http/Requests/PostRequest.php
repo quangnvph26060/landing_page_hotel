@@ -24,7 +24,7 @@ class PostRequest extends FormRequest
             'slug'                  => 'nullable|unique:posts,slug,' . $id,
             'image'                 => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'description'           => 'required',
-            'address'               => 'required',
+            'address'               => 'nullable|',
             'title_seo'             => 'nullable|max:100',
             'description_seo'       => 'nullable|max:150',
             'keywords_seo'          => 'nullable',
