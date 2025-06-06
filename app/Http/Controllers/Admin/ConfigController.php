@@ -58,6 +58,7 @@ class ConfigController extends Controller
         $data['carePhone']  = $request->carePhone;
         $data['footer']     = $request->footer;
         $data['promotion']     = $request->promotion;
+        $data['meta']     = $request->meta;
 
         $config = Config::first();
 

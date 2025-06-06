@@ -20,5 +20,6 @@
 <meta property="og:image:height" content="200">
 <meta property="og:image:type" content="image/png">
 <meta property="og:url" content="https://fasthotel.vn/" />
+{!! $config_all->meta !!}
 
 
