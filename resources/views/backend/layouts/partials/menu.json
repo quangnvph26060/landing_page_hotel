@@ -39,6 +39,20 @@
         "inRoutes": [
             "admin.posts.index", "admin.functions.index", "admin.banners.index", "admin.prices.index", "admin.advisory.index", "admin.support.index"
         ]
+    },
+    {
+        "title": "Marketing",
+        "icon": "fas fa-box-open",
+        "id": "Marketing",
+        "children": [
+            {
+                "title": "Template ZNS",
+                "url": "admin.zaloOa.template"
+            }
+        ],
+        "inRoutes": [
+            "admin.zaloOa.template"
+        ]
     }
 
 ]

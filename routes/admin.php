@@ -13,11 +13,13 @@ use App\Http\Controllers\Admin\SeoController;
 use App\Http\Controllers\Admin\SupportController;
 use App\Http\Controllers\Admin\TechnologyController;
 use App\Http\Controllers\Admin\WhyChooseUsController;
+use App\Http\Controllers\Admin\ZaloOaController;
 use App\Http\Controllers\AdvisoriesController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CKEditorController;
 use App\Http\Controllers\TitleFunctionController;
 use App\Models\TitleFunction;
+use App\Models\ZaloOa;
 use Illuminate\Support\Facades\Route;
 use UniSharp\LaravelFilemanager\Lfm;
 
@@ -63,6 +65,14 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
         Route::post('/delete-items', [BulkActionController::class, 'deleteItems'])->name('delete.items');
         Route::post('/title-function', [TitleFunctionController::class, 'update'])->name('update.title');
+
+        Route::prefix('zaloOa')->name('zaloOa.')->group(function () {
+            Route::post('update', [ZaloOaController::class, 'updateOa'])->name('update');
+            Route::get('template', [ZaloOaController::class, 'template'])->name('template');
+            Route::get('detail-template', [ZaloOaController::class, 'detailTemplate'])->name('detail.template');
+            Route::get('automation-template', [ZaloOaController::class, 'automationTemplate'])->name('automation.template');
+            Route::get('message', [ZaloOaController::class, 'template'])->name('template');
+        });
 
     });
 });

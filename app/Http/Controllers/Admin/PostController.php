@@ -124,6 +124,7 @@ class PostController extends Controller
                 $credentials['image'] = saveImages($request, 'image', 'post');
             }
 
+            Log::info($credentials);
             $post->update($credentials);
 
             sessionFlash('success', 'Thêm mới bài thành công.');

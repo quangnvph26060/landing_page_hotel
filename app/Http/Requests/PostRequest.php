@@ -27,7 +27,7 @@ class PostRequest extends FormRequest
             'address'               => 'nullable|',
             'title_seo'             => 'nullable|max:100',
             'description_seo'       => 'nullable|max:150',
-            'keywords_seo'          => 'nullable',
+            'keyword_seo'           => 'nullable',
             'status'                => 'required',
             'type'                  => 'required',
         ];

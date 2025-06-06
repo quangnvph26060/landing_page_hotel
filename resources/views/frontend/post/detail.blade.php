@@ -1,4 +1,21 @@
 @extends('frontend.layouts.master')
+@section('og:title', strip_tags($post->title_seo))
+
+@section('og:description', strip_tags($post->description_seo))
+
+@section('description', strip_tags($post->description_seo))
+@php
+    $keywords =
+        $post && $post->keyword_seo
+            ? implode(
+                ', ',
+                collect(json_decode($post->keyword_seo))
+                    ->pluck('value')
+                    ->toArray(),
+            )
+            : '';
+@endphp
+@section('keywords', $keywords)
 @section('content')
     <link rel="stylesheet"
         href="{{ asset('frontend/css/post.css') }}?v={{ filemtime(public_path('frontend/css/post.css')) }}">
@@ -49,6 +66,7 @@
             color: #888;
         }
     </style>
+
     <div class="sub-content news-page">
         <div class="container">
             <div class="wrapper-content">

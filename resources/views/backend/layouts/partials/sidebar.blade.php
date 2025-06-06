@@ -70,3 +70,13 @@
         </ul>
     </div>
 </div>
+
+<style>
+    .nav-collapse{
+        margin-bottom: 0px !important;
+        padding-bottom: 0px !important;
+    }
+    .nav-collapse li a span{
+        margin-left: 45px !important;
+    }
+</style>

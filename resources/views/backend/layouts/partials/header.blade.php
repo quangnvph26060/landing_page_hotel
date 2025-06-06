@@ -34,6 +34,14 @@
         </nav>
 
         <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
+
+            <li class="nav-item topbar-user dropdown hidden-caret mx-5">
+                <button class="btn p-2" style="border: 1px solid rgba(176, 173, 173, 0.867)" data-bs-toggle="modal" data-bs-target="#oazaloModal"
+                    type="button">
+                    <i class="fa fa-plus"></i> OA Zalo
+                </button>
+            </li>
+
             <li class="nav-item topbar-icon dropdown hidden-caret d-flex d-lg-none">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                     aria-expanded="false" aria-haspopup="true">

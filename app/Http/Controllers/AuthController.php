@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\WelcomeMail;
 use App\Models\User;
+use App\Services\TemplateService;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -18,7 +19,11 @@ use Illuminate\Support\Facades\Mail;
 
 class AuthController extends Controller
 {
-
+    public $templateService;
+    public function __construct(TemplateService $templateService)
+    {
+        $this->templateService = $templateService;
+    }
     public function login()
     {
         return view('backend.auth.login');
@@ -115,6 +120,7 @@ class AuthController extends Controller
                 $data['password'] = $request->password;
                 // Mail::to($request->email)->queue(new WelcomeMail($data));
             //  }}
+            $result = $this->templateService->zns($data);
             // sessionFlash('success', 'Đăng ký thành công!');
             return view('frontend.success.index', compact('data'));
         }else{
