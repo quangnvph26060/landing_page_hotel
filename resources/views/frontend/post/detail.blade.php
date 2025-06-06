@@ -14,6 +14,30 @@
             font-family: 'HandelGothicArabic', sans-serif !important;
         }
 
+        .news-detail-head-left ul {
+            list-style: inherit !important;
+        }
+
+        .news-detail-head-left li {
+            list-style: inherit !important;
+            margin-left: inherit !important;
+        }
+
+        .news-detail-head-left * {
+            list-style: inherit !important;
+            font-size: inherit !important;
+            /* list-hi: inherit !important; */
+        }
+
+        html p {
+            margin: inherit !important;
+            padding: inherit !important;
+        }
+
+        /* .news-col-left * {
+                all: unset;
+            } */
+
         p:not(.price-packagename),
         li {
             font-family: 'Rajdhani', sans-serif !important;

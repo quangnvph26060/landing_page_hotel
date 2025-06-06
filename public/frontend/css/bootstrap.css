@@ -104,18 +104,18 @@ address {
     line-height: inherit
 }
 
-address,
+/* address,
 dl,
 ol,
 ul {
     margin-bottom: 1rem
-}
+} */
 
-dl,
+/* dl,
 ol,
 ul {
     margin-top: 0
-}
+} */
 
 ol ol,
 ol ul,
@@ -10708,12 +10708,12 @@ html {
     padding: 0;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
-
+/*
 html ol,
 html ul {
     margin-top: 0;
     padding: 0
-}
+} */
 
 html a {
     color: #00224a;

@@ -10,7 +10,7 @@ html {
     color: #111;
     margin: 0;
     padding: 0;
-    line-height: 18px;
+    /* line-height: 18px; */
     font-family: Inter, sans-serif
 }
 
@@ -43,7 +43,7 @@ p {
 }
 
 .industry-txt,
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -51,7 +51,7 @@ h5,
 h6 {
     margin: 0;
     padding: 0 0 15px
-}
+} */
 
 h1 {
     font-size: 28px;
@@ -1729,13 +1729,13 @@ video {
     display: block
 }
 
-.uln ul,
+/* .uln ul,
 ol,
 ul {
     list-style: none;
     margin: 0;
     padding: 0
-}
+} */
 
 .clear {
     clear: both
@@ -8019,7 +8019,7 @@ html {
     padding-right: 12px
 }
 
-.industry-txt,
+/* .industry-txt,
 h1,
 h2,
 h3,
@@ -8030,20 +8030,20 @@ h6 {
     line-height: 1.5;
     margin: 0;
     padding: 0
-}
+} */
 
-dt,
+/* dt,
 ol,
 ul {
     margin-bottom: 0;
     padding-left: 0
-}
+} */
 
-dt li,
+/* dt li,
 ol li,
 ul li {
     list-style: none
-}
+} */
 
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button {
@@ -11556,16 +11556,16 @@ a {
         display: inline-block
     }
 }
-
+/*
 .news-detail-head-left span {
     font-size: 1.4rem;
     line-height: 20px;
     color: #525d6a;
     font-weight: 400;
     float: left
-}
+} */
 
-.news-detail-head-left a {
+/* .news-detail-head-left a {
     position: relative;
     padding-left: 12px;
     margin-left: 8px;
@@ -11573,7 +11573,7 @@ a {
     float: left;
     font-weight: 600;
     line-height: 20px
-}
+} */
 
 @media only screen and (min-width:1200px) {
     .news-detail-head-left a:hover {
@@ -15723,7 +15723,7 @@ body:not(.page-template-registerWebapp) .front-register-error:not(:empty)::befor
     }
 }
 
-.industry-txt,
+/* .industry-txt,
 h1,
 h2,
 h3,
@@ -15732,7 +15732,7 @@ h5,
 h6 {
     font-family: Inter, sans-serif;
     line-height: 1.5
-}
+} */
 
 h1 {
     font-size: 4.8rem
@@ -23795,7 +23795,7 @@ body {
     color: #fff
 }
 
-.industry-txt,
+/* .industry-txt,
 h1,
 h2,
 h3,
@@ -23806,7 +23806,7 @@ h6 {
     line-height: 1.5;
     margin: 0;
     padding: 0
-}
+} */
 
 @media only screen and (max-width:767px) {
     .industry-txt {
