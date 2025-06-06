@@ -120,8 +120,8 @@
 
                                     </div>
 
-                                    <div class="col-md-4 row">
-                                        <div class="form-group  col-lg-12">
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-4 col-lg-12">
                                             <div class="">
                                                 <label for="image" class="form-label">Logo <span
                                                         class="text-danger">*</span></label>
@@ -149,6 +149,11 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="form-group mb-2 col-lg-12">
+                                        <label for="meta" class="form-label">Meta</label>
+                                        <textarea name="meta" class="form-control " rows="3" placeholder="meta">{{ $config->meta }}</textarea>
+                                    </div>
+
                                     <div class="col-lg-12">
                                         <div class="mb-2">
                                             <label for="banner_login" class="form-label">Banner đăng ký <span
