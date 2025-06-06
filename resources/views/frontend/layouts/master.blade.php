@@ -18,6 +18,10 @@
             font-family: 'HandelGothicArabic', sans-serif !important;
         }
 
+        .news-col-left * {
+            font-family: 'Rajdhani', sans-serif !important;
+        }
+
         p:not(.price-packagename), li {
             font-family: 'Rajdhani', sans-serif !important;
         }
