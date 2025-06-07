@@ -85,7 +85,7 @@ class TemplateService
         $automation = Automation::with('template')->first() ?? [];
         if ($zaloOa && $automation) {
             $template = $automation->template->templateId;
-            $template_data = $this->templateData($data['name'], $data['phone'], $data['province'], $data['hotel_homestay'], $data['email']);
+            $template_data = $this->templateData($data['name'], $data['phone'], $data['province'], $data['hotel_homestay'],  $data['username']);
             Log::info($template_data);
             $response = Http::withHeaders([
                 'Content-Type' => 'application/json',
@@ -105,7 +105,7 @@ class TemplateService
         }
     }
 
-    public function templateData($customer_name, $phone_number, $address, $hotel, $email)
+    public function templateData($customer_name, $phone_number, $address, $hotel, $username)
     {
         $template_data = [
             'name' => $customer_name,
@@ -121,7 +121,7 @@ class TemplateService
             'customer_name' => $customer_name ?? '',
             'time' => Carbon::now()->format('h:i:s d/m/Y') ?? "",
             'order_date' => Carbon::now()->format('d/m/Y') ?? "",
-            'order_code' => '00001'
+            'order_code' => $username
         ];
 
         Log::info($template_data);
