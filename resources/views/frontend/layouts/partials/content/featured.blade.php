@@ -15,7 +15,7 @@
         width: 384px;
         height: 256px;
         margin-right: 10px;
-        object-fit: cover;
+        /* object-fit: cover; */
         display: block;
     }
 
@@ -65,7 +65,7 @@
         width: 180px;
         height: 120px;
         margin-right: 10px;
-        object-fit: cover;
+        /* object-fit: cover; */
         display: block;
     }
     .btn:hover{
