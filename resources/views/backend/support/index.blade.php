@@ -361,7 +361,7 @@
                             }
                             $('#postModalLabel').text('Cập nhật bài viết');
                             $('#postCategorySelect').val(post.category_id);
-                            $('#editingPostId').val(post.id);
+                             $('#editingPostId').val(post.id);
 
                             // Mở modal
                             const postModal = new bootstrap.Modal(document.getElementById(
@@ -385,6 +385,7 @@
                 $('#postModalLabel').text('Thêm bài viết mới');
                 $('#newPostTitle').val('');
                 $('.btn-add-post').text('Thêm');
+                  $('#editingPostId').val("");
                 if (typeof CKEDITOR !== 'undefined' && CKEDITOR.instances
                     .description) {
                     CKEDITOR.instances.description.setData('');
