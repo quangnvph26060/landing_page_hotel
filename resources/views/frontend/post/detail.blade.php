@@ -42,8 +42,8 @@
 
         .news-detail-head-left * {
             list-style: inherit !important;
-            font-size: inherit !important;
-            /* list-hi: inherit !important; */
+            /* font-size: inherit !important; */
+
         }
 
         html p {
