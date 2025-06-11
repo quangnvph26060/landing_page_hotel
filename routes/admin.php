@@ -52,7 +52,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('functions', FunctionsController::class);
         Route::resource('highlights', HighlightController::class);
         Route::prefix('posts')->name('posts.')->group(function () {
-            Route::resource('/', PostController::class);
+            Route::resource('', PostController::class)
+            ->parameters(['' => 'post']);
 
             // Các route SEO riêng
             Route::post('{id}/seo-analysis', [PostController::class, 'getSeoAnalysis'])->name('seo.analysis');
