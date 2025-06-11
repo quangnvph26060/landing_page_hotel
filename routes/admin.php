@@ -51,7 +51,13 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('configs', ConfigController::class);
         Route::resource('functions', FunctionsController::class);
         Route::resource('highlights', HighlightController::class);
-        Route::resource('posts', PostController::class);
+        Route::prefix('posts')->name('posts.')->group(function () {
+            Route::resource('/', PostController::class);
+
+            // Các route SEO riêng
+            Route::post('{id}/seo-analysis', [PostController::class, 'getSeoAnalysis'])->name('seo.analysis');
+            Route::post('seo-analysis-live', [PostController::class, 'getSeoAnalysisLive'])->name('seo.analysis.live');
+        });
         Route::resource('technologies', TechnologyController::class);
         Route::resource('banners', BannerController::class);
 

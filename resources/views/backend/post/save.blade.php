@@ -3,7 +3,7 @@
 
 @section('content')
     @include('backend.layouts.partials.breadcrumb', [
-       'page' => isset($post)? 'Sửa bài viết' : 'Thêm bài viết',
+        'page' => isset($post) ? 'Sửa bài viết' : 'Thêm bài viết',
         'href' => route('admin.posts.index'),
     ])
 
@@ -11,10 +11,6 @@
         <li class="nav-item" role="presentation">
             <a class="nav-link active fw-bold" id="info-tab" data-bs-toggle="tab" href="#info" role="tab"
                 aria-controls="info" aria-selected="true">Thông Tin Sản Phẩm</a>
-        </li>
-        <li class="nav-item" role="presentation">
-            <a class="nav-link fw-bold" id="seo-tab" data-bs-toggle="tab" href="#seo" role="tab"
-                aria-controls="seo" aria-selected="false">Cấu Hình Seo</a>
         </li>
     </ul>
 
@@ -55,9 +51,8 @@
                                     <div class="form-group mb-3 col-lg-12">
                                         <label for="name" class="form-label">Địa chỉ<span
                                                 class="text-danger"></span></label>
-                                        <input value="{{ $post->address ?? '' }}"
-                                            id="address" name="address" class="form-control" type="text"
-                                            placeholder="Địa chỉ">
+                                        <input value="{{ $post->address ?? '' }}" id="address" name="address"
+                                            class="form-control" type="text" placeholder="Địa chỉ">
                                     </div>
 
 
@@ -66,8 +61,86 @@
                                         <textarea name="description" class="form-control ckeditor" id="description" placeholder="Mô tả ">{!! $post->description ?? '' !!}</textarea>
                                     </div>
 
+                                    {{-- Điểm SEO --}}
+                                    @php
+
+                                        $seoScoreValue = $seoData['seoScoreValue'] ?? 0;
+                                        $analysis = $seoData['analysis'] ?? [];
+                                        $hasWarning = $seoData['hasWarning'] ?? false;
+
+                                        $seoColor = 'bg-danger'; // đỏ mặc định (dưới 50)
+                                        $badgeClass = 'bg-danger';
+
+                                        if ($seoScoreValue >= 80) {
+                                            $seoColor = 'bg-success'; // xanh lá (tốt)
+                                            $badgeClass = 'bg-success';
+                                        } elseif ($seoScoreValue >= 50) {
+                                            $seoColor = 'bg-warning'; // vàng (trung bình)
+                                            $badgeClass = 'bg-warning text-dark';
+                                        }
+                                    @endphp
+
+                                    <div class="form-group mb-3 mt-3 col-lg-12">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="mb-0">Điểm SEO tổng thể</h5>
+                                                <span class="badge {{ $badgeClass }} fs-6" id="seo-score-badge">
+                                                    {{ $seoScoreValue }}/100
+                                                </span>
+                                            </div>
+                                            <div class="progress mb-3" style="height: 10px;">
+                                                <div class="progress-bar {{ $seoColor }}" id="seo-score-progress"
+                                                    role="progressbar" style="width: {{ $seoScoreValue }}%;"
+                                                    aria-valuenow="{{ $seoScoreValue }}" aria-valuemin="0"
+                                                    aria-valuemax="100">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {{-- List SEO --}}
+                                    <div class="" id="result">
+                                        @include('backend.post.seo', ['seoData' => $seoData])
+                                    </div>
+
+                                    <!-- Google Snippet Preview -->
+                                    <div class="form-group mb-3 mt-3 col-lg-12">
+                                        <label class="form-label fw-semibold">Preview trên Google</label>
+                                        <div id="google-snippet-preview"
+                                            style="background:#fff;border:1px solid #e0e0e0;padding:16px 20px;border-radius:8px;max-width:700px;">
+                                            <div id="gsp-title"
+                                                style="color:#1a0dab;font-size:20px;line-height:1.2;font-weight:400;margin-bottom:2px;">
+                                                {{ old('title_seo', $post->title_seo ?? 'Tiêu đề bài viết') }}</div>
+                                            <div id="gsp-url"
+                                                style="color:#006621;font-size:14px;line-height:1.3;margin-bottom:2px;">
+                                                {{ url('/post') }}/<span
+                                                    id="gsp-slug">{{ old('slug', $post->slug ?? 'slug-bai-viet') }}</span>
+                                            </div>
+                                            <div id="gsp-desc" style="color:#545454;font-size:13px;line-height:1.4;">
+                                                {{ old('description_seo', $post->description_seo ?? 'Mô tả ngắn của bài viết sẽ hiển thị ở đây.') }}
+                                            </div>
+                                        </div>
+                                    </div>
 
 
+                                    {{-- SEO --}}
+                                    <div class="form-group mb-3 mt-3">
+                                        <label for="title_seo" class="form-label">Tiêu đề seo</label>
+                                        <input type="text" value="{{ $post->title_seo ?? '' }}"
+                                            placeholder="Tiêu đề seo" id="title_seo" name="title_seo"
+                                            class="form-control">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="description_seo" class="form-label">Mô tả seo</label>
+                                        <textarea name="description_seo" id="description_seo" cols="30" rows="4" class="form-control"
+                                            placeholder="Mô tả seo">{{ $post->description_seo ?? '' }}</textarea>
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label for="keyword_seo" class="form-label">Từ khóa seo</label>
+                                        <input id="keyword_seo" value="{{ $post->keyword_seo ?? '' }}"
+                                            name="keyword_seo">
+                                    </div>
 
                                     {{-- <div class="form-group mb-3">
                                         <label for="tags" class="form-label">Tags</label>
@@ -76,26 +149,6 @@
                                     </div> --}}
                                 </div>
                             </div>
-
-                            <div class="tab-pane fade" id="seo" role="tabpanel" aria-labelledby="seo-tab">
-                                <div class="form-group mb-3">
-                                    <label for="title_seo" class="form-label">Tiêu đề seo</label>
-                                    <input type="text" value="{{ $post->title_seo ?? '' }}"
-                                        placeholder="Tiêu đề seo" id="title_seo" name="title_seo" class="form-control">
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label for="description_seo" class="form-label">Mô tả seo</label>
-                                    <textarea name="description_seo" id="description_seo" cols="30" rows="4" class="form-control ckeditor"
-                                        placeholder="Mô tả seo">{{ $post->description_seo ?? '' }}</textarea>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label for="keyword_seo" class="form-label">Từ khóa seo</label>
-                                    <input id="keyword_seo" value="{{ $post->keyword_seo ?? '' }}"
-                                        name="keyword_seo">
-                                </div>
-                            </div>
-
-
                         </div>
                     </div>
                 </div>
@@ -122,7 +175,7 @@
                     <div class="card-body">
                         <select name="type" id="type" class="form-select">
                             <option value="post" @selected(($post->type ?? 'post') == 'post')>Tin tức</option>
-                            <option value="customer" @selected(($post->type ?? '') =='customer')>Khách hàng</option>
+                            <option value="customer" @selected(($post->type ?? '') == 'customer')>Khách hàng</option>
                         </select>
                     </div>
                 </div>
@@ -164,7 +217,6 @@
             border-top-right-radius: 0 !important;
             border: 1px solid #eee;
         }
-
     </style>
 @endpush
 
@@ -190,7 +242,6 @@
             });
 
             ckeditor('description')
-            ckeditor('description_seo')
 
             submitForm('#myForm', function(response) {
                 window.location.href = "{{ route('admin.posts.index') }}"
@@ -206,6 +257,108 @@
             });
 
             // formatDataInput('price');
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            function updateSnippetPreview() {
+                let seoTitle = $('#title_seo').val() || 'Tiêu đề bài viết';
+                let slug = seoTitle
+                let seoDescription = $('#description_seo').val() || 'Mô tả ngắn của bài viết sẽ hiển thị ở đây.';
+
+                $('#gsp-title').text(seoTitle);
+                $('#gsp-slug').text(slug);
+                $('#gsp-desc').text(seoDescription);
+            }
+
+            $('#title_seo, #slug, #description_seo').on('input', updateSnippetPreview);
+            updateSnippetPreview(); 
+        });
+    </script>
+
+
+    {{-- Xử lí khi thêm mới bài viết --}}
+    <script>
+        let seoTimeout;
+
+        // Định nghĩa hàm trước
+        function runSeoAnalysis() {
+            const description = CKEDITOR.instances['description']?.getData() || '';
+
+            const rawKeywords = $('#keyword_seo').val();
+            let keyword_seo = [];
+
+            try {
+                const parsed = JSON.parse(rawKeywords);
+                if (Array.isArray(parsed)) {
+                    keyword_seo = parsed.map(k => k.value?.trim()).filter(Boolean);
+                }
+            } catch (e) {
+                keyword_seo = (rawKeywords || '').split(',').map(k => k.trim()).filter(Boolean);
+            }
+
+            const title_seo = $('#title_seo').val();
+            const hasKeyword = keyword_seo.some(keyword => title_seo.toLowerCase().includes(keyword.toLowerCase()));
+            const description_seo = $('#description_seo').val();
+            const slug = $('#slug').val();
+
+            const data = {
+                description,
+                keyword_seo,
+                title_seo,
+                hasKeyword,
+                description_seo,
+                slug,
+                _token: '{{ csrf_token() }}'
+            };
+
+            console.log('⏳ Gửi dữ liệu SEO:', data);
+
+            $.ajax({
+                url: "{{ route('admin.posts.seo.analysis.live') }}",
+                method: "POST",
+                data: JSON.stringify(data),
+                contentType: "application/json",
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                success: function(response) {
+                    if (response.success) {
+                        $('#seo-score-badge').removeClass().addClass(`badge ${response.badgeClass} fs-6`).text(
+                            response.seoScoreVal + '/100');
+                        $('#seo-score-progress').removeClass().addClass(`progress-bar ${response.seoColor}`)
+                            .css('width', response.seoScoreVal + '%');
+                        $('#result').html(response.html);
+                    }
+                    console.log('✅ Phản hồi SEO:', response);
+                },
+                error: function(xhr) {
+                    console.error('❌ Lỗi SEO:', xhr);
+                }
+            });
+        }
+
+        // Chờ document sẵn sàng
+        $(document).ready(function() {
+            // Các input thông thường
+            $('#title_seo, #keyword_seo, #description_seo, #slug').on('input', function() {
+                clearTimeout(seoTimeout);
+                seoTimeout = setTimeout(runSeoAnalysis, 500);
+            });
+
+            // CKEditor ready
+            CKEDITOR.on('instanceReady', function(evt) {
+                evt.editor.on('change', function() {
+                    clearTimeout(seoTimeout);
+                    seoTimeout = setTimeout(runSeoAnalysis, 500);
+                });
+
+                // Nếu là trang chỉnh sửa thì gọi luôn
+                @if (isset($post))
+                    setTimeout(runSeoAnalysis, 500);
+                @endif
+            });
         });
     </script>
 @endpush

@@ -35,7 +35,7 @@ class AppServiceProvider extends ServiceProvider
         View::share('config_all', $config_all);
         View::share('titleFunction', $titleFunction);
         View::share('zaloOa', $zaloOa);
-        $myService = app(\App\Services\TemplateService::class);
-        $myService->template();
+        // $myService = app(\App\Services\TemplateService::class);
+        // $myService->template();
     }
 }
