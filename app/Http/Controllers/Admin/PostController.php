@@ -93,6 +93,7 @@ class PostController extends Controller
                         $keywords = explode(',', $credentials['keyword_seo']);
                         $keywords = array_map('trim', $keywords);
                         $focusKeyword = $keywords[0] ?? '';
+                        
                         // $credentials['keyword_seo'] = implode(', ', $keywords);
                     }
                 }
