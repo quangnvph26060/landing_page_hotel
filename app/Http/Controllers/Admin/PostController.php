@@ -88,12 +88,12 @@ class PostController extends Controller
                     if (json_last_error() === JSON_ERROR_NONE && is_array($decoded)) {
                         $keywords = collect($decoded)->pluck('value')->filter()->toArray();
                         $focusKeyword = $keywords[0] ?? '';
-                        $credentials['keyword_seo'] = json_encode($decoded); 
+                        // $credentials['keyword_seo'] = json_encode($decoded);
                     } else {
                         $keywords = explode(',', $credentials['keyword_seo']);
                         $keywords = array_map('trim', $keywords);
                         $focusKeyword = $keywords[0] ?? '';
-                        $credentials['keyword_seo'] = implode(', ', $keywords); 
+                        // $credentials['keyword_seo'] = implode(', ', $keywords);
                     }
                 }
             } else {
@@ -161,9 +161,9 @@ class PostController extends Controller
                 $credentials['image'] = saveImages($request, 'image', 'post');
             }
 
-            if (!empty($credentials['keyword_seo'])) {
-                $credentials['keyword_seo'] = explode(',', $credentials['keyword_seo']);
-            }
+            // if (!empty($credentials['keyword_seo'])) {
+            //     $credentials['keyword_seo'] = $credentials['keyword_seo'];
+            // }
             // dd($credentials);
 
 
