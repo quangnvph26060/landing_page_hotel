@@ -39,9 +39,9 @@
                                 </li>
                             </ul>
                         </div>  --}}
-                        <button class="register box-popup-register" id="box-register-single" data-scrolltop="no">
+                        {{-- <button class="register box-popup-register" id="box-register-single" data-scrolltop="no">
                             <span>Dùng thử miễn phí</span>
-                        </button>
+                        </button> --}}
                     </div>
                 </div>
             </div>
