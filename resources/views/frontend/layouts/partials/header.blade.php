@@ -34,8 +34,8 @@
                                     class="nav-link {{ Request::is('dich-vu') ? 'nav-link-active' : '' }}"> Bảng giá</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('suport') }}"
-                                    class="nav-link {{ Request::is('ho-tro') ? 'nav-link-active' : '' }}"> Hỗ trợ </a>
+                                <a href="{{ route('suport','dang-ky-dung-thu-fasthotel') }}"
+                                    class="nav-link {{ Request::is('huong-dan-su-dung-fasthotel*') ? 'nav-link-active' : '' }}"> Hỗ trợ </a>
                             </li>
                             <li class="nav-item nav-item-blog">
                                 <a href="{{ route('post') }}"
