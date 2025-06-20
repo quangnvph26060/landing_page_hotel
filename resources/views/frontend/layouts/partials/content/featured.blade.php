@@ -13,7 +13,7 @@
     }
     .images_new img{
         width: 384px;
-        height: 256px;
+        /* height: 256px; */
         margin-right: 10px;
         /* object-fit: cover; */
         display: block;
@@ -63,7 +63,7 @@
 
     .sidebar-news img {
         width: 180px;
-        height: 120px;
+        /* height: 120px; */
         margin-right: 10px;
         /* object-fit: cover; */
         display: block;
