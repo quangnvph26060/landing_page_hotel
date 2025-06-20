@@ -1,64 +1,71 @@
 <style>
- .social-icons {
-  display: flex;
-  gap: 12px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+    .social-icons {
+        display: flex;
+        gap: 12px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
 
-.social-icons li a {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  color: white;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
+    .social-icons li a {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        color: white;
+        text-decoration: none !important;
+        transition: all 0.3s ease;
+        transform: scale(1.1);
 
-.social-icons li a[title="Facebook"] {
-  background-color: #3b5998;
-}
+    }
 
-.social-icons li a[title="YouTube"] {
-  background-color: #ff0000;
-}
+    .social-icons li a[title="Facebook"] {
+        background-color: #3b5998;
+    }
 
-.social-icons li a:hover {
-  transform: scale(1.1);
-}
-.footer-info li {
-    display: flex;
-    align-items: center;
-    line-height: 1.5;
-}
+    .social-icons li a[title="YouTube"] {
+        background-color: #ff0000;
+    }
 
-.footer-info li::before {
-    content: "➤";
-    margin-right: 15px;
-    color: white;
-    font-size: 10px;
-    display: inline-flex;
-    align-items: center;
-}
+    .social-icons li a[title="Instagram"] {
+        background-color: #e1306c;
+    }
 
-.footer-info-1 li a::before {
-    content: "➤";
-    margin-right: 15px;
-    color: white;
-    font-size: 10px;
-    vertical-align: middle;
-    line-height: 1;
-}
-.footer-info-1 li a:hover{
-    text-decoration: none;
-}
+    .social-icons li a[title="TikTok"] {
+        background-color: #010101;
+    }
 
 
+    .social-icons li a:hover {
+        transform: scale(1.1);
+    }
+
+    .footer-info li {
+        display: flex;
+        align-items: center;
+        line-height: 1.5;
+    }
+
+    .footer-info li::before {
+        content: "➤";
+        margin-right: 15px;
+        color: white;
+        font-size: 10px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .footer-info-1 li a::before {
+        content: "➤";
+        margin-right: 15px;
+        color: white;
+        font-size: 10px;
+        vertical-align: middle;
+        line-height: 1;
+    }
 
 
 </style>
@@ -90,11 +97,16 @@
                         <div class="textwidget">
                             <div>
                                 <ul class="footer-info-1">
-                                    <li><a title="Về KiotViet" href="" target="_blank" rel="nofollow noopener">Giới thiệu</a></li>
-                                    <li><a title="Khách hàng" href="" arget="_blank" rel="nofollow">Hồ sơ năng lực</a></li>
-                                    <li><a title="Điều khoản sử dụng" href=""target="_blank" rel="nofollow noopener">Chính sách</a></li>
-                                    <li><a title="Liên hệ" href="" arget="_blank" rel="nofollow">Tuyển dụng</a></li>
-                                    <li><a title="Tuyển dụng KiotViet" href=""target="_blank" rel="nofollow noopener">Hướng dẫn thanh toán</a></li>
+                                    <li><a title="Về KiotViet" href="" target="_blank"
+                                            rel="nofollow noopener">Giới thiệu</a></li>
+                                    <li><a title="Khách hàng" href="" arget="_blank" rel="nofollow">Hồ sơ năng
+                                            lực</a></li>
+                                    <li><a title="Điều khoản sử dụng" href=""target="_blank"
+                                            rel="nofollow noopener">Chính sách</a></li>
+                                    <li><a title="Liên hệ" href="" arget="_blank" rel="nofollow">Tuyển dụng</a>
+                                    </li>
+                                    <li><a title="Tuyển dụng KiotViet" href=""target="_blank"
+                                            rel="nofollow noopener">Hướng dẫn thanh toán</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -115,16 +127,27 @@
                             <div>
                                 <ul class="social-icons">
                                     <li>
-                                        <a href="{{ $config->facebook_link }}" target="_black" title="Facebook">
+                                        <a href="{{ $config->facebook_link }}" target="_blank" title="Facebook">
                                             <i class="fab fa-facebook-f"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{{ $config->youtube_link }}" target="_black" title="YouTube">
+                                        <a href="{{ $config->youtube_link }}" target="_blank" title="YouTube">
                                             <i class="fab fa-youtube-square"></i>
                                         </a>
                                     </li>
+                                    <li>
+                                        <a href="{{ $config->instagram_link }}" target="_blank" title="Instagram">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ $config->tiktok_link }}" target="_blank" title="TikTok">
+                                            <i class="fab fa-tiktok"></i>
+                                        </a>
+                                    </li>
                                 </ul>
+
 
 
                             </div>

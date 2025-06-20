@@ -55,6 +55,8 @@ class ConfigController extends Controller
         $data['stk']        = $request->stk;
         $data['facebook_link']        = $request->facebook_link;
         $data['youtube_link']         = $request->youtube_link;
+        $data['instagram_link']        = $request->instagram_link;
+        $data['tiktok_link']         = $request->tiktok_link;
         $data['carePhone']  = $request->carePhone;
         $data['footer']     = $request->footer;
         $data['promotion']     = $request->promotion;

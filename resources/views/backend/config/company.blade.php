@@ -93,6 +93,18 @@
                                                 name="youtube_link"class="form-control" type="text" placeholder=" Link Youtobe">
                                         </div>
 
+                                        <div class="form-group mb-2 col-lg-6">
+                                            <label for="instagram_link" class="form-label">Link Instagram</label>
+                                            <input value="{{ $config->instagram_link ?? '' }}" id="instagram_link"
+                                                name="instagram_link"class="form-control" type="text" placeholder="Link Instagram ">
+                                        </div>
+
+                                        <div class="form-group mb-2 col-lg-6">
+                                            <label for="tiktok_link" class="form-label"> Link TikTok </label>
+                                            <input value="{{ $config->tiktok_link ?? '' }}" id="tiktok_link"
+                                                name="tiktok_link"class="form-control" type="text" placeholder=" Link TikTok">
+                                        </div>
+
                                         <div class="form-group mb-2 col-lg-12">
                                             <label for="salesPhone" class="form-label">Máy bàn</label>
                                             <input value="{{ $config->salesPhone ?? '' }}" id="salesPhone"
