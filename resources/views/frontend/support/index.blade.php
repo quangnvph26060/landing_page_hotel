@@ -162,6 +162,33 @@
         background: none !important;
     }
 
+    @media (max-width: 768px) {
+        .supdetailNav {
+            flex-direction: row;
+            /* bỏ column, quay về ngang */
+            overflow-x: auto;
+            /* bật scroll ngang */
+            white-space: nowrap;
+            /* tránh item xuống dòng */
+            gap: 10px;
+            /* khoảng cách đều giữa các item */
+            padding-bottom: 5px;
+            /* chừa chỗ cho scroll bar */
+        }
+
+        .supdetailNav>* {
+            flex: 0 0 auto;
+            /* item không bị co kéo */
+        }
+        .supportMain-content{
+            flex-direction: column !important;
+        }
+        .supportMain-content_sidebar{
+            width: 100% !important;
+            position: unset !important;
+        }
+    }
+
     .supportMain-content {
         display: flex;
     }
