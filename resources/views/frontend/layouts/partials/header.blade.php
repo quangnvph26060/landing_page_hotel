@@ -46,9 +46,9 @@
                             </li>
                             <li>
                                 <div class="registerandlogin">
-                                    <ul class="w-100">
+                                    <ul class="w-100 p-0">
                                         <li class="nav-item header-register">
-                                            <a class="btn btn-sm" style="color: #000 !important; border: 1px solid #000"
+                                            <a class="btn btn-sm" style="color: #000 !important; white-space: nowrap;border: 1px solid #000"
                                                 data-bs-toggle="modal" data-bs-target="#loginModal">
                                                 Đăng nhập
                                             </a>
@@ -56,7 +56,7 @@
 
                                         <li class="nav-item header-login login"><a href="{{ route('register') }}"
                                                 class="btn  btn-sm"
-                                                style="background-color: #ff0100 !important ; color: #ffff">Đăng ký</a>
+                                                style="background-color: #ff0100 !important ; color: #ffff;white-space: nowrap;">Đăng ký</a>
                                         </li>
                                     </ul>
                                 </div>
